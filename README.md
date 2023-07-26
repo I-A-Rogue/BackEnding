@@ -1,37 +1,32 @@
-# Projeto em Java
-Este é um repositório para o projeto em Java. Neste projeto, desenvolvemos uma aplicação utilizando a linguagem de programação Java para realizar uma determinada tarefa (descreva brevemente a finalidade do projeto).
+# Project in Java
+This is a repository for the project in Java. In this project, we develop an application using the Java programming language to perform a certain task (briefly describe the purpose of the project).
 
-## Instalação
-Certifique-se de ter o Java Development Kit (JDK) instalado em sua máquina. Caso ainda não tenha, você pode fazer o download e a instalação do JDK no site oficial da Oracle ou utilizar uma distribuição OpenJDK.
+## Installation
+Make sure you have the Java Development Kit (JDK) installed on your machine. If you don't have it yet, you can download and install the JDK from the official Oracle website or use an OpenJDK distribution.
 
-Clone este repositório para o seu ambiente local:
+Clone this repository to your local environment:
 
 bash
-Copy code
-git clone https://github.com/seu-usuario/projeto-java.git
-## Configuração
-(Se necessário) Liste aqui as configurações específicas que o usuário deve realizar para que o projeto funcione corretamente em seu ambiente. Por exemplo, se o projeto utilizar alguma biblioteca externa, especifique como adicioná-la ao projeto.
+Copy this code:
+git clone https://github.com/inaciozacko/I-A-Rogue
+## Settings
+(See Required) List here the specific configurations that the user must perform for the project to work correctly in their environment. For example, if the project uses some external library, specify how to add it to the project.
 
-## Uso
-(Se necessário) Explique aqui como utilizar o projeto. Forneça exemplos de código ou comandos que ajudem o usuário a compreender como interagir com a aplicação.
+## Usage
+(See required) Explain here how to use the project. Provide code examples or commands that help the user understand how to interact with the application.
 
-## Contribuição
-Contribuições são bem-vindas! Caso queira contribuir para este projeto, siga as etapas abaixo:
+## Contribution
+Contributions are welcome! If you want to contribute to this project, follow the steps below:
+Make a fork of this repository.
+Create a branch with your feature or bug fix: git checkout -b my-feature.
+Make your changes and add the commits: git commit -m 'My contribution'.
+Push the branch to the remote repository: git push origin my-feature.
+Create a new Pull Request explaining your modifications. It will be a pleasure to review and incorporate your improvements.
 
-Faça um fork deste repositório.
+## License
+MIT (or choose the appropriate license for your project)
 
-Crie uma branch com sua feature ou correção de bug: git checkout -b minha-feature.
+## Contact
+If you want to get in touch, you can find me through my email: your-email@example.com or LinkedIn. Feel free to report issues, make suggestions, or just chat about the project.
 
-Faça suas modificações e adicione os commits: git commit -m 'Minha contribuição'.
-
-Envie a branch para o repositório remoto: git push origin minha-feature.
-
-Crie um novo Pull Request explicando suas modificações. Será um prazer revisar e incorporar suas melhorias.
-
-## Licença
-MIT (ou escolha a licença adequada para o seu projeto)
-
-## Contato
-Caso deseje entrar em contato, você pode me encontrar através do meu e-mail: seu-email@exemplo.com ou LinkedIn. Sinta-se à vontade para relatar problemas, dar sugestões ou apenas bater um papo sobre o projeto.
-
-Espero que este projeto seja útil! Obrigado por utilizar o nosso software em Java.
+I hope this project is useful! Thank you for using our Java software.
