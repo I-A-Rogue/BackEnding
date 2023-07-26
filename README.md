@@ -8,7 +8,7 @@ Clone this repository to your local environment:
 
 bash
 Copy this code:
-git clone https://github.com/inaciozacko/I-A-Rogue
+git clone https://github.com/I-A-Rogue/BackEnding
 ## Settings
 (See Required) List here the specific configurations that the user must perform for the project to work correctly in their environment. For example, if the project uses some external library, specify how to add it to the project.
 
@@ -27,6 +27,6 @@ Create a new Pull Request explaining your modifications. It will be a pleasure t
 MIT (or choose the appropriate license for your project)
 
 ## Contact
-If you want to get in touch, you can find me through my email: your-email@example.com or LinkedIn. Feel free to report issues, make suggestions, or just chat about the project.
+If you want to get in touch, you can find us at the following emails: inacio_vitkoski@estudante.sc.senai.com, vitor_m_andrade@estudante.sesisenai.org.br, gustavo_g_abreu@estudante.sesisenai.org.br, maria_cb_farias@estudante.sesisenai.org.br, bruno_martins4@estudante.sesisenai.org.br. Feel free to report issues, make suggestions, or just chat about the project.
 
 I hope this project is useful! Thank you for using our Java software.
