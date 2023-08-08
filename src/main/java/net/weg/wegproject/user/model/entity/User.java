@@ -8,7 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.cart.model.entity.Cart;
-import net.weg.wegproject.model.entity.CreditCard;
+import net.weg.wegproject.creditCard.model.entity.CreditCard;
 import net.weg.wegproject.saves.model.Saves;
 
 import java.util.List;

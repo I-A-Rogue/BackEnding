@@ -1,9 +1,9 @@
 package net.weg.wegproject.company.controller;
 
 import lombok.AllArgsConstructor;
+import net.weg.wegproject.company.exceptions.*;
 import net.weg.wegproject.company.model.dto.CompanyDTO;
 import net.weg.wegproject.company.model.entity.Company;
-import net.weg.wegproject.model.exceptions.companyExceptions.*;
 import net.weg.wegproject.company.service.CompanyService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeansException;
