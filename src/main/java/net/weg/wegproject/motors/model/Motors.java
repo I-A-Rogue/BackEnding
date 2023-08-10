@@ -4,8 +4,10 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import net.weg.wegproject.product.model.dto.ProductDTO;
 import net.weg.wegproject.product.model.entity.Product;
 import net.weg.wegproject.enums.IsolationClass;
+import org.springframework.beans.BeanUtils;
 
 @Entity
 @AllArgsConstructor
@@ -14,6 +16,10 @@ import net.weg.wegproject.enums.IsolationClass;
 @Table(name = "tb_Motors")
 
 public class Motors extends Product {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long id;
 
     @Column(nullable = false)
     String carcass;
@@ -129,4 +135,8 @@ public class Motors extends Product {
 
     @Column(nullable = false)
     String tropicalizedPainting;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "produto_codigo")
+    private Product produto;
 }

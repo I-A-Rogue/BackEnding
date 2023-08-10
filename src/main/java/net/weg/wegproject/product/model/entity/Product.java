@@ -5,7 +5,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.assessment.model.entity.Assessment;
+import net.weg.wegproject.automation.model.entity.Automation;
+import net.weg.wegproject.building.model.entity.Building;
 import net.weg.wegproject.categories.model.entity.Categories;
+import net.weg.wegproject.ink.model.Ink;
+import net.weg.wegproject.motors.model.Motors;
+import net.weg.wegproject.product.model.dto.ProductDTO;
+import net.weg.wegproject.security.model.Security;
 
 @Entity
 @AllArgsConstructor
@@ -15,16 +21,36 @@ import net.weg.wegproject.categories.model.entity.Categories;
 
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long code;
+    private Long code;
+
     @Column(nullable = false, unique = true)
-    String name;
+    private String name;
+
     float price;
-    Integer stockSize;
+
+    private Integer stockSize;
+
     @Column(nullable = false)
-    String description;
+    private String description;
+
     @ManyToOne
-    Assessment assessment;
+    private Assessment assessment;
+
     @OneToOne
-    Categories categories;
+    private Categories categories;
+
+    @OneToOne(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = true)
+    private Motors motors;
+
+    @OneToOne(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = true)
+    private Automation automation;
+
+    @OneToOne(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = true)
+    private Ink ink;
+
+    @OneToOne(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = true)
+    private Building building;
+
+    @OneToOne(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = true)
+    private Security security;
 }

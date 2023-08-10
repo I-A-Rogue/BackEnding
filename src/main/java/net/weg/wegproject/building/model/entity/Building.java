@@ -4,8 +4,11 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import net.weg.wegproject.product.model.dto.ProductDTO;
 import net.weg.wegproject.product.model.entity.Product;
 import net.weg.wegproject.enums.LanguageAcronyms;
+import net.weg.wegproject.product.model.entity.Product;
+import org.springframework.beans.BeanUtils;
 
 @Entity
 @AllArgsConstructor
@@ -13,7 +16,11 @@ import net.weg.wegproject.enums.LanguageAcronyms;
 @Data
 @Table(name = "tb_Building")
 
-public class Building extends Product {
+public class Building extends Product{
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long id;
 
     @Column(nullable = false)
     String referenceProduct;
@@ -60,4 +67,8 @@ public class Building extends Product {
 
     @Column(nullable = false)
     String colorStructure;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "produto_codigo")
+    private Product produto;
 }

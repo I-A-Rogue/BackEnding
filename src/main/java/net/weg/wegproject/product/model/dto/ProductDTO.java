@@ -5,6 +5,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.assessment.model.dto.AssessmentDTO;
+import net.weg.wegproject.assessment.model.entity.Assessment;
+import net.weg.wegproject.automation.model.entity.Automation;
+import net.weg.wegproject.building.model.entity.Building;
+import net.weg.wegproject.categories.model.entity.Categories;
+import net.weg.wegproject.ink.model.Ink;
+import net.weg.wegproject.motors.model.Motors;
+import net.weg.wegproject.security.model.Security;
 import org.hibernate.validator.constraints.UniqueElements;
 
 @AllArgsConstructor
@@ -23,5 +30,10 @@ public class ProductDTO {
     Integer stockSize;
     @NotNull
     String description;
-    AssessmentDTO assessment;
+    Assessment assessment;
+
+    private Categories categories;
+
+    private Object object;
+
 }

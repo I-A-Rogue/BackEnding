@@ -4,7 +4,9 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import net.weg.wegproject.product.model.dto.ProductDTO;
 import net.weg.wegproject.product.model.entity.Product;
+import org.springframework.beans.BeanUtils;
 
 @Entity
 @AllArgsConstructor
@@ -76,4 +78,8 @@ public class Security extends Product {
 
     @Column(nullable = false)
     String terminalType;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "produto_codigo")
+    private Product produto;
 }
