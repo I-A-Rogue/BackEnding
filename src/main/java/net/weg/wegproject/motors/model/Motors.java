@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import net.weg.wegproject.product.model.entity.Product;
 import net.weg.wegproject.enums.IsolationClass;
 
 @Entity
@@ -13,7 +12,11 @@ import net.weg.wegproject.enums.IsolationClass;
 @Data
 @Table(name = "tb_Motors")
 
-public class Motors extends Product {
+public class Motors{
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long id;
 
     @Column(nullable = false)
     String carcass;

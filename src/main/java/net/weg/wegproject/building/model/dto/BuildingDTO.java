@@ -11,7 +11,7 @@ import net.weg.wegproject.enums.LanguageAcronyms;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class BuildingDTO extends ProductDTO {
+public class BuildingDTO {
 
     @NotNull
     String referenciaProduto;

@@ -1,7 +1,7 @@
 package net.weg.wegproject.company.service;
 
 import lombok.AllArgsConstructor;
-import net.weg.wegproject.company.exceptions.NoCompanyException;
+import net.weg.wegproject.company.exceptions.*;
 import net.weg.wegproject.company.model.entity.Company;
 import net.weg.wegproject.company.repository.CompanyRepository;
 import net.weg.wegproject.interfeces.ServiceInterface;

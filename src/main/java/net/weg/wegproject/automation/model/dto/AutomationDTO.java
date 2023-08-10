@@ -12,7 +12,7 @@ import net.weg.wegproject.enums.InputPhases;
 @NoArgsConstructor
 @Data
 
-public class AutomationDTO extends ProductDTO {
+public class AutomationDTO {
 
     @NotNull
     Integer nominalVoltageInput;

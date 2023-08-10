@@ -12,7 +12,7 @@ import net.weg.wegproject.enums.IsolationClass;
 @NoArgsConstructor
 @Data
 
-public class MotorsDTO extends ProductDTO {
+public class MotorsDTO {
     @NotNull
     String carcass;
     @NotNull

@@ -1,83 +1,55 @@
-package net.weg.wegproject.security.model;
+package net.weg.wegproject.security.model.dto;
 
-import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import net.weg.wegproject.product.model.entity.Product;
 
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Table(name = "tb_Security")
 
-public class Security extends Product{
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-
-    @Column(nullable = false)
+public class SecurityDTO {
+    @NotNull
     Integer voltageNominalIsolationUi; //(Volts (V))
-
-    @Column(nullable = false)
+    @NotNull
     Integer limitMinimumFrequency; //(Hertz (Hz))
-
-    @Column(nullable = false)
+    @NotNull
     Integer limitMaximumFrequency; //(Hertz (Hz))
-
-    @Column(nullable = false)
+    @NotNull
     Integer mechanics; //(Milhões)
-
-    @Column(nullable = false)
+    @NotNull
     Integer mechanicalLife; //(Milhões)
-
-    @Column(nullable = false)
+    @NotNull
     String EletricalLife;
-
-    @Column(nullable = false)
+    @NotNull
     String degreeProtecaoTerminals;
-
-    @Column(nullable = false)
+    @NotNull
     String grauProtecaoBobina;
-
-    @Column(nullable = false)
+    @NotNull
     Integer degreeProtectionCoil; //(Ampere (A))
-
-    @Column(nullable = false)
+    @NotNull
     String currentNominalIn;
-
-    @Column(nullable = false)
+    @NotNull
     String currentNominalEmployment;
-
-    @Column(nullable = false)
+    @NotNull
     Integer voltageEmploymentUIEC; //(Volts (V))
-
-    @Column(nullable = false)
+    @NotNull
     Integer voltageEmploymentUIUE; //(Volts (V))
-
-    @Column(nullable = false)
+    @NotNull
     float height; //(Milímetros (mm))
-
-    @Column(nullable = false)
+    @NotNull
     float Width; //(Milímetros (mm))
-
-    @Column(nullable = false)
+    @NotNull
     float Depth; //(Milímetros (mm))
-
-    @Column(nullable = false)
+    @NotNull
     float grossWeight; //(Milímetros (kg))
-
-    @Column(nullable = false)
+    @NotNull
     String Reference;
-
-    @Column(nullable = false)
+    @NotNull
     String contact;
-
-    @Column(nullable = false)
+    @NotNull
     Integer voltageCommand; //(Volts (V))
-
-    @Column(nullable = false)
+    @NotNull
     String terminalType;
 }

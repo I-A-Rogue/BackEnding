@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import net.weg.wegproject.product.model.entity.Product;
 import net.weg.wegproject.enums.LanguageAcronyms;
 
 @Entity
@@ -13,7 +12,11 @@ import net.weg.wegproject.enums.LanguageAcronyms;
 @Data
 @Table(name = "tb_Building")
 
-public class Building extends Product {
+public class Building{
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long id;
 
     @Column(nullable = false)
     String referenceProduct;
