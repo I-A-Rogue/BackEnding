@@ -1,6 +1,7 @@
 package net.weg.wegproject.product.controller;
 
 import lombok.AllArgsConstructor;
+import net.weg.wegproject.product.model.entity.ProductFactory;
 import net.weg.wegproject.product.service.ProductService;
 import net.weg.wegproject.product.exceptions.*;
 import net.weg.wegproject.product.model.dto.ProductDTO;
@@ -26,6 +27,7 @@ public class ProductController {
                 Product product = new Product();
                 BeanUtils.copyProperties(objDTO, product);
                 System.out.println(product);
+                System.out.println(ProductFactory.createProduct(ResponseEntity.ok(productService.create(product)).getBody()).getClass());
                 return ResponseEntity.ok(productService.create(product));
             } catch (BeansException e) {
                 return ResponseEntity.badRequest().build();

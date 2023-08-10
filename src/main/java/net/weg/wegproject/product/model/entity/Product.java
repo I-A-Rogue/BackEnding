@@ -41,5 +41,16 @@ public class Product {
     @ManyToOne
     Assessment assessment;
     @Column(nullable = false)
-    CategoriesEnums type;
+    CategoriesEnums categories;
+    @OneToOne(mappedBy = "product_code", cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = true)
+    Motors motors;
+    @OneToOne(mappedBy = "product_code", cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = true)
+    Automation automation;
+    @OneToOne(mappedBy = "product_code", cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = true)
+    Building building;
+    @OneToOne(mappedBy = "product_code", cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = true)
+    Ink ink;
+    @OneToOne(mappedBy = "product_code", cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = true)
+    Security security;
+
 }

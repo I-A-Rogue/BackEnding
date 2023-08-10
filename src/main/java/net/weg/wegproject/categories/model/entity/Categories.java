@@ -12,7 +12,7 @@ import org.hibernate.type.SqlTypes;
 @NoArgsConstructor
 @Data
 
-public abstract class Categories {
+public class Categories {
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     CategoriesEnums type;

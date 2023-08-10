@@ -4,12 +4,13 @@ import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import net.weg.wegproject.product.model.entity.Product;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 
-public class SecurityDTO {
+public class SecurityDTO extends Product {
     @NotNull
     Integer voltageNominalIsolationUi; //(Volts (V))
     @NotNull

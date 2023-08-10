@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.enums.IsolationClass;
+import net.weg.wegproject.product.model.entity.Product;
 
 @Entity
 @AllArgsConstructor
@@ -12,7 +13,7 @@ import net.weg.wegproject.enums.IsolationClass;
 @Data
 @Table(name = "tb_Motors")
 
-public class Motors{
+public class Motors extends Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -132,4 +133,8 @@ public class Motors{
 
     @Column(nullable = false)
     String tropicalizedPainting;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "product_code")
+    Product product_code;
 }

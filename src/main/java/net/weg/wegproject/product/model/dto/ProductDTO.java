@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.assessment.model.dto.AssessmentDTO;
+import net.weg.wegproject.categories.enuns.CategoriesEnums;
 import net.weg.wegproject.ink.model.Ink;
 import org.hibernate.validator.constraints.UniqueElements;
 
@@ -25,5 +26,5 @@ public class ProductDTO {
     @NotNull
     String description;
     AssessmentDTO assessment;
-    Object obj;
+    CategoriesEnums type;
 }

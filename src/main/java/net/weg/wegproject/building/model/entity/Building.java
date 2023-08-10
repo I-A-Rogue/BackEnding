@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.enums.LanguageAcronyms;
+import net.weg.wegproject.product.model.entity.Product;
 
 @Entity
 @AllArgsConstructor
@@ -12,7 +13,7 @@ import net.weg.wegproject.enums.LanguageAcronyms;
 @Data
 @Table(name = "tb_Building")
 
-public class Building{
+public class Building extends Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -63,4 +64,8 @@ public class Building{
 
     @Column(nullable = false)
     String colorStructure;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "product_code")
+    Product product_code;
 }

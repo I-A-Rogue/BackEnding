@@ -7,12 +7,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.product.model.dto.ProductDTO;
 import net.weg.wegproject.enums.IsolationClass;
+import net.weg.wegproject.product.model.entity.Product;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 
-public class MotorsDTO {
+public class MotorsDTO extends Product {
     @NotNull
     String carcass;
     @NotNull

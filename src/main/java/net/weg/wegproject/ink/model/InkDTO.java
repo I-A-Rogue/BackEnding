@@ -13,7 +13,7 @@ import net.weg.wegproject.product.model.entity.Product;
 @NoArgsConstructor
 @Data
 
-public class InkDTO {
+public class InkDTO extends Product{
     @NotNull
     String color;
     @NotNull

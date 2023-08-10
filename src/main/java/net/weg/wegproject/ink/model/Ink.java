@@ -28,4 +28,8 @@ public class Ink extends Product {
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     InkEnums format;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "product_code")
+    Product product_code;
 }

@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.categories.model.entity.Categories;
 import net.weg.wegproject.enums.InputPhases;
+import net.weg.wegproject.product.model.entity.Product;
 
 @Entity
 @AllArgsConstructor
@@ -13,24 +14,27 @@ import net.weg.wegproject.enums.InputPhases;
 @Data
 @Table(name = "tb_Automation")
 
-public class Automation extends Categories {
+public class Automation extends Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
     Integer nominalVoltageInput; //(Volts (V))
+    @Enumerated(EnumType.STRING)
+    InputPhases numberPhasesEntry; //(Ex.:Trifásico)
+    String settings; //(Ex.: Com opcionais)
+    Integer nominalChain; //(Ampere (A))
+    Integer nominalChainH; //(Ampere (A)??)
+    String filterRFI; //(ex.: Com filtro (cat C3))
+    String degreeProtection; //(ex.: IP20)
+    String rheostaticBraking; //(ex.: Standard sem frenagem)
+    boolean inductorLink; //(Sim ou Não)
+    float temperature; //(Celsius(Cº))
+    boolean safetyStop; //(Sim ou Não)
+    String electronicFeed; //(Interna, externa ou sem)
 
-//    @Enumerated(EnumType.STRING)
-//    InputPhases numberPhasesEntry; //(Ex.:Trifásico)
-//    String settings; //(Ex.: Com opcionais)
-//    Integer nominalChain; //(Ampere (A))
-//    Integer nominalChainH; //(Ampere (A)??)
-//    String filterRFI; //(ex.: Com filtro (cat C3))
-//    String degreeProtection; //(ex.: IP20)
-//    String rheostaticBraking; //(ex.: Standard sem frenagem)
-//    boolean inductorLink; //(Sim ou Não)
-//    float temperature; //(Celsius(Cº))
-//    boolean safetyStop; //(Sim ou Não)
-//    String electronicFeed; //(Interna, externa ou sem)
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "product_code")
+    Product product_code;
 
 }

@@ -80,4 +80,8 @@ public class Security extends Product{
 
     @Column(nullable = false)
     String terminalType;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "product_code")
+    Product product_code;
 }
