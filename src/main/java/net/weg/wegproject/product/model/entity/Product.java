@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import net.weg.wegproject.assessment.model.entity.Assessment;
 import net.weg.wegproject.automation.model.entity.Automation;
 import net.weg.wegproject.building.model.entity.Building;
+import net.weg.wegproject.categories.enuns.CategoriesEnums;
 import net.weg.wegproject.categories.model.entity.Categories;
 import net.weg.wegproject.ink.model.Ink;
 import net.weg.wegproject.motors.model.Motors;
@@ -18,7 +19,7 @@ import net.weg.wegproject.security.model.Security;
 @NoArgsConstructor
 @Data
 @Table(name = "tb_Product")
-
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Product {
     @Id
     private Long code;
@@ -33,24 +34,9 @@ public class Product {
     @Column(nullable = false)
     private String description;
 
+    private CategoriesEnums categories;
+
     @ManyToOne
     private Assessment assessment;
 
-    @OneToOne
-    private Categories categories;
-
-    @OneToOne(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = true)
-    private Motors motors;
-
-    @OneToOne(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = true)
-    private Automation automation;
-
-    @OneToOne(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = true)
-    private Ink ink;
-
-    @OneToOne(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = true)
-    private Building building;
-
-    @OneToOne(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = true)
-    private Security security;
 }

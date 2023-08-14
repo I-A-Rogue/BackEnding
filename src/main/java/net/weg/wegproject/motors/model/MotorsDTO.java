@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.product.model.dto.ProductDTO;
 import net.weg.wegproject.enums.IsolationClass;
+import net.weg.wegproject.product.model.entity.Product;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -90,4 +91,6 @@ public class MotorsDTO extends ProductDTO {
     String protectorFenolicOverload;
     @NotNull
     String tropicalizedPainting;
+
+    private Product produto;
 }

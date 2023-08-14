@@ -8,6 +8,7 @@ import net.weg.wegproject.assessment.model.dto.AssessmentDTO;
 import net.weg.wegproject.assessment.model.entity.Assessment;
 import net.weg.wegproject.automation.model.entity.Automation;
 import net.weg.wegproject.building.model.entity.Building;
+import net.weg.wegproject.categories.enuns.CategoriesEnums;
 import net.weg.wegproject.categories.model.entity.Categories;
 import net.weg.wegproject.ink.model.Ink;
 import net.weg.wegproject.motors.model.Motors;
@@ -32,7 +33,7 @@ public class ProductDTO {
     String description;
     Assessment assessment;
 
-    private Categories categories;
+    private CategoriesEnums categories;
 
     private Object object;
 

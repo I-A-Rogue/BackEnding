@@ -18,10 +18,6 @@ import org.springframework.beans.BeanUtils;
 
 public class Building extends Product{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-
     @Column(nullable = false)
     String referenceProduct;
 

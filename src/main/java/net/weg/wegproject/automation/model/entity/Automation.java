@@ -20,10 +20,6 @@ import org.springframework.beans.BeanUtils;
 
 public class Automation extends Product {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-
     Integer nominalVoltageInput; //(Volts (V))
     @Enumerated(EnumType.STRING)
     InputPhases numberPhasesEntry; //(Ex.:Trifásico)

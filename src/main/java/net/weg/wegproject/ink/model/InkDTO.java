@@ -7,6 +7,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.product.model.dto.ProductDTO;
 import net.weg.wegproject.enums.InkEnums;
+import net.weg.wegproject.product.model.entity.Product;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -19,5 +21,6 @@ public class InkDTO extends ProductDTO {
     @NotNull
     @Enumerated(EnumType.STRING)
     InkEnums type;
+    private Product produto;
     
 }

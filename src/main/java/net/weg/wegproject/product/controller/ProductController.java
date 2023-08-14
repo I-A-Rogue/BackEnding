@@ -1,6 +1,8 @@
 package net.weg.wegproject.product.controller;
 
 import lombok.AllArgsConstructor;
+import net.weg.wegproject.ink.service.InkService;
+import net.weg.wegproject.motors.service.MotorsService;
 import net.weg.wegproject.product.model.entity.ProductFactory;
 import net.weg.wegproject.product.service.ProductService;
 import net.weg.wegproject.product.exceptions.*;
@@ -19,13 +21,18 @@ import java.util.List;
 @RequestMapping("/product")
 public class ProductController {
     ProductService productService;
+    InkService inkService;
 
     @PostMapping
     public ResponseEntity<Product> create(@RequestBody ProductDTO objDTO) {
         try {
             try {
+                Product prod = new Product();
+                BeanUtils.copyProperties(objDTO, prod);
                 Product product = ProductFactory.criarProduto(objDTO);
-                return ResponseEntity.ok(productService.create(product));
+                System.out.println("\n\n\n"+product+"\n");
+                System.out.println(prod+"\n\n\n");
+                return ResponseEntity.ok(productService.create(prod));
             } catch (BeansException e) {
                 return ResponseEntity.badRequest().build();
             }

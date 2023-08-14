@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import net.weg.wegproject.ink.model.Ink;
 import net.weg.wegproject.ink.repository.InkRepository;
 import net.weg.wegproject.interfeces.ServiceInterface;
+import net.weg.wegproject.product.model.entity.Product;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
