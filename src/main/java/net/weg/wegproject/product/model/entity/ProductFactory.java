@@ -20,13 +20,7 @@ public class ProductFactory {
         System.out.println(productDTO.getCategories());
         switch (productDTO.getCategories().name()) {
             case "MOTOR" -> {
-                Motors motors = new Motors();
-                MotorsDTO motorsDTO = (MotorsDTO) productDTO.getObject();
-                BeanUtils.copyProperties(motorsDTO, motors);
-                Product product = new Product();
-                BeanUtils.copyProperties(productDTO, product);
-                motors.setProduto(product);
-                return motors;
+                return new Motors();
             }
             case "AUTOMATION"->{
                 return new Automation();
