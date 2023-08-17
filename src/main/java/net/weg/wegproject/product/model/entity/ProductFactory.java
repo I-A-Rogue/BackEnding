@@ -14,6 +14,8 @@ import org.springframework.beans.BeanUtils;
 
 import java.util.Map;
 
+import static net.weg.wegproject.categories.enuns.CategoriesEnums.TINTA;
+
 public class ProductFactory {
 
     public static Product criarProduto(ProductDTO productDTO) {
@@ -34,10 +36,7 @@ public class ProductFactory {
                 Map<String, Object> data = (Map<String, Object>) object;
                 ink.setColor((String) data.get("color"));
                 ink.setDensity((String) data.get("density"));
-                ink.setType((InkEnums) data.get("type"));
-                Product product = new Product();
-                BeanUtils.copyProperties(productDTO, product);
-                ink.setProduto(product);
+                ink.setType(InkEnums.PO);
                 return ink;
             }
             case "SECURITY"->{

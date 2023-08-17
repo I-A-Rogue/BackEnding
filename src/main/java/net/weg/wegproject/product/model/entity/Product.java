@@ -24,7 +24,7 @@ public class Product {
     @Id
     private Long code;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String name;
 
     float price;

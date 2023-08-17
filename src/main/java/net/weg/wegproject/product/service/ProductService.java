@@ -1,6 +1,7 @@
 package net.weg.wegproject.product.service;
 
 import lombok.AllArgsConstructor;
+import net.weg.wegproject.categories.enuns.CategoriesEnums;
 import net.weg.wegproject.product.repository.ProductRepository;
 import net.weg.wegproject.product.model.entity.Product;
 import net.weg.wegproject.interfeces.ServiceInterface;
@@ -17,6 +18,10 @@ public class ProductService implements ServiceInterface<Product> {
     @Override
     public Product create(Product obj) {
         return productRepository.save(obj);
+    }
+
+    public List<Product> findAllByCategories(CategoriesEnums categories){
+        return productRepository.findAllByCategories(categories);
     }
 
     @Override
