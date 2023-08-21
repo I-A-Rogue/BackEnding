@@ -73,9 +73,7 @@ public class ProductController {
         }
     }
     @GetMapping("/{id}")
-    public ResponseEntity<Product> findOne(@PathVariable Long id,
-                                           @RequestParam("size") int size,
-                                           @RequestParam("page") int page) {
+    public ResponseEntity<Product> findOne(@PathVariable Long id) {
         try {
             return ResponseEntity.ok(productService.findOne(id));
         } catch (Exception e) {
