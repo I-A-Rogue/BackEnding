@@ -10,15 +10,19 @@ import net.weg.wegproject.ink.model.Ink;
 import net.weg.wegproject.ink.service.InkService;
 import net.weg.wegproject.motors.model.Motors;
 import net.weg.wegproject.motors.service.MotorsService;
-import net.weg.wegproject.product.model.entity.ProductFactory;
-import net.weg.wegproject.product.service.ProductService;
-import net.weg.wegproject.product.exceptions.*;
+import net.weg.wegproject.product.exceptions.NoProductException;
+import net.weg.wegproject.product.exceptions.NoProductsException;
+import net.weg.wegproject.product.exceptions.ProductDeleteException;
+import net.weg.wegproject.product.exceptions.ProductUpdateException;
 import net.weg.wegproject.product.model.dto.ProductDTO;
 import net.weg.wegproject.product.model.entity.Product;
+import net.weg.wegproject.product.model.entity.ProductFactory;
+import net.weg.wegproject.product.service.ProductService;
 import net.weg.wegproject.security.model.Security;
 import net.weg.wegproject.security.service.SecurityService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeansException;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -48,18 +52,30 @@ public class ProductController {
                 return ResponseEntity.badRequest().build();
             }
     }
+    @GetMapping("/all")
+    public ResponseEntity<List<Product>> findAll(@RequestParam("size") int size,
+                                                 @RequestParam("page") int page) {
+        try {
+            return ResponseEntity.ok(productService.findAll(PageRequest.of(page, size)));
+        } catch (Exception e) {
+            throw new NoProductsException();
+        }
+    }
 
     @GetMapping
-    public ResponseEntity<List<Product>> findAllByCategories(@RequestParam CategoriesEnums categories) {
+    public ResponseEntity<List<Product>> findAllByCategories(@RequestParam CategoriesEnums categories,
+                                                             @RequestParam("size") int size,
+                                                             @RequestParam("page") int page) {
         try {
-            List<Product> produtos = productService.findAllByCategories(categories);
-            return ResponseEntity.ok().body(produtos);
+            return ResponseEntity.ok(productService.findAllByCategories(PageRequest.of(page, size), categories));
         } catch (Exception e) {
             throw new NoProductsException();
         }
     }
     @GetMapping("/{id}")
-    public ResponseEntity<Product> findOne(@PathVariable Long id) {
+    public ResponseEntity<Product> findOne(@PathVariable Long id,
+                                           @RequestParam("size") int size,
+                                           @RequestParam("page") int page) {
         try {
             return ResponseEntity.ok(productService.findOne(id));
         } catch (Exception e) {

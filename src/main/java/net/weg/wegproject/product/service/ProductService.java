@@ -5,6 +5,7 @@ import net.weg.wegproject.categories.enuns.CategoriesEnums;
 import net.weg.wegproject.product.repository.ProductRepository;
 import net.weg.wegproject.product.model.entity.Product;
 import net.weg.wegproject.interfeces.ServiceInterface;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,24 +13,21 @@ import java.util.NoSuchElementException;
 
 @Service
 @AllArgsConstructor
-public class ProductService implements ServiceInterface<Product> {
+public class ProductService{
     ProductRepository productRepository;
 
-    @Override
     public Product create(Product obj) {
         return productRepository.save(obj);
     }
 
-    public List<Product> findAllByCategories(CategoriesEnums categories){
-        return productRepository.findAllByCategories(categories);
+    public List<Product> findAllByCategories(Pageable pageable, CategoriesEnums categories){
+        return productRepository.findAllByCategories(pageable, categories);
     }
 
-    @Override
-    public List<Product> findAll() {
+    public List<Product> findAll(Pageable pageable) {
         return productRepository.findAll();
     }
 
-    @Override
     public Product findOne(Long id) {
         try {
             return productRepository.findById(id).get();
@@ -38,12 +36,10 @@ public class ProductService implements ServiceInterface<Product> {
         }
     }
 
-    @Override
     public Product update(Product obj) {
         return productRepository.save(obj);
     }
 
-    @Override
     public Product delete(Long id) {
         Product product = findOne(id);
         productRepository.delete(product);
