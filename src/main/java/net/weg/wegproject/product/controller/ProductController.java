@@ -1,25 +1,29 @@
 package net.weg.wegproject.product.controller;
 
 import lombok.AllArgsConstructor;
+import net.weg.wegproject.automation.model.entity.Automation;
+import net.weg.wegproject.automation.service.AutomationService;
+import net.weg.wegproject.building.model.entity.Building;
+import net.weg.wegproject.building.service.BuildingService;
 import net.weg.wegproject.categories.enuns.CategoriesEnums;
 import net.weg.wegproject.ink.model.Ink;
 import net.weg.wegproject.ink.service.InkService;
+import net.weg.wegproject.motors.model.Motors;
 import net.weg.wegproject.motors.service.MotorsService;
 import net.weg.wegproject.product.model.entity.ProductFactory;
 import net.weg.wegproject.product.service.ProductService;
 import net.weg.wegproject.product.exceptions.*;
 import net.weg.wegproject.product.model.dto.ProductDTO;
 import net.weg.wegproject.product.model.entity.Product;
+import net.weg.wegproject.security.model.Security;
+import net.weg.wegproject.security.service.SecurityService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
-
-import static net.weg.wegproject.categories.enuns.CategoriesEnums.TINTA;
 
 @AllArgsConstructor
 @Controller
@@ -27,6 +31,10 @@ import static net.weg.wegproject.categories.enuns.CategoriesEnums.TINTA;
 public class ProductController {
     ProductService productService;
     InkService inkService;
+    AutomationService automationService;
+    MotorsService motorsService;
+    BuildingService buildingService;
+    SecurityService securityService;
 
     @PostMapping
     public ResponseEntity<Product> create(@RequestBody ProductDTO objDTO) {
@@ -34,24 +42,17 @@ public class ProductController {
                 Product prod = new Product();
                 BeanUtils.copyProperties(objDTO, prod);
                 Product product = ProductFactory.criarProduto(objDTO);
-                if(product instanceof Ink ink){
-                    BeanUtils.copyProperties(prod, ink);
-                    inkService.create(ink);
-                    ink.setProduto(prod);
-                    inkService.create(ink);
-                }
+                manager(product, prod);
                 return ResponseEntity.ok(prod);
             } catch (BeansException e) {
                 return ResponseEntity.badRequest().build();
             }
     }
+
     @GetMapping
     public ResponseEntity<List<Product>> findAllByCategories(@RequestParam CategoriesEnums categories) {
         try {
-            System.out.println(categories);
             List<Product> produtos = productService.findAllByCategories(categories);
-            System.out.println(produtos.get(0));
-
             return ResponseEntity.ok().body(produtos);
         } catch (Exception e) {
             throw new NoProductsException();
@@ -86,5 +87,39 @@ public class ProductController {
         } catch (Exception e) {
             throw new ProductDeleteException();
         }
+    }
+
+    private void manager(Product product, Product prod) {
+        if(product instanceof Ink ink){
+            BeanUtils.copyProperties(prod, ink);
+            inkService.create(ink);
+            ink.setProduto(prod);
+            inkService.create(ink);
+        }
+        if(product instanceof Automation automation){
+            BeanUtils.copyProperties(prod, automation);
+            automationService.create(automation);
+            automation.setProduto(prod);
+            automationService.create(automation);
+        }
+        if(product instanceof Motors motors){
+            BeanUtils.copyProperties(prod, motors);
+            motorsService.create(motors);
+            motors.setProduto(prod);
+            motorsService.create(motors);
+        }
+        if(product instanceof Building building){
+            BeanUtils.copyProperties(prod, building);
+            buildingService.create(building);
+            building.setProduto(prod);
+            buildingService.create(building);
+        }
+        if(product instanceof Security security){
+            BeanUtils.copyProperties(prod, security);
+            securityService.create(security);
+            security.setProduto(prod);
+            securityService.create(security);
+        }
+
     }
 }
