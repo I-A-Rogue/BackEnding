@@ -36,7 +36,6 @@ public class ProductController {
                 Product product = ProductFactory.criarProduto(objDTO);
                 if(product instanceof Ink ink){
                     BeanUtils.copyProperties(prod, ink);
-                    System.out.println(ink);
                     inkService.create(ink);
                     ink.setProduto(prod);
                     inkService.create(ink);
@@ -50,14 +49,10 @@ public class ProductController {
     public ResponseEntity<List<Product>> findAllByCategories(@RequestParam CategoriesEnums categories) {
         try {
             System.out.println(categories);
-//            List<Product> inks = new ArrayList<>();
             List<Product> produtos = productService.findAllByCategories(categories);
-            System.out.println(produtos);
-//            for (Product produto:produtos) {
-//                inks.add(inkService.findOne(produto.getCode()));
-//            }
+            System.out.println(produtos.get(0));
 
-            return ResponseEntity.ok().build();
+            return ResponseEntity.ok().body(produtos);
         } catch (Exception e) {
             throw new NoProductsException();
         }

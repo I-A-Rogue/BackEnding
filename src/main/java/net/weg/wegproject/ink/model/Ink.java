@@ -33,11 +33,20 @@ public class Ink extends Product {
     @JsonIgnore
     private Product produto;
 
-    public Ink(Long code, String name, float price, Integer stockSize, String description, CategoriesEnums categories, Assessment assessment, String color, String density, InkEnums type, Product produto) {
-        super(code, name, price, stockSize, description, categories, assessment);
-        this.color = color;
-        this.density = density;
-        this.type = type;
-        this.produto = produto;
+    @Override
+    public String toString() {
+        return "Ink{" +
+                "color='" + color + '\'' +
+                ", density='" + density + '\'' +
+                ", type=" + type +
+                "Product{" +
+                ", code=" + produto.getCode() +
+                ", name='" + produto.getName() + '\'' +
+                ", price=" + produto.getPrice() +
+                ", stockSize=" + produto.getStockSize() +
+                ", description='" + produto.getDescription() + '\'' +
+                ", categories=" + produto.getCategories() +
+                ", assessment=" + produto.getAssessment() +
+                '}';
     }
 }

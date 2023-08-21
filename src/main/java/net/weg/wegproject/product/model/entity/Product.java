@@ -27,7 +27,7 @@ public class Product {
     @Column(nullable = false)
     private String name;
 
-    float price;
+    Float price;
 
     private Integer stockSize;
 
@@ -38,5 +38,6 @@ public class Product {
 
     @ManyToOne
     private Assessment assessment;
+
 
 }
