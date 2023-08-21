@@ -14,13 +14,13 @@ public class ProductFactory {
 
     public static Product criarProduto(ProductDTO productDTO) {
         switch (productDTO.getCategories().name()) {
-            case "MOTOR" -> {
+            case "MOTORS" -> {
                 Motors motors = new Motors();
                 Object object = productDTO.getObject();
                 modelMapper.map(object, motors);
                 return motors;
             }
-            case "AUTOMACAO"->{
+            case "AUTOMATION"->{
                 Automation automation = new Automation();
                 Object object = productDTO.getObject();
                 modelMapper.map(object, automation);
@@ -32,10 +32,11 @@ public class ProductFactory {
                 modelMapper.map(object, building);
                 return building;
             }
-            case "TINTA"-> {
+            case "INK"-> {
                 Ink ink = new Ink();
                 Object object = productDTO.getObject();
                 modelMapper.map(object, ink);
+                System.out.println(ink);
                 return ink;
             }
             case "SECURITY"->{

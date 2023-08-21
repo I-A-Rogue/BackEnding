@@ -7,7 +7,7 @@ import net.weg.wegproject.ConcreteClasses.productsClasses.building.model.Buildin
 import net.weg.wegproject.ConcreteClasses.productsClasses.building.service.BuildingService;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.ProductFactory;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.service.ProductService;
-import net.weg.wegproject.categories.enuns.CategoriesEnums;
+import net.weg.wegproject.enums.CategoriesEnums;
 import net.weg.wegproject.ConcreteClasses.productsClasses.ink.model.Ink;
 import net.weg.wegproject.ink.service.InkService;
 import net.weg.wegproject.ConcreteClasses.productsClasses.motors.model.Motors;

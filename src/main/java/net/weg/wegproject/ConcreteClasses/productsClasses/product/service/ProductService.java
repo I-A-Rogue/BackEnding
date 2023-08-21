@@ -1,7 +1,7 @@
 package net.weg.wegproject.ConcreteClasses.productsClasses.product.service;
 
 import lombok.AllArgsConstructor;
-import net.weg.wegproject.categories.enuns.CategoriesEnums;
+import net.weg.wegproject.enums.CategoriesEnums;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.repository.ProductRepository;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
 import org.springframework.data.domain.Pageable;
