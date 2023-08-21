@@ -5,13 +5,27 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.assessment.model.entity.Assessment;
+import net.weg.wegproject.automation.model.entity.Automation;
+import net.weg.wegproject.building.model.entity.Building;
+import net.weg.wegproject.categories.enuns.CategoriesEnums;
 import net.weg.wegproject.categories.model.entity.Categories;
+import net.weg.wegproject.ink.model.Ink;
+import net.weg.wegproject.motors.model.Motors;
+import net.weg.wegproject.security.model.Security;
+import org.hibernate.annotations.JdbcType;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.annotations.JdbcTypeRegistration;
+import org.hibernate.annotations.JdbcTypeRegistrations;
+
+import java.sql.Types;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Table(name = "tb_Product")
+@Inheritance(strategy = InheritanceType.JOINED)
 
 public class Product {
     @Id
@@ -19,12 +33,24 @@ public class Product {
     Long code;
     @Column(nullable = false, unique = true)
     String name;
+    @Column(nullable = false)
     float price;
     Integer stockSize;
     @Column(nullable = false)
     String description;
     @ManyToOne
     Assessment assessment;
-    @OneToOne
-    Categories categories;
+    @Column(nullable = false)
+    CategoriesEnums categories;
+    @OneToOne(mappedBy = "product_code", cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = true)
+    Motors motors;
+    @OneToOne(mappedBy = "product_code", cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = true)
+    Automation automation;
+    @OneToOne(mappedBy = "product_code", cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = true)
+    Building building;
+    @OneToOne(mappedBy = "product_code", cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = true)
+    Ink ink;
+    @OneToOne(mappedBy = "product_code", cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = true)
+    Security security;
+
 }

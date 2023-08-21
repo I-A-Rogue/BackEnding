@@ -1,5 +1,5 @@
 package net.weg.wegproject.enums;
 
 public enum InkEnums {
-    LIQUIDA, PO, AUTOMOTIVA, FROTA, VERNIZES, DILUENTES
+    LIQUID, POWDER, AUTOMOTIVE, FLEET, VERNISHES, THINNERS
 }

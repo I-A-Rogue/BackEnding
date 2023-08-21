@@ -4,8 +4,9 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import net.weg.wegproject.product.model.entity.Product;
+import net.weg.wegproject.categories.model.entity.Categories;
 import net.weg.wegproject.enums.InputPhases;
+import net.weg.wegproject.product.model.entity.Product;
 
 @Entity
 @AllArgsConstructor
@@ -14,6 +15,9 @@ import net.weg.wegproject.enums.InputPhases;
 @Table(name = "tb_Automation")
 
 public class Automation extends Product {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long id;
 
     Integer nominalVoltageInput; //(Volts (V))
     @Enumerated(EnumType.STRING)
@@ -28,5 +32,9 @@ public class Automation extends Product {
     float temperature; //(Celsius(Cº))
     boolean safetyStop; //(Sim ou Não)
     String electronicFeed; //(Interna, externa ou sem)
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "product_code")
+    Product product_code;
 
 }

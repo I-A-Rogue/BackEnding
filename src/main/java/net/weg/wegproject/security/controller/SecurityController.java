@@ -1,7 +1,7 @@
 package net.weg.wegproject.security.controller;
 
 import lombok.AllArgsConstructor;
-import net.weg.wegproject.security.dto.SecurityDTO;
+import net.weg.wegproject.security.model.dto.SecurityDTO;
 import net.weg.wegproject.security.exceptions.*;
 import net.weg.wegproject.security.model.Security;
 import net.weg.wegproject.security.service.SecurityService;
