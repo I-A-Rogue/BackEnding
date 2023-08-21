@@ -1,5 +1,5 @@
 package net.weg.wegproject.enums;
 
 public enum InputPhases {
-    MONOFASICO, LINEAR, TRIFASICO
+    SINGLE_PHASE, LINEAR, THREE_PHASE
 }
