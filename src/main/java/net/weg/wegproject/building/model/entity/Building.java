@@ -1,5 +1,6 @@
 package net.weg.wegproject.building.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -66,5 +67,36 @@ public class Building extends Product{
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "produto_codigo")
+    @JsonIgnore
     private Product produto;
+
+    @Override
+    public String toString() {
+        return "Building{" +
+                "referenceProduct='" + referenceProduct + '\'' +
+                ", codigoInteligente='" + codigoInteligente + '\'' +
+                ", ratedPower=" + ratedPower +
+                ", voltageInput='" + voltageInput + '\'' +
+                ", voltageOutput=" + voltageOutput +
+                ", autonomy=" + autonomy +
+                ", batterytype='" + batterytype + '\'' +
+                ", frequency=" + frequency +
+                ", language=" + language +
+                ", nominalChain=" + nominalChain +
+                ", busVoltage=" + busVoltage +
+                ", currentBatteries=" + currentBatteries +
+                ", typeplug='" + typeplug + '\'' +
+                ", casing='" + casing + '\'' +
+                ", colorStructure='" + colorStructure + '\'' +
+                "Product{" +
+                ", code=" + produto.getCode() +
+                ", name='" + produto.getName() + '\'' +
+                ", price=" + produto.getPrice() +
+                ", stockSize=" + produto.getStockSize() +
+                ", description='" + produto.getDescription() + '\'' +
+                ", categories=" + produto.getCategories() +
+                ", assessment=" + produto.getAssessment() +
+                '}';
+    }
+
 }

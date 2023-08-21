@@ -8,6 +8,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.product.model.dto.ProductDTO;
 import net.weg.wegproject.enums.InputPhases;
+import net.weg.wegproject.product.model.entity.Product;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -49,4 +51,6 @@ public class AutomationDTO extends ProductDTO {
 
     @NotNull
     String electronicFeed;
+
+    private Product produto;
 }

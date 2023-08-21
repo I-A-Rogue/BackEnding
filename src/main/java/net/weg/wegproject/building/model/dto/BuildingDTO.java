@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.product.model.dto.ProductDTO;
 import net.weg.wegproject.enums.LanguageAcronyms;
+import net.weg.wegproject.product.model.entity.Product;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -44,5 +45,7 @@ public class BuildingDTO extends ProductDTO {
     String involucro;
     @NotNull
     String corEstrutura;
+
+    private Product produto;
 
 }

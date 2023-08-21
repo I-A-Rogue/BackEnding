@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.product.model.dto.ProductDTO;
+import net.weg.wegproject.product.model.entity.Product;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -53,4 +54,6 @@ public class SecurityDTO extends ProductDTO {
     Integer voltageCommand; //(Volts (V))
     @NotNull
     String terminalType;
+
+    private Product produto;
 }

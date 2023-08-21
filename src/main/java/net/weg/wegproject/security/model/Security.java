@@ -1,5 +1,6 @@
 package net.weg.wegproject.security.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -81,5 +82,41 @@ public class Security extends Product {
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "produto_codigo")
+    @JsonIgnore
     private Product produto;
+
+    @Override
+    public String toString() {
+        return "Security{" +
+                "voltageNominalIsolationUi=" + voltageNominalIsolationUi +
+                ", limitMinimumFrequency=" + limitMinimumFrequency +
+                ", limitMaximumFrequency=" + limitMaximumFrequency +
+                ", mechanics=" + mechanics +
+                ", mechanicalLife=" + mechanicalLife +
+                ", EletricalLife='" + EletricalLife + '\'' +
+                ", degreeProtecaoTerminals='" + degreeProtecaoTerminals + '\'' +
+                ", grauProtecaoBobina='" + grauProtecaoBobina + '\'' +
+                ", degreeProtectionCoil=" + degreeProtectionCoil +
+                ", currentNominalIn='" + currentNominalIn + '\'' +
+                ", currentNominalEmployment='" + currentNominalEmployment + '\'' +
+                ", voltageEmploymentUIEC=" + voltageEmploymentUIEC +
+                ", voltageEmploymentUIUE=" + voltageEmploymentUIUE +
+                ", height=" + height +
+                ", Width=" + Width +
+                ", Depth=" + Depth +
+                ", grossWeight=" + grossWeight +
+                ", Reference='" + Reference + '\'' +
+                ", contact='" + contact + '\'' +
+                ", voltageCommand=" + voltageCommand +
+                ", terminalType='" + terminalType + '\'' +
+                "Product{" +
+                ", code=" + produto.getCode() +
+                ", name='" + produto.getName() + '\'' +
+                ", price=" + produto.getPrice() +
+                ", stockSize=" + produto.getStockSize() +
+                ", description='" + produto.getDescription() + '\'' +
+                ", categories=" + produto.getCategories() +
+                ", assessment=" + produto.getAssessment() +
+                '}';
+    }
 }
