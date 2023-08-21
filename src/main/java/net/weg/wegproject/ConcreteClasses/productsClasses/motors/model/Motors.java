@@ -12,7 +12,6 @@ import net.weg.wegproject.enums.IsolationClass;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Table(name = "tb_Motors")
 
 public class Motors extends Product {
 

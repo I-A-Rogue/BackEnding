@@ -11,7 +11,6 @@ import net.weg.wegproject.categories.enuns.CategoriesEnums;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Table(name = "tb_Product")
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Product {
 

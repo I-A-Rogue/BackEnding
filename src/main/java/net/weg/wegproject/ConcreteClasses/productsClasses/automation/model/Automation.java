@@ -12,7 +12,6 @@ import net.weg.wegproject.enums.InputPhases;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Table(name = "tb_Automation")
 
 public class Automation extends Product {
 

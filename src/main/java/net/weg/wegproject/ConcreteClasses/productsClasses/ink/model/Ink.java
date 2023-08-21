@@ -12,7 +12,6 @@ import net.weg.wegproject.enums.InkEnums;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Table(name = "tb_Ink")
 
 public class Ink extends Product {
 

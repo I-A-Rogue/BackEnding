@@ -12,7 +12,6 @@ import net.weg.wegproject.enums.LanguageAcronyms;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Table(name = "tb_Building")
 
 public class Building extends Product{
 

@@ -5,7 +5,6 @@ import net.weg.wegproject.ConcreteClasses.user.exceptions.*;
 import net.weg.wegproject.ConcreteClasses.user.model.dto.UserDTO;
 import net.weg.wegproject.ConcreteClasses.user.model.entity.User;
 import net.weg.wegproject.ConcreteClasses.user.service.UserService;
-import net.weg.wegproject.user.exceptions.*;
 import org.springframework.beans.BeanUtils;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

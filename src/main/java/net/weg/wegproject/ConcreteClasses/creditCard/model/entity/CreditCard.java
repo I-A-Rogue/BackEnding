@@ -16,7 +16,6 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "tb_CreditCard")
 
 public class CreditCard {
     @Id
