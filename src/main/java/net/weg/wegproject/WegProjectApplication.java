@@ -9,7 +9,6 @@ public class WegProjectApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(WegProjectApplication.class, args);
-//		BancoUtil.createRandomMotors();
 	}
 
 }
