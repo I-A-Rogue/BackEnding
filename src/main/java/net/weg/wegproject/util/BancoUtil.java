@@ -26,9 +26,9 @@ public class BancoUtil {
 
     @PostConstruct
     public void createRandomMotors() {
-        for (int i = 0; i <= 10; i++) {
+        for (Long i = 0l; i <= 30; i++) {
             ProductDTO productDTO = new ProductDTO();
-            productDTO.setCode(faker.number().randomNumber());
+            productDTO.setCode(i);
             productDTO.setName(faker.commerce().productName());
             productDTO.setPrice((float) faker.number().randomDouble(2, 10, 1000)); // Adjust the range as needed
             productDTO.setStockSize(faker.number().randomDigit());
