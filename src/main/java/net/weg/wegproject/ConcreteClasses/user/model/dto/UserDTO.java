@@ -34,10 +34,6 @@ public class UserDTO {
 
     private String address;
 
-    private Saves saves;
-
-    private Cart cart;
-
     private List<CreditCard> cards;
 
 }

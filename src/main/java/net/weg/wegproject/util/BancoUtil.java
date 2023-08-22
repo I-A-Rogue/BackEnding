@@ -11,9 +11,13 @@ import net.weg.wegproject.ConcreteClasses.productsClasses.motors.model.Motors;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.controller.ProductController;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.dto.ProductDTO;
 import net.weg.wegproject.ConcreteClasses.productsClasses.security.model.Security;
+import net.weg.wegproject.ConcreteClasses.user.controller.UserController;
+import net.weg.wegproject.ConcreteClasses.user.model.dto.UserDTO;
 import net.weg.wegproject.enums.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
 
 @Component
 @AllArgsConstructor
@@ -22,6 +26,8 @@ public class BancoUtil {
 
     @Autowired
     private ProductController productController;
+    @Autowired
+    private UserController userController;
     private final Faker faker = new Faker();
 
     @PostConstruct
@@ -46,6 +52,19 @@ public class BancoUtil {
             }
             productController.create(productDTO);
         }
+
+        userController.create(gerarUser());
+    }
+
+    public UserDTO gerarUser(){
+        UserDTO userDTO = new UserDTO();
+        userDTO.setName(faker.name().fullName());
+        userDTO.setCpf(faker.number().randomNumber());
+        userDTO.setEmail(faker.internet().emailAddress());
+        userDTO.setPassword(faker.internet().password());
+        userDTO.setAddress(faker.address().fullAddress());
+        userDTO.setCards(new ArrayList<>());
+        return userDTO;
     }
 
     public Motors gerarMotor(){
