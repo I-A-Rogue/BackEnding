@@ -1,10 +1,10 @@
-package net.weg.wegproject.assessment.controller;
+package net.weg.wegproject.ConcreteClasses.assessment.controller;
 
 import lombok.AllArgsConstructor;
-import net.weg.wegproject.assessment.exceptions.*;
-import net.weg.wegproject.assessment.model.dto.AssessmentDTO;
-import net.weg.wegproject.assessment.model.entity.Assessment;
-import net.weg.wegproject.assessment.service.AssessmentService;
+import net.weg.wegproject.ConcreteClasses.assessment.exceptions.*;
+import net.weg.wegproject.ConcreteClasses.assessment.model.dto.AssessmentDTO;
+import net.weg.wegproject.ConcreteClasses.assessment.model.entity.Assessment;
+import net.weg.wegproject.ConcreteClasses.assessment.service.AssessmentService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.http.ResponseEntity;

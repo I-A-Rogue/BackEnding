@@ -1,4 +1,4 @@
-package net.weg.wegproject.assessment.model.dto;
+package net.weg.wegproject.ConcreteClasses.assessment.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

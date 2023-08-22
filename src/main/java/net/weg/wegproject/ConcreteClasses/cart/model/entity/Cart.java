@@ -1,5 +1,6 @@
-package net.weg.wegproject.cart.model.entity;
+package net.weg.wegproject.ConcreteClasses.cart.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -28,6 +29,7 @@ public class Cart {
     )
     List<Product> products;
 
-    @ManyToOne
-    User user;
+    @OneToOne(mappedBy = "cart")
+    @JsonIgnore
+    private User user;
 }

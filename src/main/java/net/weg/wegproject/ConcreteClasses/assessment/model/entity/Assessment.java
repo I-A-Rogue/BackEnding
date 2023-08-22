@@ -1,4 +1,4 @@
-package net.weg.wegproject.assessment.model.entity;
+package net.weg.wegproject.ConcreteClasses.assessment.model.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

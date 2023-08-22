@@ -1,4 +1,4 @@
-package net.weg.wegproject.interfeces;
+package net.weg.wegproject.interfaces;
 
 import org.springframework.http.ResponseEntity;
 

@@ -1,9 +1,9 @@
-package net.weg.wegproject.cart.service;
+package net.weg.wegproject.ConcreteClasses.cart.service;
 
 import lombok.AllArgsConstructor;
-import net.weg.wegproject.cart.model.entity.Cart;
-import net.weg.wegproject.cart.repository.CartRepository;
-import net.weg.wegproject.interfeces.ServiceInterface;
+import net.weg.wegproject.ConcreteClasses.cart.model.entity.Cart;
+import net.weg.wegproject.ConcreteClasses.cart.repository.CartRepository;
+import net.weg.wegproject.interfaces.ServiceInterface;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

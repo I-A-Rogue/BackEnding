@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.dto.ProductDTO;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
 import net.weg.wegproject.enums.IsolationClass;
 
@@ -14,6 +15,10 @@ import net.weg.wegproject.enums.IsolationClass;
 @Data
 
 public class Motors extends Product {
+
+    public Motors(ProductDTO productDTO){
+
+    }
 
     @Column(nullable = false)
     private String carcass;

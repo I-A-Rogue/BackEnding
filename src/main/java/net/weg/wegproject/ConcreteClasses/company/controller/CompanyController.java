@@ -1,10 +1,10 @@
-package net.weg.wegproject.company.controller;
+package net.weg.wegproject.ConcreteClasses.company.controller;
 
 import lombok.AllArgsConstructor;
-import net.weg.wegproject.company.exceptions.*;
-import net.weg.wegproject.company.model.dto.CompanyDTO;
-import net.weg.wegproject.company.model.entity.Company;
-import net.weg.wegproject.company.service.CompanyService;
+import net.weg.wegproject.ConcreteClasses.company.exceptions.*;
+import net.weg.wegproject.ConcreteClasses.company.model.dto.CompanyDTO;
+import net.weg.wegproject.ConcreteClasses.company.model.entity.Company;
+import net.weg.wegproject.ConcreteClasses.company.service.CompanyService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.http.ResponseEntity;

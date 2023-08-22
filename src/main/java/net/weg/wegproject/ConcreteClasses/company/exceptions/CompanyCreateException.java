@@ -1,4 +1,4 @@
-package net.weg.wegproject.company.exceptions;
+package net.weg.wegproject.ConcreteClasses.company.exceptions;
 
 public class CompanyCreateException extends RuntimeException{
     public CompanyCreateException() {

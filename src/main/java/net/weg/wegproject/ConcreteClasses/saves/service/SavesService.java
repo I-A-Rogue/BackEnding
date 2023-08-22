@@ -1,11 +1,15 @@
 package net.weg.wegproject.ConcreteClasses.saves.service;
 
+import lombok.AllArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.saves.model.entity.Saves;
 import net.weg.wegproject.ConcreteClasses.saves.repository.SavesRepository;
-import net.weg.wegproject.interfeces.ServiceInterface;
+import net.weg.wegproject.interfaces.ServiceInterface;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
+@AllArgsConstructor
 public class SavesService implements ServiceInterface<Saves> {
     SavesRepository savesRepository;
 

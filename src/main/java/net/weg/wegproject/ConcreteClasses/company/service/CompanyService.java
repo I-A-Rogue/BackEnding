@@ -1,10 +1,10 @@
-package net.weg.wegproject.company.service;
+package net.weg.wegproject.ConcreteClasses.company.service;
 
 import lombok.AllArgsConstructor;
-import net.weg.wegproject.company.exceptions.NoCompanyException;
-import net.weg.wegproject.company.model.entity.Company;
-import net.weg.wegproject.company.repository.CompanyRepository;
-import net.weg.wegproject.interfeces.ServiceInterface;
+import net.weg.wegproject.ConcreteClasses.company.exceptions.NoCompanyException;
+import net.weg.wegproject.ConcreteClasses.company.model.entity.Company;
+import net.weg.wegproject.ConcreteClasses.company.repository.CompanyRepository;
+import net.weg.wegproject.interfaces.ServiceInterface;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

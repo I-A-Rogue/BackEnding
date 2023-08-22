@@ -1,4 +1,4 @@
-package net.weg.wegproject.assessment.exceptions;
+package net.weg.wegproject.ConcreteClasses.assessment.exceptions;
 
 public class AssessmentCreateException extends RuntimeException{
     public AssessmentCreateException() {

@@ -1,5 +1,6 @@
 package net.weg.wegproject.ConcreteClasses.saves.controller;
 
+import lombok.AllArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.saves.model.dto.SavesDTO;
 import net.weg.wegproject.ConcreteClasses.saves.model.entity.Saves;
 import net.weg.wegproject.ConcreteClasses.saves.service.SavesService;
@@ -11,8 +12,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
+@AllArgsConstructor
 @RequestMapping("/saves")
 public class SavesController{
+
     SavesService savesService;
 
     @PostMapping

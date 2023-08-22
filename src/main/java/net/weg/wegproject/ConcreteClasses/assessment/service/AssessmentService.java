@@ -1,9 +1,9 @@
-package net.weg.wegproject.assessment.service;
+package net.weg.wegproject.ConcreteClasses.assessment.service;
 
 import lombok.AllArgsConstructor;
-import net.weg.wegproject.assessment.model.entity.Assessment;
-import net.weg.wegproject.assessment.repository.AssessmentRepository;
-import net.weg.wegproject.interfeces.ServiceInterface;
+import net.weg.wegproject.ConcreteClasses.assessment.model.entity.Assessment;
+import net.weg.wegproject.ConcreteClasses.assessment.repository.AssessmentRepository;
+import net.weg.wegproject.interfaces.ServiceInterface;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

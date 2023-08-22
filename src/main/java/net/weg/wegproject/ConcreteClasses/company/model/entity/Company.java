@@ -1,4 +1,4 @@
-package net.weg.wegproject.company.model.entity;
+package net.weg.wegproject.ConcreteClasses.company.model.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;

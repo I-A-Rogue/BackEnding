@@ -1,4 +1,4 @@
-package net.weg.wegproject.company.model.dto;
+package net.weg.wegproject.ConcreteClasses.company.model.dto;
 
 import jakarta.persistence.Column;
 import jakarta.validation.constraints.*;

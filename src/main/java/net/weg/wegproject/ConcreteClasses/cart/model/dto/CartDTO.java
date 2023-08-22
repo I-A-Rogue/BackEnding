@@ -1,4 +1,4 @@
-package net.weg.wegproject.cart.model.dto;
+package net.weg.wegproject.ConcreteClasses.cart.model.dto;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;

@@ -1,8 +1,9 @@
-package net.weg.wegproject.creditCard.model.entity;
+package net.weg.wegproject.ConcreteClasses.creditCard.model.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,6 +12,7 @@ import org.hibernate.validator.constraints.Range;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Data
@@ -20,25 +22,22 @@ import java.util.Date;
 public class CreditCard {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    private Long id;
 
     @Column(nullable = false)
-    String name;
+    private String name;
 
     @Column(nullable = false)
-    @DateTimeFormat(style = "mm/dd")
-    Date validity;
+    private Date validity;
 
     @Column(nullable = false, unique = true)
-    @Range(max = 16, min = 13)
-    Long number;
+    @Size(max = 16, min = 13)
+    private String number;
 
     @Column(nullable = false)
-    @Max(3)
-    @Min(3)
-    Long CVV;
+    private Long cvv;
 
-    @ManyToOne
-    User user;
+    @ManyToMany(mappedBy = "cards")
+    private List<User> user;
 
 }

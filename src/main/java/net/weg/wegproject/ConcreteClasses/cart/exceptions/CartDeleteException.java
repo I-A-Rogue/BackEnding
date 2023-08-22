@@ -1,4 +1,4 @@
-package net.weg.wegproject.cart.exceptions;
+package net.weg.wegproject.ConcreteClasses.cart.exceptions;
 
 public class CartDeleteException extends RuntimeException{
     public CartDeleteException() {

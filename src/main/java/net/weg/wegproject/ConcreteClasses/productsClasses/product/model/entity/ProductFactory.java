@@ -36,7 +36,6 @@ public class ProductFactory {
                 Ink ink = new Ink();
                 Object object = productDTO.getObject();
                 modelMapper.map(object, ink);
-                System.out.println(ink);
                 return ink;
             }
             case "SECURITY"->{

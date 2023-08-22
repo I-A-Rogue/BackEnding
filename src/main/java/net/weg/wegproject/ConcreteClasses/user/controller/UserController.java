@@ -1,5 +1,6 @@
 package net.weg.wegproject.ConcreteClasses.user.controller;
 
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.user.exceptions.*;
 import net.weg.wegproject.ConcreteClasses.user.model.dto.UserDTO;
@@ -12,21 +13,23 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@NoArgsConstructor
 @Controller
+@AllArgsConstructor
+@RequestMapping("/user")
 public class UserController {
+
     UserService userService;
 
     @PostMapping
     public ResponseEntity<User> create(@RequestBody UserDTO objDTO) {
         try {
-            if (userService.verifyCPF(String.valueOf(objDTO.getRegister()))) {
+//            if (userService.verifyCPF(String.valueOf(objDTO.getRegister()))) {
                 User user = new User();
                 BeanUtils.copyProperties(objDTO, user);
                 return ResponseEntity.ok(userService.create(user));
-            } else {
-                throw new InvalidCpfException();
-            }
+//            } else {
+//                throw new InvalidCpfException();
+//            }
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
         }

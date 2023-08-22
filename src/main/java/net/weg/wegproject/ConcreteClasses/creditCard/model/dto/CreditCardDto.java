@@ -1,6 +1,7 @@
-package net.weg.wegproject.creditCard.model.dto;
+package net.weg.wegproject.ConcreteClasses.creditCard.model.dto;
 
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,10 +19,8 @@ public class CreditCardDto {
     @NotNull
     Date validity;
     @NotNull
-    @Range(max = 16, min = 13)
-    Long number;
+    @Size(max = 16, min = 13)
+    String number;
     @NotNull
-    Long CVV;
-    @NotNull
-    User user;
+    Long cvv;
 }

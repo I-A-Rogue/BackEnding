@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.user.exceptions.*;
 import net.weg.wegproject.ConcreteClasses.user.model.entity.User;
 import net.weg.wegproject.ConcreteClasses.user.repository.UserRepository;
-import net.weg.wegproject.interfeces.ServiceInterface;
+import net.weg.wegproject.interfaces.ServiceInterface;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,7 +19,7 @@ public class UserService implements ServiceInterface<User> {
         try {
             return userRepository.save(obj);
         } catch (Exception e) {
-            throw new UserCreateException();
+            throw new RuntimeException(e.getMessage());
         }
     }
 

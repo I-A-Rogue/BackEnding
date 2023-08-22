@@ -1,4 +1,4 @@
-package net.weg.wegproject.company.exceptions;
+package net.weg.wegproject.ConcreteClasses.company.exceptions;
 
 public class NoCompanyException extends RuntimeException{
     public NoCompanyException() {

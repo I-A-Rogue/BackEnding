@@ -1,4 +1,4 @@
-package net.weg.wegproject.creditCard.exceptions;
+package net.weg.wegproject.ConcreteClasses.creditCard.exceptions;
 
 public class NoCreditCardException extends RuntimeException{
     public NoCreditCardException() {

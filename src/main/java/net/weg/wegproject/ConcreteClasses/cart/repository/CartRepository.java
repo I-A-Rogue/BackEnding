@@ -1,6 +1,6 @@
-package net.weg.wegproject.cart.repository;
+package net.weg.wegproject.ConcreteClasses.cart.repository;
 
-import net.weg.wegproject.cart.model.entity.Cart;
+import net.weg.wegproject.ConcreteClasses.cart.model.entity.Cart;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

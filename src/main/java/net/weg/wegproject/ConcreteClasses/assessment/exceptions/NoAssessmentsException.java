@@ -1,4 +1,4 @@
-package net.weg.wegproject.assessment.exceptions;
+package net.weg.wegproject.ConcreteClasses.assessment.exceptions;
 
 public class NoAssessmentsException extends RuntimeException{
     public NoAssessmentsException() {

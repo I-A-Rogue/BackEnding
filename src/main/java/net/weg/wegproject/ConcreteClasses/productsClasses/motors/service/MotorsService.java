@@ -3,12 +3,8 @@ package net.weg.wegproject.ConcreteClasses.productsClasses.motors.service;
 import lombok.AllArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.productsClasses.motors.model.Motors;
 import net.weg.wegproject.ConcreteClasses.productsClasses.motors.repository.MotorsRepository;
-import net.weg.wegproject.interfeces.ServiceInterface;
-import net.weg.wegproject.interfeces.ServiceProductInterface;
+import net.weg.wegproject.interfaces.ServiceProductInterface;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.NoSuchElementException;
 
 @Service
 @AllArgsConstructor

@@ -1,12 +1,18 @@
-package net.weg.wegproject.creditCard.service;
+package net.weg.wegproject.ConcreteClasses.creditCard.service;
 
-import net.weg.wegproject.creditCard.exceptions.*;
-import net.weg.wegproject.creditCard.model.entity.CreditCard;
-import net.weg.wegproject.creditCard.repository.CreditCardRepository;
-import net.weg.wegproject.interfeces.ServiceInterface;
+
+
+import lombok.AllArgsConstructor;
+import net.weg.wegproject.ConcreteClasses.creditCard.exceptions.*;
+import net.weg.wegproject.ConcreteClasses.creditCard.model.entity.CreditCard;
+import net.weg.wegproject.ConcreteClasses.creditCard.repository.CreditCardRepository;
+import net.weg.wegproject.interfaces.ServiceInterface;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
+@AllArgsConstructor
 public class CreditCardService implements ServiceInterface<CreditCard> {
     CreditCardRepository creditCardRepository;
     @Override
@@ -14,7 +20,7 @@ public class CreditCardService implements ServiceInterface<CreditCard> {
         try {
             return creditCardRepository.save(obj);
         }catch (Exception e) {
-            throw new CreditCardCreateException();
+            throw new RuntimeException(e.getMessage());
         }
     }
 

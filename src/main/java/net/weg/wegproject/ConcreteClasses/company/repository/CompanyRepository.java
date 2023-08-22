@@ -1,6 +1,6 @@
-package net.weg.wegproject.company.repository;
+package net.weg.wegproject.ConcreteClasses.company.repository;
 
-import net.weg.wegproject.company.model.entity.Company;
+import net.weg.wegproject.ConcreteClasses.company.model.entity.Company;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
