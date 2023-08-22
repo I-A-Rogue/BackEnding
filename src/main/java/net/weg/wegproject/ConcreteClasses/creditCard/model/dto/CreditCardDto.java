@@ -9,6 +9,7 @@ import net.weg.wegproject.ConcreteClasses.user.model.entity.User;
 import org.hibernate.validator.constraints.Range;
 
 import java.util.Date;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -23,4 +24,6 @@ public class CreditCardDto {
     String number;
     @NotNull
     Long cvv;
+
+    private List<User> user;
 }

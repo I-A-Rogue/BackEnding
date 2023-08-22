@@ -10,7 +10,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.cart.model.entity.Cart;
+import net.weg.wegproject.ConcreteClasses.creditCard.model.entity.CreditCard;
 import net.weg.wegproject.ConcreteClasses.saves.model.entity.Saves;
+
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -34,5 +37,7 @@ public class UserDTO {
     private Saves saves;
 
     private Cart cart;
+
+    private List<CreditCard> cards;
 
 }

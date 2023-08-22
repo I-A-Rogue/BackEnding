@@ -16,10 +16,6 @@ import net.weg.wegproject.enums.IsolationClass;
 
 public class Motors extends Product {
 
-    public Motors(ProductDTO productDTO){
-
-    }
-
     @Column(nullable = false)
     private String carcass;
 

@@ -24,8 +24,8 @@ public class Cart {
     Integer size;
     @ManyToMany
     @JoinTable(
-            joinColumns = @JoinColumn(name = "id_Product"),
-            inverseJoinColumns = @JoinColumn(name = "id_Cart")
+            joinColumns = @JoinColumn(name = "id_Cart"),
+            inverseJoinColumns = @JoinColumn(name = "id_Product")
     )
     List<Product> products;
 

@@ -47,6 +47,6 @@ public class User {
     @OneToOne(cascade = CascadeType.ALL)
     private Cart cart;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "user")
     private List<CreditCard> cards;
 }

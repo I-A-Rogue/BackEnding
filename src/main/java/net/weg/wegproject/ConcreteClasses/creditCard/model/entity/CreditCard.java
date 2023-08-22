@@ -37,7 +37,7 @@ public class CreditCard {
     @Column(nullable = false)
     private Long cvv;
 
-    @ManyToMany(mappedBy = "cards")
+    @ManyToMany
     private List<User> user;
 
 }
