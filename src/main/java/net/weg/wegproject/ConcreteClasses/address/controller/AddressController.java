@@ -1,6 +1,9 @@
-package net.weg.wegproject.ConcreteClasses.address;
+package net.weg.wegproject.ConcreteClasses.address.controller;
 
 import lombok.AllArgsConstructor;
+import net.weg.wegproject.ConcreteClasses.address.service.AddressService;
+import net.weg.wegproject.ConcreteClasses.address.model.dto.AddressDTO;
+import net.weg.wegproject.ConcreteClasses.address.model.entity.Address;
 import net.weg.wegproject.interfaces.ControllerInterface;
 import org.springframework.beans.BeanUtils;
 import org.springframework.http.ResponseEntity;
@@ -32,24 +35,45 @@ public class AddressController implements ControllerInterface<Address, AddressDT
     @Override
     @GetMapping
     public ResponseEntity<List<Address>> findAll() {
-        return null;
+        try{
+            return ResponseEntity.ok(addressService.findAll());
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
     }
 
     @Override
     @GetMapping("/{id}")
     public ResponseEntity<Address> findOne(@PathVariable Long id) {
-        return null;
+        try{
+            return ResponseEntity.ok(addressService.findOne(id));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
     }
 
     @Override
     @PutMapping("/{id}")
     public ResponseEntity<Address> update(@RequestBody AddressDTO objDTO,@PathVariable Long id) {
-        return null;
+        try{
+            Address obj = new Address();
+            BeanUtils.copyProperties(objDTO, obj);
+            obj.setId(id);
+            return ResponseEntity.ok(addressService.update(obj));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
     }
 
     @Override
     @DeleteMapping("/{id}")
     public ResponseEntity<Address> delete(@PathVariable Long id) {
-        return null;
+        try{
+            Address address = addressService.findOne(id);
+            addressService.delete(id);
+            return ResponseEntity.ok(address);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
     }
 }

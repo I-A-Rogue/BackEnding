@@ -1,6 +1,8 @@
-package net.weg.wegproject.ConcreteClasses.address;
+package net.weg.wegproject.ConcreteClasses.address.service;
 
 import lombok.AllArgsConstructor;
+import net.weg.wegproject.ConcreteClasses.address.model.entity.Address;
+import net.weg.wegproject.ConcreteClasses.address.repository.AddressRepository;
 import net.weg.wegproject.interfaces.ServiceInterface;
 import org.springframework.stereotype.Service;
 
