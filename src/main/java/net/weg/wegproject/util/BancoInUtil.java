@@ -202,7 +202,7 @@ public class BancoInUtil {
     public Ink gerarInk(){
         Ink ink = new Ink();
         ink.setColor(faker.color().name());
-        ink.setDensity(faker.lorem().word());
+        ink.setDensity(faker.number().randomDigit());
         ink.setType(InkEnums.values()[faker.number().numberBetween(0, InkEnums.values().length)]);
         return ink;
     }

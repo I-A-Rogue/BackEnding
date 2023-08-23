@@ -131,9 +131,4 @@ public class Motors extends Product {
     @Column(nullable = false)
     private String tropicalizedPainting;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "produto_codigo")
-    @JsonIgnore
-    private Product produto;
-
 }

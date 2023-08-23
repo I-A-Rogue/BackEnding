@@ -61,9 +61,4 @@ public class Building extends Product{
     @Column(nullable = false)
     private String colorStructure;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "produto_codigo")
-    @JsonIgnore
-    private Product produto;
-
 }

@@ -77,9 +77,4 @@ public class Security extends Product {
     @Column(nullable = false)
     private String terminalType;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "produto_codigo")
-    @JsonIgnore
-    private Product produto;
-
 }

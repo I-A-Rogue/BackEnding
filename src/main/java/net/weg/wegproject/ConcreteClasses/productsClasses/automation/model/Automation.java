@@ -41,9 +41,4 @@ public class Automation extends Product {
     @Column(nullable = false)
     private String electronicFeed; //(Interna, externa ou sem)
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "produto_codigo")
-    @JsonIgnore
-    private Product produto;
-
 }

@@ -18,14 +18,9 @@ public class Ink extends Product {
     @Column(nullable = false)
     private String color;
     @Column(nullable = false)
-    private String density;
+    private Integer density;
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private InkEnums type;
-
-    @OneToOne
-    @JoinColumn(name = "produto_codigo")
-    @JsonIgnore
-    private Product produto;
 
 }
