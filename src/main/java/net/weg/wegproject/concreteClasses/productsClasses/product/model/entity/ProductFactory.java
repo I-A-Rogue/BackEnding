@@ -9,16 +9,7 @@ import net.weg.wegproject.security.model.Security;
 
 import static net.weg.wegproject.categories.enuns.CategoriesEnums.*;
 
-=======
-import net.weg.wegproject.concreteClasses.productsClasses.automation.model.Automation;
-import net.weg.wegproject.concreteClasses.productsClasses.building.model.Building;
-import net.weg.wegproject.concreteClasses.productsClasses.ink.model.Ink;
-import net.weg.wegproject.concreteClasses.productsClasses.motors.model.Motors;
-import net.weg.wegproject.concreteClasses.productsClasses.product.model.dto.ProductDTO;
-import net.weg.wegproject.concreteClasses.productsClasses.security.model.Security;
-import org.modelmapper.ModelMapper;
 
->>>>>>> Stashed changes:src/main/java/net/weg/wegproject/concreteClasses/productsClasses/product/model/entity/ProductFactory.java
 public class ProductFactory {
     public static Product createProduct(Product product){
         if(product.getCategories().equals(TINTA)){
