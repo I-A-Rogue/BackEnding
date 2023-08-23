@@ -4,15 +4,18 @@ import com.github.javafaker.Faker;
 import jakarta.annotation.PostConstruct;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import net.weg.wegproject.ConcreteClasses.assessment.model.entity.Assessment;
 import net.weg.wegproject.ConcreteClasses.productsClasses.automation.model.Automation;
 import net.weg.wegproject.ConcreteClasses.productsClasses.building.model.Building;
 import net.weg.wegproject.ConcreteClasses.productsClasses.ink.model.Ink;
 import net.weg.wegproject.ConcreteClasses.productsClasses.motors.model.Motors;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.controller.ProductController;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.dto.ProductDTO;
+import net.weg.wegproject.ConcreteClasses.productsClasses.product.repository.ProductRepository;
 import net.weg.wegproject.ConcreteClasses.productsClasses.security.model.Security;
 import net.weg.wegproject.ConcreteClasses.user.controller.UserController;
 import net.weg.wegproject.ConcreteClasses.user.model.dto.UserDTO;
+import net.weg.wegproject.ConcreteClasses.user.repository.UserRepository;
 import net.weg.wegproject.enums.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -32,14 +35,13 @@ public class BancoUtil {
 
     @PostConstruct
     public void createRandomMotors() {
-        for (Long i = 0l; i <= 30; i++) {
+        for (Long i = 1l; i <= 30; i++) {
             ProductDTO productDTO = new ProductDTO();
             productDTO.setCode(i);
             productDTO.setName(faker.commerce().productName());
             productDTO.setPrice((float) faker.number().randomDouble(2, 10, 1000)); // Adjust the range as needed
             productDTO.setStockSize(faker.number().randomDigit());
             productDTO.setDescription(faker.lorem().sentence());
-            productDTO.setAssessment(null);
             CategoriesEnums random =
                     CategoriesEnums.values()[faker.number().numberBetween(0, CategoriesEnums.values().length)];
             productDTO.setCategories(random);

@@ -37,7 +37,7 @@ public class CompanyController{
         try {
             return ResponseEntity.ok(companyService.findAll());
         } catch (Exception e) {
-            throw new NoCompanyException();
+            throw new NoCompaniesException();
         }
     }
     @GetMapping("/{id}")
@@ -45,10 +45,10 @@ public class CompanyController{
         try {
             return ResponseEntity.ok(companyService.findOne(id));
         } catch (Exception e) {
-            throw new NoCompaniesException();
+            throw new NoCompanyException();
         }
     }
-    @PatchMapping("/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<Company> update(@RequestBody CompanyDTO objDTO, @PathVariable Long id) {
         try {
             try {

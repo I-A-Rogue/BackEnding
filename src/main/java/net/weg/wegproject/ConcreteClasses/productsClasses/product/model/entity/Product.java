@@ -29,7 +29,7 @@ public class Product {
 
     private CategoriesEnums categories;
 
-    @ManyToOne
+    @OneToOne(cascade = CascadeType.PERSIST)
     private Assessment assessment;
 
 

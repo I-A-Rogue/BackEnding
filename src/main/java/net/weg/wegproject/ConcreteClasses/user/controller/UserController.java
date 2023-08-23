@@ -28,7 +28,7 @@ public class UserController {
         try {
 //            if (userService.verifyCPF(String.valueOf(objDTO.getRegister()))) {
             Cart cart = new Cart();
-            cart.setTotalPrice(0);
+            cart.setTotalPrice(0f);
             cart.setSize(0);
             cart.setProducts(new ArrayList<>());
             Saves saves = new Saves();
@@ -55,14 +55,14 @@ public class UserController {
         }
     }
     @GetMapping("/{id}")
-    public ResponseEntity<User> findOne(@RequestBody Long id) {
+    public ResponseEntity<User> findOne(@PathVariable Long id) {
         try {
             return ResponseEntity.ok(userService.findOne(id));
         } catch (Exception e) {
             throw new NoUserException();
         }
     }
-    @GetMapping("/{email}")
+    @GetMapping("/email/{email}")
     public void findByEmail(@PathVariable String email){
         try {
             ResponseEntity.ok(userService.findByEmail(email));
@@ -78,7 +78,7 @@ public class UserController {
             throw new NoUserException();
         }
     }
-    @PatchMapping("/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<User> update(@RequestBody UserDTO objDTO, @PathVariable Long id) {
         try {
             User user = userService.findOne(id);

@@ -1,4 +1,4 @@
-package net.weg.wegproject.ink.service;
+package net.weg.wegproject.ConcreteClasses.productsClasses.ink.service;
 
 import lombok.AllArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.productsClasses.ink.model.Ink;

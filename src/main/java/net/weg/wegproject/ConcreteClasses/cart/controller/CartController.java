@@ -1,13 +1,12 @@
 package net.weg.wegproject.ConcreteClasses.cart.controller;
 
 import lombok.AllArgsConstructor;
+import net.weg.wegproject.ConcreteClasses.cart.exceptions.*;
 import net.weg.wegproject.ConcreteClasses.cart.model.entity.Cart;
 import net.weg.wegproject.ConcreteClasses.cart.model.dto.CartDTO;
-import net.weg.wegproject.ConcreteClasses.cart.exceptions.CartCreateException;
-import net.weg.wegproject.ConcreteClasses.cart.exceptions.CartUpdateException;
-import net.weg.wegproject.ConcreteClasses.cart.exceptions.NoCartException;
-import net.weg.wegproject.ConcreteClasses.cart.exceptions.NoCartsException;
 import net.weg.wegproject.ConcreteClasses.cart.service.CartService;
+import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
+import net.weg.wegproject.ConcreteClasses.productsClasses.product.service.ProductService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.http.ResponseEntity;
@@ -21,19 +20,29 @@ import java.util.List;
 @RequestMapping("/cart")
 public class CartController {
     CartService cartService;
+    ProductService productService;
 
-    @PostMapping
-    public ResponseEntity<Cart> create(@RequestBody CartDTO objDTO) {
+    @PutMapping("add/{cartId}/{productCode}")
+    public ResponseEntity<Cart> addOnCart(@PathVariable Long cartId, @PathVariable Long productCode) {
         try {
             try {
-                Cart cart = new Cart();
-                BeanUtils.copyProperties(objDTO, cart);
-                return ResponseEntity.ok(cartService.create(cart));
+                Cart cart = findOne(cartId).getBody();
+                Product product = productService.findOne(productCode);
+                if (cart != null) {
+                    cart.setSize(cart.getSize() + 1);
+                    cart.setTotalPrice(cart.getTotalPrice() + product.getPrice());
+                        if(!cart.getProducts().contains(product)) {
+                            cart.getProducts().add(product);
+                        } else {
+                            throw new ExistingProductException();
+                        }
+                }
+                return ResponseEntity.ok(cartService.update(cart));
             } catch (BeansException e) {
                 return ResponseEntity.badRequest().build();
             }
-        } catch (Exception e) {
-            throw new CartCreateException();
+        } catch (CartCreateException | ExistingProductException u) {
+            throw new RuntimeException(u.getMessage());
         }
     }
 
@@ -70,12 +79,30 @@ public class CartController {
         }
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Cart> delete(@PathVariable Long id) {
+    @PutMapping("remove/{cartId}/{productCode}")
+    public ResponseEntity<Cart> deleteFromCart(@PathVariable Long cartId, @PathVariable Long productCode) {
         try {
-            return ResponseEntity.ok(cartService.delete(id));
-        } catch (Exception e) {
-            throw new CartUpdateException();
+            Cart cart = findOne(cartId).getBody();
+            Product product = productService.findOne(productCode);
+            try{
+                if (cart != null && cart.getSize() > 0) {
+                    if(cart.getProducts().contains(product)){
+                        cart.setSize(cart.getSize() - 1);
+                        cart.setTotalPrice(cart.getTotalPrice() - product.getPrice());
+                        cart.getProducts().remove(product);
+                    }else {
+                        throw new ProductNotInCartException();
+                    }
+                }else{
+                    throw new EmptyCartException();
+                }
+            } catch (EmptyCartException | ProductNotInCartException e){
+                throw new RuntimeException(e.getMessage());
+            }
+
+            return ResponseEntity.ok().body(cartService.update(cart));
+        } catch (CartUpdateException | EmptyCartException e) {
+            throw new RuntimeException(e.getMessage());
         }
     }
 }

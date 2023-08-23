@@ -8,18 +8,16 @@ import net.weg.wegproject.interfaces.ControllerInterface;
 import org.springframework.beans.BeanUtils;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @Controller
 @AllArgsConstructor
 @RequestMapping("/creditCard")
-public class CreditCardController implements ControllerInterface<CreditCard, CreditCardDto> {
+public class CreditCardController {
     CreditCardService creditCardService;
-    @Override
+
     @PostMapping
     public ResponseEntity<CreditCard> create(@RequestBody CreditCardDto objDTO) {
         CreditCard creditCard = new CreditCard();
@@ -27,25 +25,18 @@ public class CreditCardController implements ControllerInterface<CreditCard, Cre
         return ResponseEntity.ok(creditCardService.create(creditCard));
     }
 
-    @Override
+    @GetMapping
     public ResponseEntity<List<CreditCard>> findAll() {
         return ResponseEntity.ok(creditCardService.findAll());
     }
 
-    @Override
-    public ResponseEntity<CreditCard> findOne(Long id) {
+    @GetMapping("/{id}")
+    public ResponseEntity<CreditCard> findOne(@PathVariable Long id) {
         return ResponseEntity.ok(creditCardService.findOne(id));
     }
 
-    @Override
-    public ResponseEntity<CreditCard> update(CreditCardDto objDTO, Long id) {
-        CreditCard creditCard = creditCardService.findOne(id);
-        BeanUtils.copyProperties(objDTO, creditCard);
-        return ResponseEntity.ok(creditCardService.update(creditCard));
-    }
-
-    @Override
-    public ResponseEntity<CreditCard> delete(Long id) {
+    @DeleteMapping("/{id}")
+    public ResponseEntity<CreditCard> delete(@PathVariable Long id) {
         return ResponseEntity.ok(creditCardService.delete(id));
     }
 }

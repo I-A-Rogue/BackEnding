@@ -5,6 +5,7 @@ import net.weg.wegproject.ConcreteClasses.assessment.exceptions.*;
 import net.weg.wegproject.ConcreteClasses.assessment.model.dto.AssessmentDTO;
 import net.weg.wegproject.ConcreteClasses.assessment.model.entity.Assessment;
 import net.weg.wegproject.ConcreteClasses.assessment.service.AssessmentService;
+import net.weg.wegproject.ConcreteClasses.productsClasses.product.service.ProductService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.http.ResponseEntity;
@@ -19,13 +20,15 @@ import java.util.List;
 public class AssessmentController {
     AssessmentService assessmentService;
 
-    @PostMapping
-    public ResponseEntity<Assessment> create(@RequestBody AssessmentDTO objDTO) {
+    @PutMapping("add/{assessmentId}")
+    public ResponseEntity<Assessment> addAssessment(@PathVariable Long assessmentId, @RequestBody AssessmentDTO objDTO){
         try {
             try {
-                Assessment assessment = new Assessment();
-                BeanUtils.copyProperties(objDTO, assessment);
-                return ResponseEntity.ok(assessmentService.create(assessment));
+                Assessment assessment = assessmentService.findOne(assessmentId);
+                assessment.setAmountVotes(assessment.getAmountVotes() + 1);
+                assessment.setAssessment(assessment.getAssessment() + objDTO.getAssessment());
+                assessment.setTotalAssessment(assessment.getAmountVotes() / assessment.getAssessment());
+                return ResponseEntity.ok(assessmentService.update(assessment));
             } catch (BeansException e) {
                 return ResponseEntity.badRequest().build();
             }

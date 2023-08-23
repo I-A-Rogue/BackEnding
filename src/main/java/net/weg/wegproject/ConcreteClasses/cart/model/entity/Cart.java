@@ -18,16 +18,16 @@ import java.util.List;
 public class Cart {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    float totalPrice;
+    private Long id;
+    private Float totalPrice;
     @Column(nullable = false)
-    Integer size;
+    private Integer size;
     @ManyToMany
     @JoinTable(
             joinColumns = @JoinColumn(name = "id_Cart"),
             inverseJoinColumns = @JoinColumn(name = "id_Product")
     )
-    List<Product> products;
+    private List<Product> products;
 
     @OneToOne(mappedBy = "cart")
     @JsonIgnore

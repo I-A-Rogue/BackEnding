@@ -1,6 +1,8 @@
 package net.weg.wegproject.ConcreteClasses.productsClasses.product.controller;
 
 import lombok.AllArgsConstructor;
+import net.weg.wegproject.ConcreteClasses.assessment.model.dto.AssessmentDTO;
+import net.weg.wegproject.ConcreteClasses.assessment.model.entity.Assessment;
 import net.weg.wegproject.ConcreteClasses.productsClasses.automation.model.Automation;
 import net.weg.wegproject.ConcreteClasses.productsClasses.automation.service.AutomationService;
 import net.weg.wegproject.ConcreteClasses.productsClasses.building.model.Building;
@@ -9,7 +11,7 @@ import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.P
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.service.ProductService;
 import net.weg.wegproject.enums.CategoriesEnums;
 import net.weg.wegproject.ConcreteClasses.productsClasses.ink.model.Ink;
-import net.weg.wegproject.ink.service.InkService;
+import net.weg.wegproject.ConcreteClasses.productsClasses.ink.service.InkService;
 import net.weg.wegproject.ConcreteClasses.productsClasses.motors.model.Motors;
 import net.weg.wegproject.ConcreteClasses.productsClasses.motors.service.MotorsService;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.exceptions.NoProductException;
@@ -46,8 +48,13 @@ public class ProductController {
                 Product prod = new Product();
                 BeanUtils.copyProperties(objDTO, prod);
                 Product product = ProductFactory.criarProduto(objDTO);
-                manager(product, prod);
-                return ResponseEntity.ok(prod);
+                BeanUtils.copyProperties(prod, product);
+                Assessment assessment = new Assessment();
+                assessment.setAssessment(0);
+                assessment.setTotalAssessment(0);
+                assessment.setAmountVotes(0);
+                product.setAssessment(assessment);
+                return ResponseEntity.ok(productService.create(product));
             } catch (BeansException e) {
                 return ResponseEntity.badRequest().build();
             }
@@ -103,37 +110,5 @@ public class ProductController {
         }
     }
 
-    private void manager(Product product, Product prod) {
-        if(product instanceof Ink ink){
-            BeanUtils.copyProperties(prod, ink);
-            inkService.create(ink);
-            ink.setProduto(prod);
-            inkService.create(ink);
-        }
-        if(product instanceof Automation automation){
-            BeanUtils.copyProperties(prod, automation);
-            automationService.create(automation);
-            automation.setProduto(prod);
-            automationService.create(automation);
-        }
-        if(product instanceof Motors motors){
-            BeanUtils.copyProperties(prod, motors);
-            motorsService.create(motors);
-            motors.setProduto(prod);
-            motorsService.create(motors);
-        }
-        if(product instanceof Building building){
-            BeanUtils.copyProperties(prod, building);
-            buildingService.create(building);
-            building.setProduto(prod);
-            buildingService.create(building);
-        }
-        if(product instanceof Security security){
-            BeanUtils.copyProperties(prod, security);
-            securityService.create(security);
-            security.setProduto(prod);
-            securityService.create(security);
-        }
 
-    }
 }
