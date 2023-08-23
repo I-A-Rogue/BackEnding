@@ -19,6 +19,7 @@ public class Cart {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(nullable = false)
     private Float totalPrice;
     @Column(nullable = false)
     private Integer size;

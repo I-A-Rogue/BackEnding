@@ -15,10 +15,12 @@ public class Assessment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-
-    Integer amountVotes;
-    Integer assessment;
-    Integer totalAssessment;
+    private Long id;
+    @Column(nullable = false)
+    private Integer amountVotes;
+    @Column(nullable = false)
+    private Integer assessment;
+    @Column(nullable = false)
+    private Integer totalAssessment;
 
 }

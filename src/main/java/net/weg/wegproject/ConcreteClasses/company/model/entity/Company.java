@@ -16,18 +16,14 @@ public class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @Column(nullable = false, unique = true)
     @Size (min = 14, max = 14)
     private String CNPJ;
-
     @Column(nullable = false)
     private String name;
-
     @Column(nullable = false, unique = true)
     @Email
     private String email;
-
     @Column(nullable = false)
     private String password;
 }

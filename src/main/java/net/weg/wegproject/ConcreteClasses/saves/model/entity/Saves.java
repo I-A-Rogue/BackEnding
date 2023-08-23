@@ -18,13 +18,10 @@ public class Saves {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-
     @Column(nullable = false)
     Integer quantity;
-
     @ManyToMany
     private List<Product> products;
-
     @OneToOne(mappedBy = "saves")
     @JsonIgnore
     private User user;

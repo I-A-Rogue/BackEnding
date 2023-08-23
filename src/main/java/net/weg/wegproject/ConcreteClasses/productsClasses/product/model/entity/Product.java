@@ -17,24 +17,21 @@ public class Product {
 
     @Id
     private Long code;
-
     @Column(nullable = false)
     private String name;
-
+    @Column(nullable = false)
     private Float price;
-
+    @Column(nullable = false)
     private Integer stockSize;
-
+    @Column(nullable = false)
     private String application;
-
+    @Column(nullable = false)
     private String caracteristics;
-
     @Column(nullable = false)
     private String description;
-
+    @Column(nullable = false)
     private CategoriesEnums categories;
-
-    @OneToOne(cascade = CascadeType.PERSIST)
+    @OneToOne(cascade = CascadeType.ALL)
     private Assessment assessment;
 
 

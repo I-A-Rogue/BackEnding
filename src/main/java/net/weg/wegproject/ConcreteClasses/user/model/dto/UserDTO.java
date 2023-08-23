@@ -1,6 +1,7 @@
 package net.weg.wegproject.ConcreteClasses.user.model.dto;
 
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,21 +15,16 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 public class UserDTO {
-    @NotNull
+    @NotBlank(message = "CPF/CNPJ não podem ser nulos")
     private Long cpf; // CPF ou CNPJ
-
-    @NotNull
+    @NotBlank(message = "Nome não pode ser nulo")
     private String name;
-
-    @NotNull
+    @NotBlank(message = "Email não pode ser nulo")
     @Email
     private String email;
-
-    @NotNull
+    @NotBlank(message = "Senha não pode ser nula")
     private String password;
-
     private List<Address> address;
-
     private List<CreditCard> cards;
 
 }

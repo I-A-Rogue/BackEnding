@@ -10,16 +10,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CompanyDTO {
-    @NotNull
+    @NotBlank(message = "CNPJ não pode ser vazio")
     @Min(14)
     @Max(14)
     private String CNPJ;
-    @NotNull
+    @NotBlank(message = "Nome não pode ser vazio")
     private String name;
-
     @Email
+    @NotBlank(message = "Email não pode ser vazio")
     private String email;
-
-    @NotNull
+    @NotBlank(message = "Senha não pode ser vazia")
     private String password;
 }

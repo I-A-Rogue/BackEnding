@@ -16,83 +16,54 @@ import net.weg.wegproject.enums.LanguageAcronyms;
 public class Building extends Product{
 
     @Column(nullable = false)
-    String referenceProduct;
+    private String referenceProduct;
 
     @Column(nullable = false)
-    String codigoInteligente;
+    private String codigoInteligente;
 
     @Column(nullable = false)
-    Integer ratedPower; //(Volt-Ampère (VA))
+    private Integer ratedPower; //(Volt-Ampère (VA))
 
     @Column(nullable = false)
-    String voltageInput; //(Volts (V))
+    private String voltageInput; //(Volts (V))
 
     @Column(nullable = false)
-    Integer voltageOutput; //(Volts (V))
+    private Integer voltageOutput; //(Volts (V))
 
     @Column(nullable = false)
-    Integer autonomy; //(Minutos (Min))
+    private Integer autonomy; //(Minutos (Min))
 
     @Column(nullable = false)
-    String batterytype;
+    private String batterytype;
 
     @Column(nullable = false)
-    Integer frequency; //(Hertz (Hz))
+    private Integer frequency; //(Hertz (Hz))
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    LanguageAcronyms language; //(sigla PT-Br..)
+    private LanguageAcronyms language; //(sigla PT-Br..)
 
     @Column(nullable = false)
-    float nominalChain; //(Ampere (A))
+    private Float nominalChain; //(Ampere (A))
 
     @Column(nullable = false)
-    Integer busVoltage; //(Tensão Corrente Contínua (VCC))
+    private Integer busVoltage; //(Tensão Corrente Contínua (VCC))
 
     @Column(nullable = false)
-    Integer currentBatteries; //(Ampère-hora (Ah))
+    private Integer currentBatteries; //(Ampère-hora (Ah))
 
     @Column(nullable = false)
-    String typeplug;
+    private String typeplug;
 
     @Column(nullable = false)
-    String casing;
+    private String casing;
 
     @Column(nullable = false)
-    String colorStructure;
+    private String colorStructure;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "produto_codigo")
     @JsonIgnore
     private Product produto;
-
-    @Override
-    public String toString() {
-        return "Building{" +
-                "referenceProduct='" + referenceProduct + '\'' +
-                ", codigoInteligente='" + codigoInteligente + '\'' +
-                ", ratedPower=" + ratedPower +
-                ", voltageInput='" + voltageInput + '\'' +
-                ", voltageOutput=" + voltageOutput +
-                ", autonomy=" + autonomy +
-                ", batterytype='" + batterytype + '\'' +
-                ", frequency=" + frequency +
-                ", language=" + language +
-                ", nominalChain=" + nominalChain +
-                ", busVoltage=" + busVoltage +
-                ", currentBatteries=" + currentBatteries +
-                ", typeplug='" + typeplug + '\'' +
-                ", casing='" + casing + '\'' +
-                ", colorStructure='" + colorStructure + '\'' +
-                "Product{" +
-                ", code=" + produto.getCode() +
-                ", name='" + produto.getName() + '\'' +
-                ", price=" + produto.getPrice() +
-                ", stockSize=" + produto.getStockSize() +
-                ", description='" + produto.getDescription() + '\'' +
-                ", categories=" + produto.getCategories() +
-                ", assessment=" + produto.getAssessment() +
-                '}';
-    }
 
 }

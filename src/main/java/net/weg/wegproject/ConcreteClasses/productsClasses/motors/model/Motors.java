@@ -72,7 +72,7 @@ public class Motors extends Product {
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    IsolationClass classIsolation; //(B (130 C), F (155 C) ou H (180 C))
+    private IsolationClass classIsolation; //(B (130 C), F (155 C) ou H (180 C))
 
     @Column(nullable = false)
     private String regimeService; //(ex.: Cont.(S1))
@@ -136,55 +136,4 @@ public class Motors extends Product {
     @JsonIgnore
     private Product produto;
 
-    @Override
-    public String toString() {
-        return "Motors{" +
-                "carcass='" + carcass + '\'' +
-                ", materialCarcass='" + materialCarcass + '\'' +
-                ", power=" + power +
-                ", frequency=" + frequency +
-                ", performance=" + performance +
-                ", powerFactor=" + powerFactor +
-                ", nominalRotation=" + nominalRotation +
-                ", slip=" + slip +
-                ", ratedVoltage=" + ratedVoltage +
-                ", nominalChain=" + nominalChain +
-                ", currentDeparture=" + currentDeparture +
-                ", ipIn=" + ipIn +
-                ", currentEmpty=" + currentEmpty +
-                ", conjugateNominal=" + conjugateNominal +
-                ", conjugateDeparture=" + conjugateDeparture +
-                ", maximumConjugate=" + maximumConjugate +
-                ", timeRotorLocked='" + timeRotorLocked + '\'' +
-                ", momentInertia=" + momentInertia +
-                ", classIsolation=" + classIsolation +
-                ", regimeService='" + regimeService + '\'' +
-                ", matchMethod=" + matchMethod +
-                ", roomTemperature=" + roomTemperature +
-                ", altitude=" + altitude +
-                ", degreeProtection='" + degreeProtection + '\'' +
-                ", refrigeration='" + refrigeration + '\'' +
-                ", ConstructiveWay='" + ConstructiveWay + '\'' +
-                ", rotationDirection=" + rotationDirection +
-                ", approximateMass=" + approximateMass +
-                ", impregnationMethod='" + impregnationMethod + '\'' +
-                ", materialAxis='" + materialAxis + '\'' +
-                ", painting='" + painting + '\'' +
-                ", typeGrounding='" + typeGrounding + '\'' +
-                ", materialBaffleCover='" + materialBaffleCover + '\'' +
-                ", thermalProtectionWinding='" + thermalProtectionWinding + '\'' +
-                ", bearingType='" + bearingType + '\'' +
-                ", bearingLNA='" + bearingLNA + '\'' +
-                ", protectorFenolicOverload='" + protectorFenolicOverload + '\'' +
-                ", tropicalizedPainting='" + tropicalizedPainting + '\'' +
-                "Product{" +
-                ", code=" + produto.getCode() +
-                ", name='" + produto.getName() + '\'' +
-                ", price=" + produto.getPrice() +
-                ", stockSize=" + produto.getStockSize() +
-                ", description='" + produto.getDescription() + '\'' +
-                ", categories=" + produto.getCategories() +
-                ", assessment=" + produto.getAssessment() +
-                '}';
-    }
 }

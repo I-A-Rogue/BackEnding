@@ -27,7 +27,7 @@ import java.util.List;
 @Component
 @AllArgsConstructor
 @NoArgsConstructor
-public class BancoUtil {
+public class BancoInUtil {
 
     @Autowired
     private ProductController productController;
@@ -46,6 +46,8 @@ public class BancoUtil {
             productDTO.setPrice((float) faker.number().randomDouble(2, 10, 1000)); // Adjust the range as needed
             productDTO.setStockSize(faker.number().randomDigit());
             productDTO.setDescription(faker.lorem().sentence());
+            productDTO.setApplication(faker.lorem().sentence());
+            productDTO.setCaracteristics(faker.lorem().sentence());
             CategoriesEnums random =
                     CategoriesEnums.values()[faker.number().numberBetween(0, CategoriesEnums.values().length)];
             productDTO.setCategories(random);
@@ -65,7 +67,7 @@ public class BancoUtil {
     public UserDTO gerarUser(){
         UserDTO userDTO = new UserDTO();
         userDTO.setName(faker.name().fullName());
-        userDTO.setCpf(faker.number().randomNumber());
+        userDTO.setCpf(Long.valueOf(faker.number().digits(11)));
         userDTO.setEmail(faker.internet().emailAddress());
         userDTO.setPassword(faker.internet().password());
         AddressDTO addressDTO = new AddressDTO(faker.address().streetName(),

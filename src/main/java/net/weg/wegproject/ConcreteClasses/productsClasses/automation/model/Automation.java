@@ -15,49 +15,35 @@ import net.weg.wegproject.enums.InputPhases;
 
 public class Automation extends Product {
 
-    Integer nominalVoltageInput; //(Volts (V))
+    @Column(nullable = false)
+    private Integer nominalVoltageInput; //(Volts (V))
     @Enumerated(EnumType.STRING)
-    InputPhases numberPhasesEntry; //(Ex.:Trifásico)
-    String settings; //(Ex.: Com opcionais)
-    Integer nominalChain; //(Ampere (A))
-    Integer nominalChainH; //(Ampere (A)??)
-    String filterRFI; //(ex.: Com filtro (cat C3))
-    String degreeProtection; //(ex.: IP20)
-    String rheostaticBraking; //(ex.: Standard sem frenagem)
-    Boolean inductorLink; //(Sim ou Não)
-    Float temperature; //(Celsius(Cº))
-    Boolean safetyStop; //(Sim ou Não)
-    String electronicFeed; //(Interna, externa ou sem)
+    @Column(nullable = false)
+    private InputPhases numberPhasesEntry; //(Ex.:Trifásico)
+    @Column(nullable = false)
+    private String settings; //(Ex.: Com opcionais)
+    @Column(nullable = false)
+    private Integer nominalChain; //(Ampere (A))
+    @Column(nullable = false)
+    private Integer nominalChainH; //(Ampere (A)??)
+    @Column(nullable = false)
+    private String filterRFI; //(ex.: Com filtro (cat C3))
+    @Column(nullable = false)
+    private String degreeProtection; //(ex.: IP20)
+    @Column(nullable = false)
+    private String rheostaticBraking; //(ex.: Standard sem frenagem)
+    @Column(nullable = false)
+    private Boolean inductorLink; //(Sim ou Não)
+    @Column(nullable = false)
+    private Float temperature; //(Celsius(Cº))
+    @Column(nullable = false)
+    private Boolean safetyStop; //(Sim ou Não)
+    @Column(nullable = false)
+    private String electronicFeed; //(Interna, externa ou sem)
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "produto_codigo")
     @JsonIgnore
     private Product produto;
-
-    @Override
-    public String toString() {
-        return "Automation{" +
-                "nominalVoltageInput=" + nominalVoltageInput +
-                ", numberPhasesEntry=" + numberPhasesEntry +
-                ", settings='" + settings + '\'' +
-                ", nominalChain=" + nominalChain +
-                ", nominalChainH=" + nominalChainH +
-                ", filterRFI='" + filterRFI + '\'' +
-                ", degreeProtection='" + degreeProtection + '\'' +
-                ", rheostaticBraking='" + rheostaticBraking + '\'' +
-                ", inductorLink=" + inductorLink +
-                ", temperature=" + temperature +
-                ", safetyStop=" + safetyStop +
-                ", electronicFeed='" + electronicFeed + '\'' +
-//                "Product{" +
-//                ", code=" + produto.getCode() +
-//                ", name='" + produto.getName() + '\'' +
-//                ", price=" + produto.getPrice() +
-//                ", stockSize=" + produto.getStockSize() +
-//                ", description='" + produto.getDescription() + '\'' +
-//                ", categories=" + produto.getCategories() +
-//                ", assessment=" + produto.getAssessment() +
-                '}';
-    }
 
 }

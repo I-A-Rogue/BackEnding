@@ -23,20 +23,15 @@ public class CreditCard {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @Column(nullable = false)
     private String name;
-
     @Column(nullable = false)
     private Date validity;
-
     @Column(nullable = false, unique = true)
     @Size(max = 16, min = 13)
     private String number;
-
     @Column(nullable = false)
     private Long cvv;
-
     @ManyToMany
     private List<User> user;
 

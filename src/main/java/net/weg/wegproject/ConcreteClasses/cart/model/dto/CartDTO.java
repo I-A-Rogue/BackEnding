@@ -1,6 +1,7 @@
 package net.weg.wegproject.ConcreteClasses.cart.model.dto;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,9 +16,11 @@ import java.util.List;
 
 public class CartDTO {
 
-    float totalPrice;
-    @NotNull
-    Integer size;
+    @NotBlank(message = "O preço total não pode ser nulo")
+    private Float totalPrice;
+    @NotBlank(message = "O tamanho não pode ser nulo")
+    private Integer size;
+    @NotBlank(message = "O id do usuário não pode ser nulo")
     @OneToMany
-    List<ProductDTO> products;
+    private List<ProductDTO> products;
 }

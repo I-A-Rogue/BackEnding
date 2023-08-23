@@ -1,5 +1,6 @@
 package net.weg.wegproject.ConcreteClasses.productsClasses.product.model.dto;
 
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,30 +15,25 @@ import org.hibernate.validator.constraints.UniqueElements;
 
 public class ProductDTO {
     
-    @NotNull
-   private Long code;
-    
-    @NotNull
+    @NotBlank(message = "O código do produto não pode ser nulo.")
+    private Long code;
+    @NotBlank(message = "O nome do produto não pode ser nulo.")
     @UniqueElements
     private String name;
-    
-    @NotNull
+    @NotBlank(message = "O preço do produto não pode ser nulo.")
     private Float price;
-    
-    @NotNull
+    @NotBlank(message = "O estoque do produto não pode ser nulo.")
     private Integer stockSize;
-
+    @NotBlank(message = "A aplicação do produto não pode ser nula.")
     private String application;
-
+    @NotBlank(message = "As características do produto não podem ser nulas.")
     private String caracteristics;
-    
-    @NotNull
+    @NotBlank(message = "A descrição do produto não pode ser nula.")
     private String description;
-    
+    @NotBlank(message = "A categoria do produto não pode ser nula.")
     private Assessment assessment;
-
+    @NotBlank(message = "A avaliação do produto não pode ser nula.")
     private CategoriesEnums categories;
-
     private Object object;
 
 }
