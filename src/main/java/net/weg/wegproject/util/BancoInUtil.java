@@ -48,6 +48,7 @@ public class BancoInUtil {
             productDTO.setDescription(faker.lorem().sentence());
             productDTO.setApplication(faker.lorem().sentence());
             productDTO.setCaracteristics(faker.lorem().sentence());
+            productDTO.setOptional(faker.lorem().sentence());
             CategoriesEnums random =
                     CategoriesEnums.values()[faker.number().numberBetween(0, CategoriesEnums.values().length)];
             productDTO.setCategories(random);

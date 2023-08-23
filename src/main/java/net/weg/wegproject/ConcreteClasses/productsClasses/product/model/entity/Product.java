@@ -30,6 +30,8 @@ public class Product {
     @Column(nullable = false)
     private String description;
     @Column(nullable = false)
+    private String optional;
+    @Column(nullable = false)
     private CategoriesEnums categories;
     @OneToOne(cascade = CascadeType.ALL)
     private Assessment assessment;

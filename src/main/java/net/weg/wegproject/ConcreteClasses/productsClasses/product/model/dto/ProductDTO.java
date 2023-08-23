@@ -28,6 +28,8 @@ public class ProductDTO {
     private String application;
     @NotBlank(message = "As características do produto não podem ser nulas.")
     private String caracteristics;
+    @NotBlank(message = "O opcional do produto não pode ser nulo.")
+    private String optional;
     @NotBlank(message = "A descrição do produto não pode ser nula.")
     private String description;
     @NotBlank(message = "A categoria do produto não pode ser nula.")
