@@ -12,6 +12,7 @@ import java.util.List;
 @Service
 @AllArgsConstructor
 public class UserService implements ServiceInterface<User> {
+
     UserRepository userRepository;
 
     @Override
@@ -49,8 +50,9 @@ public class UserService implements ServiceInterface<User> {
         }
     }
 
-    public boolean existsUserByEmailAndPassword(String email, String password){
+    public Boolean existsUserByEmailAndPassword(String email, String password){
         try {
+            System.out.print(email + " " + password + "\n");
             return userRepository.existsUserByEmailAndPassword(email, password);
         }catch (Exception e){
             throw new NoUserException();

@@ -12,10 +12,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class UserDTO {
+
     @NotNull
-    @Min(11)
-    @Max(11)
-    private Long register; // CPF ou CNPJ
+    private Long cpf; // CPF ou CNPJ
 
     @NotNull
     private String name;
@@ -26,4 +25,7 @@ public class UserDTO {
 
     @NotNull
     private String password;
+
+    @NotNull
+    private String address;
 }

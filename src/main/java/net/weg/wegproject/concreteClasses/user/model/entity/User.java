@@ -25,7 +25,6 @@ public class User {
     private Long id;
 
     @Column(nullable = false, unique = true)
-    @Size(min = 11, max = 11)
     private Long cpf;
 
     @Column(nullable = false)
