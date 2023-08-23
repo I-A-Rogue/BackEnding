@@ -23,14 +23,18 @@ public class Cart {
     private Float totalPrice;
     @Column(nullable = false)
     private Integer size;
-    @ManyToMany
-    @JoinTable(
-            joinColumns = @JoinColumn(name = "id_Cart"),
-            inverseJoinColumns = @JoinColumn(name = "id_Product")
-    )
-    private List<Product> products;
-
+    @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL)
+    private List<CartProductQuantity> cartProductQuantities;
     @OneToOne(mappedBy = "cart")
     @JsonIgnore
     private User user;
+
+    @Override
+    public String toString() {
+        return "Cart{" +
+                "id=" + id +
+                ", totalPrice=" + totalPrice +
+                ", size=" + size +
+                '}';
+    }
 }

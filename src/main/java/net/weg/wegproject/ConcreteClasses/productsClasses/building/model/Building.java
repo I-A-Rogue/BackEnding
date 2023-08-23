@@ -61,4 +61,24 @@ public class Building extends Product{
     @Column(nullable = false)
     private String colorStructure;
 
+    @Override
+    public String toString() {
+        return "Building{" +
+                "referenceProduct='" + referenceProduct + '\'' +
+                ", codigoInteligente='" + codigoInteligente + '\'' +
+                ", ratedPower=" + ratedPower +
+                ", voltageInput='" + voltageInput + '\'' +
+                ", voltageOutput=" + voltageOutput +
+                ", autonomy=" + autonomy +
+                ", batterytype='" + batterytype + '\'' +
+                ", frequency=" + frequency +
+                ", language=" + language +
+                ", nominalChain=" + nominalChain +
+                ", busVoltage=" + busVoltage +
+                ", currentBatteries=" + currentBatteries +
+                ", typeplug='" + typeplug + '\'' +
+                ", casing='" + casing + '\'' +
+                ", colorStructure='" + colorStructure + '\'' +
+                '}';
+    }
 }

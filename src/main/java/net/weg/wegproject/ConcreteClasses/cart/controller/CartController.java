@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.cart.exceptions.*;
 import net.weg.wegproject.ConcreteClasses.cart.model.entity.Cart;
 import net.weg.wegproject.ConcreteClasses.cart.model.dto.CartDTO;
+import net.weg.wegproject.ConcreteClasses.cart.model.entity.CartProductQuantity;
+import net.weg.wegproject.ConcreteClasses.cart.service.CartProductQuantityService;
 import net.weg.wegproject.ConcreteClasses.cart.service.CartService;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.service.ProductService;
@@ -22,28 +24,46 @@ import java.util.List;
 public class CartController {
     CartService cartService;
     ProductService productService;
+    CartProductQuantityService cartProductQuantityService;
 
     @PutMapping("add/{cartId}/{productCode}")
-    public ResponseEntity<Cart> addOnCart(@PathVariable Long cartId, @PathVariable Long productCode) {
+    public ResponseEntity<Cart> addOnCart(
+            @PathVariable Long cartId,
+            @PathVariable Long productCode,
+            @RequestParam Integer quantity
+    ) {
         try {
-            try {
-                Cart cart = findOne(cartId).getBody();
-                Product product = productService.findOne(productCode);
-                if (cart != null) {
-                    cart.setSize(cart.getSize() + 1);
-                    cart.setTotalPrice(cart.getTotalPrice() + product.getPrice());
-                        if(!cart.getProducts().contains(product)) {
-                            cart.getProducts().add(product);
-                        } else {
-                            throw new ExistingProductException();
-                        }
-                }
-                return ResponseEntity.ok(cartService.update(cart));
-            } catch (BeansException e) {
-                return ResponseEntity.badRequest().build();
+            Cart cart = cartService.findOne(cartId);
+            Product product = productService.findOne(productCode);
+
+            if (cart == null || product == null) {
+                return ResponseEntity.notFound().build();
             }
-        } catch (CartCreateException | ExistingProductException u) {
-            throw new RuntimeException(u.getMessage());
+            CartProductQuantity existingEntry = cartProductQuantityService.findByCartAndProduct(cart, product);
+
+            Float productPrice = 0f;
+
+            if (existingEntry != null) {
+                existingEntry.setQuantity(quantity);
+            } else {
+                CartProductQuantity newEntry = new CartProductQuantity();
+                newEntry.setCart(cart);
+                newEntry.setProduct(product);
+                newEntry.setQuantity(quantity);
+                cart.getCartProductQuantities().add(newEntry);
+            }
+
+            for ( CartProductQuantity cartProductQuantity : cart.getCartProductQuantities() ) {
+                productPrice += cartProductQuantity.getProduct().getPrice() * cartProductQuantity.getQuantity();
+            }
+
+            cart.setTotalPrice(productPrice);
+            cart.setSize(cart.getCartProductQuantities().size());
+            return ResponseEntity.ok(cartService.update(cart));
+        } catch (CartCreateException | ExistingProductException e) {
+            return ResponseEntity.badRequest().build();
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
         }
     }
 
@@ -83,24 +103,16 @@ public class CartController {
     @PutMapping("remove/{cartId}/{productCode}")
     public ResponseEntity<Cart> deleteFromCart(@PathVariable Long cartId, @PathVariable Long productCode) {
         try {
-            Cart cart = findOne(cartId).getBody();
-            Product product = productService.findOne(productCode);
-            try{
-                if (cart != null && cart.getSize() > 0) {
-                    if(cart.getProducts().contains(product)){
-                        cart.setSize(cart.getSize() - 1);
-                        cart.setTotalPrice(cart.getTotalPrice() - product.getPrice());
-                        cart.getProducts().remove(product);
-                    }else {
-                        throw new ProductNotInCartException();
-                    }
-                }else{
-                    throw new EmptyCartException();
+            Cart cart = cartService.findOne(cartId);
+            for ( CartProductQuantity cartProductQuantity : cart.getCartProductQuantities() ) {
+                if (cartProductQuantity.getProduct().getCode().equals(productCode)) {
+                    cart.setSize(cart.getCartProductQuantities().size() - 1);
+                    cart.setTotalPrice(cart.getTotalPrice() - cartProductQuantity.getProduct().getPrice() * cartProductQuantity.getQuantity());
+                    cart.getCartProductQuantities().remove(cartProductQuantity);
+                    cartProductQuantityService.deleteByObject(cartProductQuantity);
+                    break;
                 }
-            } catch (EmptyCartException | ProductNotInCartException e){
-                throw new RuntimeException(e.getMessage());
             }
-
             return ResponseEntity.ok().body(cartService.update(cart));
         } catch (CartUpdateException | EmptyCartException e) {
             throw new RuntimeException(e.getMessage());

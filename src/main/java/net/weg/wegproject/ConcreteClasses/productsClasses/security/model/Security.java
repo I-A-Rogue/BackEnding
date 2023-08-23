@@ -77,4 +77,30 @@ public class Security extends Product {
     @Column(nullable = false)
     private String terminalType;
 
+    @Override
+    public String toString() {
+        return "Security{" +
+                "voltageNominalIsolationUi=" + voltageNominalIsolationUi +
+                ", limitMinimumFrequency=" + limitMinimumFrequency +
+                ", limitMaximumFrequency=" + limitMaximumFrequency +
+                ", mechanics=" + mechanics +
+                ", mechanicalLife=" + mechanicalLife +
+                ", EletricalLife='" + EletricalLife + '\'' +
+                ", degreeProtecaoTerminals='" + degreeProtecaoTerminals + '\'' +
+                ", grauProtecaoBobina='" + grauProtecaoBobina + '\'' +
+                ", degreeProtectionCoil=" + degreeProtectionCoil +
+                ", currentNominalIn='" + currentNominalIn + '\'' +
+                ", currentNominalEmployment='" + currentNominalEmployment + '\'' +
+                ", voltageEmploymentUIEC=" + voltageEmploymentUIEC +
+                ", voltageEmploymentUIUE=" + voltageEmploymentUIUE +
+                ", height=" + height +
+                ", Width=" + Width +
+                ", Depth=" + Depth +
+                ", grossWeight=" + grossWeight +
+                ", Reference='" + Reference + '\'' +
+                ", contact='" + contact + '\'' +
+                ", voltageCommand=" + voltageCommand +
+                ", terminalType='" + terminalType + '\'' +
+                '}';
+    }
 }

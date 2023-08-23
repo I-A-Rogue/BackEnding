@@ -3,6 +3,8 @@ package net.weg.wegproject.ConcreteClasses.user.controller;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.cart.model.entity.Cart;
+import net.weg.wegproject.ConcreteClasses.cart.model.entity.CartProductQuantity;
+import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
 import net.weg.wegproject.ConcreteClasses.saves.model.entity.Saves;
 import net.weg.wegproject.ConcreteClasses.user.exceptions.*;
 import net.weg.wegproject.ConcreteClasses.user.model.dto.UserDTO;
@@ -31,7 +33,6 @@ public class UserController {
             Cart cart = new Cart();
             cart.setTotalPrice(0f);
             cart.setSize(0);
-            cart.setProducts(new ArrayList<>());
             Saves saves = new Saves();
             saves.setQuantity(0);
             saves.setProducts(new ArrayList<>());

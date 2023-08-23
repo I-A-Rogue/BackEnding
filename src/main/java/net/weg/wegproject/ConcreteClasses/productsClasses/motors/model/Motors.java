@@ -131,4 +131,48 @@ public class Motors extends Product {
     @Column(nullable = false)
     private String tropicalizedPainting;
 
+
+    @Override
+    public String toString() {
+        return "Motors{" +
+                "carcass='" + carcass + '\'' +
+                ", materialCarcass='" + materialCarcass + '\'' +
+                ", power=" + power +
+                ", frequency=" + frequency +
+                ", performance=" + performance +
+                ", powerFactor=" + powerFactor +
+                ", nominalRotation=" + nominalRotation +
+                ", slip=" + slip +
+                ", ratedVoltage=" + ratedVoltage +
+                ", nominalChain=" + nominalChain +
+                ", currentDeparture=" + currentDeparture +
+                ", ipIn=" + ipIn +
+                ", currentEmpty=" + currentEmpty +
+                ", conjugateNominal=" + conjugateNominal +
+                ", conjugateDeparture=" + conjugateDeparture +
+                ", maximumConjugate=" + maximumConjugate +
+                ", timeRotorLocked='" + timeRotorLocked + '\'' +
+                ", momentInertia=" + momentInertia +
+                ", classIsolation=" + classIsolation +
+                ", regimeService='" + regimeService + '\'' +
+                ", matchMethod=" + matchMethod +
+                ", roomTemperature=" + roomTemperature +
+                ", altitude=" + altitude +
+                ", degreeProtection='" + degreeProtection + '\'' +
+                ", refrigeration='" + refrigeration + '\'' +
+                ", ConstructiveWay='" + ConstructiveWay + '\'' +
+                ", rotationDirection=" + rotationDirection +
+                ", approximateMass=" + approximateMass +
+                ", impregnationMethod='" + impregnationMethod + '\'' +
+                ", materialAxis='" + materialAxis + '\'' +
+                ", painting='" + painting + '\'' +
+                ", typeGrounding='" + typeGrounding + '\'' +
+                ", materialBaffleCover='" + materialBaffleCover + '\'' +
+                ", thermalProtectionWinding='" + thermalProtectionWinding + '\'' +
+                ", bearingType='" + bearingType + '\'' +
+                ", bearingLNA='" + bearingLNA + '\'' +
+                ", protectorFenolicOverload='" + protectorFenolicOverload + '\'' +
+                ", tropicalizedPainting='" + tropicalizedPainting + '\'' +
+                '}';
+    }
 }

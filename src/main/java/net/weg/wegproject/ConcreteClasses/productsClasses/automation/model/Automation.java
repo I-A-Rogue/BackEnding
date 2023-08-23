@@ -41,4 +41,21 @@ public class Automation extends Product {
     @Column(nullable = false)
     private String electronicFeed; //(Interna, externa ou sem)
 
+    @Override
+    public String toString() {
+        return "Automation{" +
+                "nominalVoltageInput=" + nominalVoltageInput +
+                ", numberPhasesEntry=" + numberPhasesEntry +
+                ", settings='" + settings + '\'' +
+                ", nominalChain=" + nominalChain +
+                ", nominalChainH=" + nominalChainH +
+                ", filterRFI='" + filterRFI + '\'' +
+                ", degreeProtection='" + degreeProtection + '\'' +
+                ", rheostaticBraking='" + rheostaticBraking + '\'' +
+                ", inductorLink=" + inductorLink +
+                ", temperature=" + temperature +
+                ", safetyStop=" + safetyStop +
+                ", electronicFeed='" + electronicFeed + '\'' +
+                '}';
+    }
 }
