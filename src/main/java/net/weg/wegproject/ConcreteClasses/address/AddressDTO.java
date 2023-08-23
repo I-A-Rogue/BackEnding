@@ -21,6 +21,5 @@ public class AddressDTO {
     private String pais;
     private String uf;
     private String cep;
-    private List<User> user;
 
 }

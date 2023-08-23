@@ -33,7 +33,7 @@ public class UserDTO {
     @NotNull
     private String password;
 
-    private Address address;
+    private List<Address> address;
 
     private List<CreditCard> cards;
 

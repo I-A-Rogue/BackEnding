@@ -26,6 +26,10 @@ public class ProductDTO {
     
     @NotNull
     private Integer stockSize;
+
+    private String application;
+
+    private String caracteristics;
     
     @NotNull
     private String description;

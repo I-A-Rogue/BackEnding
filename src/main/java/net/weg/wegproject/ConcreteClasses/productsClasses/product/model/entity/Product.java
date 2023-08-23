@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.assessment.model.entity.Assessment;
 import net.weg.wegproject.enums.CategoriesEnums;
+import org.springframework.boot.ApplicationArguments;
 
 @Entity
 @AllArgsConstructor
@@ -23,6 +24,10 @@ public class Product {
     private Float price;
 
     private Integer stockSize;
+
+    private String application;
+
+    private String caracteristics;
 
     @Column(nullable = false)
     private String description;

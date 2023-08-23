@@ -86,7 +86,7 @@ public class UserController {
             BeanUtils.copyProperties(objDTO, user);
             return ResponseEntity.ok(userService.update(user));
         } catch (Exception e) {
-            throw new UserUpdateException();
+            throw new RuntimeException(e.getMessage());
         }
     }
     @DeleteMapping("/{id}")

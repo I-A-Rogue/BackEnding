@@ -40,7 +40,7 @@ public class User {
     private String password;
 
     @Column(nullable = false)
-    @ManyToMany(mappedBy = "user")
+    @ManyToMany(cascade = CascadeType.ALL)
     private List<Address> address;
 
     @OneToOne(cascade = CascadeType.ALL)

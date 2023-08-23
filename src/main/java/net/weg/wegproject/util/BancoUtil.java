@@ -63,21 +63,7 @@ public class BancoUtil {
             productController.create(productDTO);
         }
 
-        AddressDTO addressDTO = new AddressDTO(faker.address().streetName(),
-                faker.number().numberBetween(1, 1000),
-                faker.address().secondaryAddress(),
-                faker.address().cityName(),
-                faker.address().city(),
-                faker.address().state(),
-                faker.address().country(),
-                faker.address().stateAbbr(),
-                faker.address().zipCode(), null);
-        Address address = new Address();
-        BeanUtils.copyProperties(addressDTO, address);
-        List<User> users = new ArrayList<>();
-        users.add(userController.create(gerarUser()).getBody());
-        address.setUser(users);
-        addressService.create(address);
+        userController.create(gerarUser());
     }
 
     public UserDTO gerarUser(){
@@ -86,6 +72,20 @@ public class BancoUtil {
         userDTO.setCpf(faker.number().randomNumber());
         userDTO.setEmail(faker.internet().emailAddress());
         userDTO.setPassword(faker.internet().password());
+        AddressDTO addressDTO = new AddressDTO(faker.address().streetName(),
+                faker.number().numberBetween(1, 1000),
+                faker.address().secondaryAddress(),
+                faker.address().cityName(),
+                faker.address().city(),
+                faker.address().state(),
+                faker.address().country(),
+                faker.address().stateAbbr(),
+                faker.address().zipCode());
+        Address address = new Address();
+        BeanUtils.copyProperties(addressDTO, address);
+        List<Address> addresses = new ArrayList<>();
+        addresses.add(address);
+        userDTO.setAddress(addresses);
         userDTO.setCards(new ArrayList<>());
         return userDTO;
     }

@@ -2,6 +2,7 @@ package net.weg.wegproject.ConcreteClasses.address;
 
 import lombok.AllArgsConstructor;
 import net.weg.wegproject.interfaces.ControllerInterface;
+import org.springframework.beans.BeanUtils;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -12,11 +13,20 @@ import java.util.List;
 @CrossOrigin
 @AllArgsConstructor
 @RequestMapping("/address")
-public class AddressController implements ControllerInterface<Address, Long> {
+public class AddressController implements ControllerInterface<Address, AddressDTO> {
+
+    private final AddressService addressService;
+
     @Override
     @PostMapping
-    public ResponseEntity<Address> create(@RequestBody Long objDTO) {
-        return null;
+    public ResponseEntity<Address> create(@RequestBody AddressDTO objDTO) {
+        try{
+            Address obj = new Address();
+            BeanUtils.copyProperties(objDTO, obj);
+            return ResponseEntity.ok(addressService.create(obj));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
     }
 
     @Override
@@ -33,7 +43,7 @@ public class AddressController implements ControllerInterface<Address, Long> {
 
     @Override
     @PutMapping("/{id}")
-    public ResponseEntity<Address> update(@RequestBody Long objDTO,@PathVariable Long id) {
+    public ResponseEntity<Address> update(@RequestBody AddressDTO objDTO,@PathVariable Long id) {
         return null;
     }
 

@@ -26,7 +26,7 @@ public class Address {
     private String pais;
     private String uf;
     private String cep;
-    @ManyToMany
+    @ManyToMany(mappedBy = "address")
     @JsonIgnore
     private List<User> user;
 
