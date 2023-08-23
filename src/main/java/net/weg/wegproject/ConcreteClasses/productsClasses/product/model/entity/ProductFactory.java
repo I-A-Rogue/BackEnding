@@ -4,6 +4,7 @@ import net.weg.wegproject.ConcreteClasses.productsClasses.automation.model.Autom
 import net.weg.wegproject.ConcreteClasses.productsClasses.building.model.Building;
 import net.weg.wegproject.ConcreteClasses.productsClasses.ink.model.Ink;
 import net.weg.wegproject.ConcreteClasses.productsClasses.motors.model.Motors;
+
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.dto.ProductDTO;
 import net.weg.wegproject.ConcreteClasses.productsClasses.security.model.Security;
 import org.modelmapper.ModelMapper;

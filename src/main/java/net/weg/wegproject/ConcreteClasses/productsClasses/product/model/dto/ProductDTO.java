@@ -14,7 +14,7 @@ import org.hibernate.validator.constraints.UniqueElements;
 @Data
 
 public class ProductDTO {
-    
+
     @NotBlank(message = "O código do produto não pode ser nulo.")
     private Long code;
     @NotBlank(message = "O nome do produto não pode ser nulo.")

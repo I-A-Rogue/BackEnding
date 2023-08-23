@@ -2,6 +2,7 @@ package net.weg.wegproject.ConcreteClasses.productsClasses.product.controller;
 
 import lombok.AllArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.assessment.model.entity.Assessment;
+import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.dto.ProductDTO;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.ProductFactory;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.service.ProductService;
 import net.weg.wegproject.enums.CategoriesEnums;
@@ -9,7 +10,6 @@ import net.weg.wegproject.ConcreteClasses.productsClasses.product.exceptions.NoP
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.exceptions.NoProductsException;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.exceptions.ProductDeleteException;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.exceptions.ProductUpdateException;
-import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.dto.ProductDTO;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeansException;
@@ -18,8 +18,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @AllArgsConstructor
 @Controller

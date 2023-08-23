@@ -1,11 +1,9 @@
 package net.weg.wegproject.ConcreteClasses.productsClasses.motors.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.dto.ProductDTO;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
 import net.weg.wegproject.enums.IsolationClass;
 
