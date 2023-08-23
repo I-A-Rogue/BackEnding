@@ -9,6 +9,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import net.weg.wegproject.ConcreteClasses.address.Address;
 import net.weg.wegproject.ConcreteClasses.cart.model.entity.Cart;
 import net.weg.wegproject.ConcreteClasses.creditCard.model.entity.CreditCard;
 import net.weg.wegproject.ConcreteClasses.saves.model.entity.Saves;
@@ -32,7 +33,7 @@ public class UserDTO {
     @NotNull
     private String password;
 
-    private String address;
+    private Address address;
 
     private List<CreditCard> cards;
 

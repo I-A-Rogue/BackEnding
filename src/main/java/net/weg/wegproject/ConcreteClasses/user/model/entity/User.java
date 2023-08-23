@@ -9,6 +9,7 @@ import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import net.weg.wegproject.ConcreteClasses.address.Address;
 import net.weg.wegproject.ConcreteClasses.saves.model.entity.Saves;
 import net.weg.wegproject.ConcreteClasses.cart.model.entity.Cart;
 import net.weg.wegproject.ConcreteClasses.creditCard.model.entity.CreditCard;
@@ -39,7 +40,8 @@ public class User {
     private String password;
 
     @Column(nullable = false)
-    private String address;
+    @ManyToMany(mappedBy = "user")
+    private List<Address> address;
 
     @OneToOne(cascade = CascadeType.ALL)
     private Saves saves;

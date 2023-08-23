@@ -4,6 +4,9 @@ import com.github.javafaker.Faker;
 import jakarta.annotation.PostConstruct;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import net.weg.wegproject.ConcreteClasses.address.Address;
+import net.weg.wegproject.ConcreteClasses.address.AddressDTO;
+import net.weg.wegproject.ConcreteClasses.address.AddressService;
 import net.weg.wegproject.ConcreteClasses.assessment.model.entity.Assessment;
 import net.weg.wegproject.ConcreteClasses.productsClasses.automation.model.Automation;
 import net.weg.wegproject.ConcreteClasses.productsClasses.building.model.Building;
@@ -15,12 +18,15 @@ import net.weg.wegproject.ConcreteClasses.productsClasses.product.repository.Pro
 import net.weg.wegproject.ConcreteClasses.productsClasses.security.model.Security;
 import net.weg.wegproject.ConcreteClasses.user.controller.UserController;
 import net.weg.wegproject.ConcreteClasses.user.model.dto.UserDTO;
+import net.weg.wegproject.ConcreteClasses.user.model.entity.User;
 import net.weg.wegproject.ConcreteClasses.user.repository.UserRepository;
 import net.weg.wegproject.enums.*;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Component
 @AllArgsConstructor
@@ -31,6 +37,8 @@ public class BancoUtil {
     private ProductController productController;
     @Autowired
     private UserController userController;
+    @Autowired
+    private AddressService addressService;
     private final Faker faker = new Faker();
 
     @PostConstruct
@@ -55,7 +63,21 @@ public class BancoUtil {
             productController.create(productDTO);
         }
 
-        userController.create(gerarUser());
+        AddressDTO addressDTO = new AddressDTO(faker.address().streetName(),
+                faker.number().numberBetween(1, 1000),
+                faker.address().secondaryAddress(),
+                faker.address().cityName(),
+                faker.address().city(),
+                faker.address().state(),
+                faker.address().country(),
+                faker.address().stateAbbr(),
+                faker.address().zipCode(), null);
+        Address address = new Address();
+        BeanUtils.copyProperties(addressDTO, address);
+        List<User> users = new ArrayList<>();
+        users.add(userController.create(gerarUser()).getBody());
+        address.setUser(users);
+        addressService.create(address);
     }
 
     public UserDTO gerarUser(){
@@ -64,7 +86,6 @@ public class BancoUtil {
         userDTO.setCpf(faker.number().randomNumber());
         userDTO.setEmail(faker.internet().emailAddress());
         userDTO.setPassword(faker.internet().password());
-        userDTO.setAddress(faker.address().fullAddress());
         userDTO.setCards(new ArrayList<>());
         return userDTO;
     }
