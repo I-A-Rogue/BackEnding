@@ -18,6 +18,7 @@ import java.util.List;
 
 @Controller
 @AllArgsConstructor
+@CrossOrigin
 @RequestMapping("/user")
 public class UserController {
 

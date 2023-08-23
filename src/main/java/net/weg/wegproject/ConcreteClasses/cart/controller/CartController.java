@@ -17,6 +17,7 @@ import java.util.List;
 
 @AllArgsConstructor
 @Controller
+@CrossOrigin
 @RequestMapping("/cart")
 public class CartController {
     CartService cartService;

@@ -16,6 +16,7 @@ import java.util.List;
 
 @AllArgsConstructor
 @Controller
+@CrossOrigin
 @RequestMapping("/assessment")
 public class AssessmentController {
     AssessmentService assessmentService;

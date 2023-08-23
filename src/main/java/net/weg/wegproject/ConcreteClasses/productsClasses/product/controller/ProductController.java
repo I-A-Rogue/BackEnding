@@ -33,6 +33,7 @@ import java.util.List;
 
 @AllArgsConstructor
 @Controller
+@CrossOrigin
 @RequestMapping("/product")
 public class ProductController {
     ProductService productService;
