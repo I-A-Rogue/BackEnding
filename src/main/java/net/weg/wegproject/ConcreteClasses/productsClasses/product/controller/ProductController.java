@@ -1,27 +1,16 @@
 package net.weg.wegproject.ConcreteClasses.productsClasses.product.controller;
 
 import lombok.AllArgsConstructor;
-import net.weg.wegproject.ConcreteClasses.assessment.model.dto.AssessmentDTO;
 import net.weg.wegproject.ConcreteClasses.assessment.model.entity.Assessment;
-import net.weg.wegproject.ConcreteClasses.productsClasses.automation.model.Automation;
-import net.weg.wegproject.ConcreteClasses.productsClasses.automation.service.AutomationService;
-import net.weg.wegproject.ConcreteClasses.productsClasses.building.model.Building;
-import net.weg.wegproject.ConcreteClasses.productsClasses.building.service.BuildingService;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.ProductFactory;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.service.ProductService;
 import net.weg.wegproject.enums.CategoriesEnums;
-import net.weg.wegproject.ConcreteClasses.productsClasses.ink.model.Ink;
-import net.weg.wegproject.ConcreteClasses.productsClasses.ink.service.InkService;
-import net.weg.wegproject.ConcreteClasses.productsClasses.motors.model.Motors;
-import net.weg.wegproject.ConcreteClasses.productsClasses.motors.service.MotorsService;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.exceptions.NoProductException;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.exceptions.NoProductsException;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.exceptions.ProductDeleteException;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.exceptions.ProductUpdateException;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.dto.ProductDTO;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
-import net.weg.wegproject.ConcreteClasses.productsClasses.security.model.Security;
-import net.weg.wegproject.ConcreteClasses.productsClasses.security.service.SecurityService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.data.domain.PageRequest;
@@ -37,11 +26,6 @@ import java.util.List;
 @RequestMapping("/product")
 public class ProductController {
     ProductService productService;
-    InkService inkService;
-    AutomationService automationService;
-    MotorsService motorsService;
-    BuildingService buildingService;
-    SecurityService securityService;
 
     @PostMapping
     public ResponseEntity<Product> create(@RequestBody ProductDTO objDTO) {
