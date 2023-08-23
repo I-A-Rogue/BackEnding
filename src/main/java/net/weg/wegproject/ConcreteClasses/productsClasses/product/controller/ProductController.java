@@ -13,6 +13,7 @@ import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.dto.Prod
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeansException;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -45,8 +46,8 @@ public class ProductController {
             }
     }
     @GetMapping("/all")
-    public ResponseEntity<List<Product>> findAll(@RequestParam("size") int size,
-                                                 @RequestParam("page") int page) {
+    public ResponseEntity<Page<Product>> findAll(@RequestParam("size") int size,
+                                        @RequestParam("page") int page) {
         try {
             return ResponseEntity.ok(productService.findAll(PageRequest.of(page, size)));
         } catch (Exception e) {
@@ -55,7 +56,7 @@ public class ProductController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Product>> findAllByCategories(@RequestParam CategoriesEnums categories,
+    public ResponseEntity<Page<Product>> findAllByCategories(@RequestParam CategoriesEnums categories,
                                                              @RequestParam("size") int size,
                                                              @RequestParam("page") int page) {
         try {

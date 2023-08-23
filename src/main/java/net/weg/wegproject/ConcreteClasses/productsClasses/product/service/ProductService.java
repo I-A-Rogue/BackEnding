@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import net.weg.wegproject.enums.CategoriesEnums;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.repository.ProductRepository;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
@@ -19,12 +20,12 @@ public class ProductService{
         return productRepository.save(obj);
     }
 
-    public List<Product> findAllByCategories(Pageable pageable, CategoriesEnums categories){
+    public Page<Product> findAllByCategories(Pageable pageable, CategoriesEnums categories){
         return productRepository.findAllByCategories(pageable, categories);
     }
 
-    public List<Product> findAll(Pageable pageable) {
-        return productRepository.findAll();
+    public Page<Product> findAll(Pageable pageable) {
+        return productRepository.findAll(pageable);
     }
 
     public Product findOne(Long id) {

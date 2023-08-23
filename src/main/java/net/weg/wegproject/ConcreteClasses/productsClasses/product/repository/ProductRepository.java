@@ -2,6 +2,7 @@ package net.weg.wegproject.ConcreteClasses.productsClasses.product.repository;
 
 import net.weg.wegproject.enums.CategoriesEnums;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -12,7 +13,7 @@ import java.util.List;
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
 
-    List<Product> findAllByCategories(Pageable pageable, CategoriesEnums categories);
+    Page<Product> findAllByCategories(Pageable pageable, CategoriesEnums categories);
 
     @Query(value = "SELECT *, MATCH(video.titulo) AGAINST(CONCAT('*', :searchTerm, '*') IN BOOLEAN MODE) * 3000 +" +
             " (SELECT MAX(MATCH(categoria.categoria_string) AGAINST(CONCAT('*', :searchTerm, '*') IN BOOLEAN MODE) * 2000)" +
@@ -22,5 +23,8 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
             " TotalScore FROM video GROUP BY video.titulo;",
             nativeQuery = true)
     List<Product> searchBy(String searchTerm);
+
+    Page<Product> findAll(Pageable pageable);
+
 
 }
