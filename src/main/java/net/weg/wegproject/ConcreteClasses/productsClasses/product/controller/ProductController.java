@@ -19,6 +19,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @AllArgsConstructor
 @Controller
 @CrossOrigin
@@ -43,7 +45,7 @@ public class ProductController {
                 return ResponseEntity.badRequest().build();
             }
     }
-    @GetMapping("/all")
+    @GetMapping
     public ResponseEntity<Page<Product>> findAll(@RequestParam("size") int size,
                                         @RequestParam("page") int page) {
         try {
@@ -53,7 +55,16 @@ public class ProductController {
         }
     }
 
-    @GetMapping
+    @GetMapping("/all")
+    public ResponseEntity<List<Product>> findAll() {
+        try {
+            return ResponseEntity.ok(productService.findAll());
+        } catch (Exception e) {
+            throw new NoProductsException();
+        }
+    }
+
+    @GetMapping("/category")
     public ResponseEntity<Page<Product>> findAllByCategories(@RequestParam CategoriesEnums categories,
                                                              @RequestParam("size") int size,
                                                              @RequestParam("page") int page) {
