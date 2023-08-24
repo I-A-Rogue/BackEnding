@@ -49,7 +49,7 @@ public class UserService implements ServiceInterface<User> {
         }
     }
 
-    public boolean existsUserByEmailAndPassword(String email, String password){
+    public Boolean existsUserByEmailAndPassword(String email, String password){
         try {
             return userRepository.existsUserByEmailAndPassword(email, password);
         }catch (Exception e){

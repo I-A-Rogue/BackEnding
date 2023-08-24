@@ -67,18 +67,12 @@ public class UserController {
             throw new NoUserException();
         }
     }
-    @GetMapping("/email/{email}")
-    public void findByEmail(@PathVariable String email){
+    @GetMapping("/login")
+    public ResponseEntity<Boolean> existsUserByEmailAndPassword(@RequestParam("email") String email,
+                                                                @RequestParam("password") String password){
         try {
-            ResponseEntity.ok(userService.findByEmail(email));
-        }catch (Exception e){
-            throw new NoUserException();
-        }
-    }
-    @GetMapping("/{email}/{password}")
-    public void existsUserByEmailAndPassword(@PathVariable String email, @PathVariable String password){
-        try {
-            ResponseEntity.ok(userService.existsUserByEmailAndPassword(email, password));
+            System.out.print(email +"\n"+ password);
+            return ResponseEntity.ok(userService.existsUserByEmailAndPassword(email, password));
         }catch (Exception e){
             throw new NoUserException();
         }
