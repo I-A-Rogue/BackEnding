@@ -28,6 +28,10 @@ public class ProductService{
         return productRepository.findAll(pageable);
     }
 
+    public List<Product> findAll() {
+        return productRepository.findAll();
+    }
+
     public Product findOne(Long id) {
         try {
             return productRepository.findById(id).orElseThrow();
