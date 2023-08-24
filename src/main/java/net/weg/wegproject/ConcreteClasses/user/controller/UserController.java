@@ -71,7 +71,6 @@ public class UserController {
     public ResponseEntity<Boolean> existsUserByEmailAndPassword(@RequestParam("email") String email,
                                                                 @RequestParam("password") String password){
         try {
-            System.out.print(email +"\n"+ password);
             return ResponseEntity.ok(userService.existsUserByEmailAndPassword(email, password));
         }catch (Exception e){
             throw new NoUserException();
