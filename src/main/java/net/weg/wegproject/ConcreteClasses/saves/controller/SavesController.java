@@ -19,6 +19,7 @@ import java.util.List;
 
 @Controller
 @AllArgsConstructor
+@CrossOrigin
 @RequestMapping("/saves")
 public class SavesController{
 
