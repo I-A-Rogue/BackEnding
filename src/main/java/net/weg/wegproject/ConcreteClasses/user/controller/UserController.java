@@ -2,6 +2,8 @@ package net.weg.wegproject.ConcreteClasses.user.controller;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import net.weg.wegproject.ConcreteClasses.address.model.entity.Address;
+import net.weg.wegproject.ConcreteClasses.address.service.AddressService;
 import net.weg.wegproject.ConcreteClasses.cart.model.entity.Cart;
 import net.weg.wegproject.ConcreteClasses.cart.model.entity.CartProductQuantity;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
@@ -25,6 +27,7 @@ import java.util.List;
 public class UserController {
 
     UserService userService;
+    AddressService addressService;
 
     @PostMapping
     public ResponseEntity<User> create(@RequestBody UserDTO objDTO) {
@@ -90,6 +93,21 @@ public class UserController {
             throw new RuntimeException(e.getMessage());
         }
     }
+
+    @DeleteMapping("/address/{user_id}/{address_id}")
+    public ResponseEntity<Address> removeAddress(@PathVariable Long user_id, @PathVariable Long address_id) {
+        try {
+            User user = userService.findOne(user_id);
+            Address address = addressService.findOne(address_id);
+            user.getAddress().remove(address);
+            addressService.delete(address_id);
+            userService.update(user);
+            return ResponseEntity.ok(address);
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
+        }
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<User> delete(@PathVariable Long id) {
         try {
