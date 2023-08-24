@@ -26,7 +26,7 @@ public class CartController {
     ProductService productService;
     CartProductQuantityService cartProductQuantityService;
 
-    @PutMapping("add/{cartId}/{productCode}")
+    @PutMapping("/add/{cartId}/{productCode}")
     public ResponseEntity<Cart> addOnCart(
             @PathVariable Long cartId,
             @PathVariable Long productCode,
