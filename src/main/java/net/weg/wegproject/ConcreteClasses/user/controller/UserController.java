@@ -68,10 +68,10 @@ public class UserController {
         }
     }
     @GetMapping("/login")
-    public ResponseEntity<Boolean> existsUserByEmailAndPassword(@RequestParam("email") String email,
+    public ResponseEntity<User> existsUserByEmailAndPassword(@RequestParam("email") String email,
                                                                 @RequestParam("password") String password){
         try {
-            return ResponseEntity.ok(userService.existsUserByEmailAndPassword(email, password));
+            return ResponseEntity.ok(userService.findUserByEmailAndPassword(email, password));
         }catch (Exception e){
             throw new NoUserException();
         }
