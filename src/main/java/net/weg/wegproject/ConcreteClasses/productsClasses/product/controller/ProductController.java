@@ -2,9 +2,19 @@ package net.weg.wegproject.ConcreteClasses.productsClasses.product.controller;
 
 import lombok.AllArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.assessment.model.entity.Assessment;
+import net.weg.wegproject.ConcreteClasses.productsClasses.automation.model.Automation;
+import net.weg.wegproject.ConcreteClasses.productsClasses.automation.service.AutomationService;
+import net.weg.wegproject.ConcreteClasses.productsClasses.building.model.Building;
+import net.weg.wegproject.ConcreteClasses.productsClasses.building.service.BuildingService;
+import net.weg.wegproject.ConcreteClasses.productsClasses.ink.model.Ink;
+import net.weg.wegproject.ConcreteClasses.productsClasses.ink.service.InkService;
+import net.weg.wegproject.ConcreteClasses.productsClasses.motors.model.Motors;
+import net.weg.wegproject.ConcreteClasses.productsClasses.motors.service.MotorsService;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.dto.ProductDTO;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.ProductFactory;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.service.ProductService;
+import net.weg.wegproject.ConcreteClasses.productsClasses.security.model.Security;
+import net.weg.wegproject.ConcreteClasses.productsClasses.security.service.SecurityService;
 import net.weg.wegproject.enums.CategoriesEnums;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.exceptions.NoProductException;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.exceptions.NoProductsException;
@@ -27,6 +37,11 @@ import java.util.List;
 @RequestMapping("/product")
 public class ProductController {
     ProductService productService;
+    InkService inkService;
+    BuildingService buildingService;
+    MotorsService motorsService;
+    SecurityService securityService;
+    AutomationService automationService;
 
     @PostMapping
     public ResponseEntity<Product> create(@RequestBody ProductDTO objDTO) {
@@ -40,7 +55,9 @@ public class ProductController {
                 assessment.setTotalAssessment(0);
                 assessment.setAmountVotes(0);
                 product.setAssessment(assessment);
-                return ResponseEntity.ok(productService.create(product));
+                Product productCreated = productService.create(product);
+                manager(productCreated);
+                return ResponseEntity.ok(productCreated);
             } catch (BeansException e) {
                 return ResponseEntity.badRequest().build();
             }
@@ -105,5 +122,37 @@ public class ProductController {
         }
     }
 
+    public void manager(Product product) {
+        switch (product.getCategories().name()) {
+            case "MOTORS" -> {
+                Motors motors = motorsService.findOne(product.getCode());
+                motors.setProduct_motors(product);
+                motorsService.update(motors);
+            }
+            case "AUTOMATION"->{
+                Automation automation = automationService.findOne(product.getCode());
+                automation.setProduct_auto(product);
+                automationService.update(automation);
+            }
+            case "BUILDING"->{
+                Building building = buildingService.findOne(product.getCode());
+                building.setProduct_building(product);
+                buildingService.update(building);
+            }
+            case "INK"-> {
+                Ink ink = inkService.findOne(product.getCode());
+                ink.setProduct_ink(product);
+                inkService.update(ink);
+            }
+            case "SECURITY"->{
+                Security security = securityService.findOne(product.getCode());
+                security.setProduct_security(product);
+                securityService.update(security);
+            }
+            default->{
+                throw new IllegalArgumentException("Categoria inválida");
+            }
+        }
+    }
 
 }
