@@ -100,7 +100,7 @@ public class CartController {
         }
     }
 
-    @PutMapping("remove/{cartId}/{productCode}")
+    @PutMapping("/remove/{cartId}/{productCode}")
     public ResponseEntity<Cart> deleteFromCart(@PathVariable Long cartId, @PathVariable Long productCode) {
         try {
             Cart cart = cartService.findOne(cartId);
