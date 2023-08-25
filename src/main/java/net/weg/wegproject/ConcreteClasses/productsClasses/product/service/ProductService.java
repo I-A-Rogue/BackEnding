@@ -26,22 +26,24 @@ public class ProductService{
     }
 
     public List<Product> filterProducts(String search, Pageable pageable, Filtro filtro) {
-        return productRepository.searchBy(pageable,
+        return productRepository.filterProducts(pageable,
                 search,
                 filtro.getPriceMin(),
                 filtro.getPriceMax(),
-                filtro.getType(),
-                filtro.getColor(),
-                filtro.getDensity(),
-                filtro.getPower(),
-                filtro.getFrequencyMin(),
-                filtro.getFrequencyMax(),
-                filtro.getCarcass(),
-                filtro.getRfi(),
-                filtro.getTemperature(),
-                filtro.getPlug(),
-                filtro.getBattery(),
-                filtro.getCasing());
+                filtro.getAssesment()
+//                filtro.getType(),
+//                filtro.getColor(),
+//                filtro.getDensity(),
+//                filtro.getPower(),
+//                filtro.getFrequencyMin(),
+//                filtro.getFrequencyMax(),
+//                filtro.getCarcass(),
+//                filtro.getRfi(),
+//                filtro.getTemperature(),
+//                filtro.getPlug(),
+//                filtro.getBattery(),
+//                filtro.getCasing()
+        );
     }
 
     public Page<Product> findAll(Pageable pageable) {
