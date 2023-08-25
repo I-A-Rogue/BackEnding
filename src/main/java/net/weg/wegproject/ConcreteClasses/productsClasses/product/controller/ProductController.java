@@ -94,7 +94,7 @@ public class ProductController {
     @GetMapping("/{id}")
     public ResponseEntity<Product> findOne(@PathVariable Long id) {
         try {
-            return ResponseEntity.ok(productService.findOne(id));
+            return ResponseEntity.ok(productService.findByCode(id));
         } catch (Exception e) {
             throw new NoProductException();
         }
@@ -103,7 +103,7 @@ public class ProductController {
     public ResponseEntity<Product> update(@RequestBody ProductDTO objDTO, @PathVariable Long id) {
         try {
             try {
-                Product product = productService.findOne(id);
+                Product product = productService.findByCode(id);
                 BeanUtils.copyProperties(objDTO, product);
                 return ResponseEntity.ok(productService.update(product));
             } catch (BeansException e) {

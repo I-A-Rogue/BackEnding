@@ -34,7 +34,7 @@ public class CartController {
     ) {
         try {
             Cart cart = cartService.findOne(cartId);
-            Product product = productService.findOne(productCode);
+            Product product = productService.findByCode(productCode);
 
             if (cart == null || product == null) {
                 return ResponseEntity.notFound().build();

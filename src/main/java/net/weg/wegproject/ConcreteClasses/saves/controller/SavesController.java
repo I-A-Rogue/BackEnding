@@ -29,7 +29,7 @@ public class SavesController{
     @PutMapping("/add/{savesId}/{productCode}")
     public ResponseEntity<?> addOnSaves(@PathVariable Long savesId, @PathVariable Long productCode) {
         Saves saves = findOne(savesId).getBody();
-        Product product = productService.findOne(productCode);
+        Product product = productService.findByCode(productCode);
         if (saves != null) {
             saves.setQuantity(saves.getQuantity() + 1);
             try{
@@ -65,7 +65,7 @@ public class SavesController{
     @PutMapping("/remove/{savesId}/{productCode}")
     public ResponseEntity<Saves> removeFromSaves(@PathVariable Long savesId, @PathVariable Long productCode) {
         Saves saves = findOne(savesId).getBody();
-        Product product = productService.findOne(productCode);
+        Product product = productService.findByCode(productCode);
         try {
             if (saves != null && saves.getQuantity() > 0) {
                 if(saves.getProducts().contains(product)) {

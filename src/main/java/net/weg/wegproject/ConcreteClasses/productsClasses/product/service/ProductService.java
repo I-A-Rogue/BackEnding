@@ -32,9 +32,9 @@ public class ProductService{
         return productRepository.findAll();
     }
 
-    public Product findOne(Long id) {
+    public Product findByCode(Long code) {
         try {
-            return productRepository.findById(id).orElseThrow();
+            return productRepository.findByCode(code);
         }catch (NoSuchElementException e){
             throw new NoSuchElementException("Produto inexistente");
         }
@@ -45,7 +45,7 @@ public class ProductService{
     }
 
     public Product delete(Long id) {
-        Product product = findOne(id);
+        Product product = findByCode(id);
         productRepository.delete(product);
         return product;
     }
