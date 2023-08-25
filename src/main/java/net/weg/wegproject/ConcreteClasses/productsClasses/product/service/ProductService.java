@@ -1,6 +1,7 @@
 package net.weg.wegproject.ConcreteClasses.productsClasses.product.service;
 
 import lombok.AllArgsConstructor;
+import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Filtro;
 import net.weg.wegproject.enums.CategoriesEnums;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.repository.ProductRepository;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
@@ -22,6 +23,25 @@ public class ProductService{
 
     public Page<Product> findAllByCategories(Pageable pageable, CategoriesEnums categories){
         return productRepository.findAllByCategories(pageable, categories);
+    }
+
+    public List<Product> filterProducts(String search, Pageable pageable, Filtro filtro) {
+        return productRepository.searchBy(pageable,
+                search,
+                filtro.getPriceMin(),
+                filtro.getPriceMax(),
+                filtro.getType(),
+                filtro.getColor(),
+                filtro.getDensity(),
+                filtro.getPower(),
+                filtro.getFrequencyMin(),
+                filtro.getFrequencyMax(),
+                filtro.getCarcass(),
+                filtro.getRfi(),
+                filtro.getTemperature(),
+                filtro.getPlug(),
+                filtro.getBattery(),
+                filtro.getCasing());
     }
 
     public Page<Product> findAll(Pageable pageable) {

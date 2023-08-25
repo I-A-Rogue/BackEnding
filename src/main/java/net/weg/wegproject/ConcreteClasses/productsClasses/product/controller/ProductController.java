@@ -10,7 +10,9 @@ import net.weg.wegproject.ConcreteClasses.productsClasses.ink.model.Ink;
 import net.weg.wegproject.ConcreteClasses.productsClasses.ink.service.InkService;
 import net.weg.wegproject.ConcreteClasses.productsClasses.motors.model.Motors;
 import net.weg.wegproject.ConcreteClasses.productsClasses.motors.service.MotorsService;
+import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.dto.FiltroDTO;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.dto.ProductDTO;
+import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Filtro;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.ProductFactory;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.service.ProductService;
 import net.weg.wegproject.ConcreteClasses.productsClasses.security.model.Security;
@@ -25,6 +27,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -69,6 +72,22 @@ public class ProductController {
             return ResponseEntity.ok(productService.findAll(PageRequest.of(page, size)));
         } catch (Exception e) {
             throw new NoProductsException();
+        }
+    }
+
+
+    @GetMapping("/search/filter/{searchTerm}")
+    public ResponseEntity<List<Product>> filterProducts(@PathVariable String searchTerm,
+                                                        @ModelAttribute FiltroDTO filtroDTO,
+                                                        @RequestParam("size") int size,
+                                                        @RequestParam("page") int page) {
+        try {
+            Filtro filtro = new Filtro();
+            System.out.print(searchTerm);
+            BeanUtils.copyProperties(filtroDTO, filtro);
+            return ResponseEntity.ok(productService.filterProducts(searchTerm, PageRequest.of(page, size), filtro));
+        } catch (Exception e) {
+            throw new NoProductException();
         }
     }
 
