@@ -1,10 +1,12 @@
 package net.weg.wegproject.ConcreteClasses.cart.controller;
 
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.cart.exceptions.*;
 import net.weg.wegproject.ConcreteClasses.cart.model.entity.Cart;
 import net.weg.wegproject.ConcreteClasses.cart.model.dto.CartDTO;
 import net.weg.wegproject.ConcreteClasses.cart.model.entity.CartProductQuantity;
+import net.weg.wegproject.ConcreteClasses.cart.repository.CartProductQuantityRepository;
 import net.weg.wegproject.ConcreteClasses.cart.service.CartProductQuantityService;
 import net.weg.wegproject.ConcreteClasses.cart.service.CartService;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
@@ -25,6 +27,7 @@ public class CartController {
     CartService cartService;
     ProductService productService;
     CartProductQuantityService cartProductQuantityService;
+    CartProductQuantityRepository cartProductQuantityRepository;
 
     @PutMapping("/add/{cartId}/{productCode}")
     public ResponseEntity<Cart> addOnCart(
@@ -97,6 +100,23 @@ public class CartController {
             }
         } catch (Exception e) {
             throw new CartUpdateException();
+        }
+    }
+
+    @Transactional
+    @DeleteMapping("/remove/all/{cartId}")
+    public ResponseEntity<Cart> deleteAllFromCart(@PathVariable Long cartId) {
+        try {
+            Cart cart = cartService.findOne(cartId);
+            cart.setSize(0);
+            cart.setTotalPrice(0f);
+            List<CartProductQuantity> cartProductQuantities = cart.getCartProductQuantities();
+            cartProductQuantityRepository.deleteAll(cartProductQuantities);
+            cart.getCartProductQuantities().clear();
+            cartService.update(cart);
+            return ResponseEntity.ok().body(cart);
+        } catch (CartUpdateException | EmptyCartException e) {
+            throw new RuntimeException(e.getMessage());
         }
     }
 

@@ -1,5 +1,6 @@
 package net.weg.wegproject.ConcreteClasses.cart.service;
 
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.cart.model.entity.Cart;
 import net.weg.wegproject.ConcreteClasses.cart.model.entity.CartProductQuantity;
@@ -44,6 +45,8 @@ public class CartProductQuantityService implements ServiceInterface<CartProductQ
     public CartProductQuantity delete(Long id) {
         return null;
     }
+
+
 
     public CartProductQuantity deleteByObject(CartProductQuantity obj) {
         cartProductQuantityRepository.delete(obj);
