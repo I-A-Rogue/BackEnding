@@ -1,4 +1,4 @@
-package net.weg.wegproject.ConcreteClasses.Order;
+package net.weg.wegproject.ConcreteClasses.Order.model.dto;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.OneToMany;

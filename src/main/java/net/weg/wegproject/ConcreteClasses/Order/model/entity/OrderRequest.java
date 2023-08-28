@@ -1,11 +1,10 @@
-package net.weg.wegproject.ConcreteClasses.Order;
+package net.weg.wegproject.ConcreteClasses.Order.model.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.address.model.entity.Address;
-import net.weg.wegproject.ConcreteClasses.cart.model.entity.CartProductQuantity;
 
 import java.util.List;
 

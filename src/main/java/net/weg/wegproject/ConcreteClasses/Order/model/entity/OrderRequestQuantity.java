@@ -1,4 +1,4 @@
-package net.weg.wegproject.ConcreteClasses.Order;
+package net.weg.wegproject.ConcreteClasses.Order.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
