@@ -21,13 +21,15 @@ public class Filtro {
     private Float priceMin;
     private Float priceMax;
     private InkEnums type;
-    private Integer density;
+    private String Categories;
+
+    private Float density;
     private String color;
 
     private Boolean assesment;
 
     //  Motors
-    private Integer power;
+    private Float power;
     private Float frequencyMin;
     private Float frequencyMax;
     private String material;
@@ -43,4 +45,8 @@ public class Filtro {
     private String plug;
     private String battery;
     private String casing;
+
+    public String getType() {
+        return type.name();
+    }
 }

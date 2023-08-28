@@ -10,22 +10,30 @@ import net.weg.wegproject.enums.InkEnums;
 @Data
 public class FiltroDTO {
 
+    private Boolean assesment;
+
     private Float priceMin;
     private Float priceMax;
+    private String Categories;
+
     private InkEnums type;
     private Integer density;
     private String color;
-    private Boolean assesment;
+
+
     private Integer power;
     private String material;
     private String  carcass;
+
     private Float voltage;
     private String rfi;
+
     private Float temperature;
     private Float voltageMin;
     private Float voltageMax;
     private Float frequencyMin;
     private Float frequencyMax;
+
     private String plug;
     private String battery;
     private String casing;

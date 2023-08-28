@@ -81,14 +81,14 @@ public class ProductController {
                                                         @ModelAttribute FiltroDTO filtroDTO,
                                                         @RequestParam("size") int size,
                                                         @RequestParam("page") int page) {
-        try {
+//        try {
             Filtro filtro = new Filtro();
             System.out.print(searchTerm);
             BeanUtils.copyProperties(filtroDTO, filtro);
             return ResponseEntity.ok(productService.filterProducts(searchTerm, PageRequest.of(page, size), filtro));
-        } catch (Exception e) {
-            throw new NoProductException();
-        }
+//        } catch (Exception e) {
+//            throw new NoProductException();
+//        }
     }
 
     @GetMapping("/all")
