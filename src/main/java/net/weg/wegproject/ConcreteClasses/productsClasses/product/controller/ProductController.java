@@ -27,7 +27,6 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -75,20 +74,19 @@ public class ProductController {
         }
     }
 
-
-    @GetMapping("/search/filter/{searchTerm}")
+        @GetMapping("/search/filter/{searchTerm}")  
     public ResponseEntity<List<Product>> filterProducts(@PathVariable String searchTerm,
                                                         @ModelAttribute FiltroDTO filtroDTO,
                                                         @RequestParam("size") int size,
                                                         @RequestParam("page") int page) {
-//        try {
+        try {
             Filtro filtro = new Filtro();
             System.out.print(searchTerm);
             BeanUtils.copyProperties(filtroDTO, filtro);
             return ResponseEntity.ok(productService.filterProducts(searchTerm, PageRequest.of(page, size), filtro));
-//        } catch (Exception e) {
-//            throw new NoProductException();
-//        }
+        } catch (Exception e) {
+            throw new NoProductException();
+        }
     }
 
     @GetMapping("/all")
