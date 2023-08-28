@@ -1,6 +1,7 @@
 package net.weg.wegproject.ConcreteClasses.productsClasses.product.service;
 
 import lombok.AllArgsConstructor;
+import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Filtro;
 import net.weg.wegproject.enums.CategoriesEnums;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.repository.ProductRepository;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Objects;
 
 @Service
 @AllArgsConstructor
@@ -22,6 +24,51 @@ public class ProductService{
 
     public Page<Product> findAllByCategories(Pageable pageable, CategoriesEnums categories){
         return productRepository.findAllByCategories(pageable, categories);
+    }
+
+    public List<Product> filterProducts(String search, Pageable pageable, Filtro filtro) {
+        List<Product> prods = productRepository.filterProducts(pageable,
+                search,
+                filtro.getPriceMin(),
+                filtro.getPriceMax()
+        );
+
+        if (CategoriesEnums.INK.name().equals(filtro.getCategories().toUpperCase())){
+            prods.retainAll(productRepository.filterInk(
+                    filtro.getColor(),
+                    filtro.getDensity()
+            ));
+
+        }else if (CategoriesEnums.MOTORS.name().equals(filtro.getCategories().toUpperCase())) {
+            prods.retainAll(productRepository.filterMotors(
+                    filtro.getFrequencyMin(),
+                    filtro.getFrequencyMax(),
+                    filtro.getCarcass(),
+                    filtro.getMaterial()
+
+            ));
+        } else if (CategoriesEnums.AUTOMATION.name().equals(filtro.getCategories().toUpperCase())){
+        prods.retainAll(productRepository.filterAutomation(
+                filtro.getVoltage(),
+                filtro.getRfi(),
+                filtro.getTemperature()
+        ));
+        } else if (CategoriesEnums.SECURITY.name().equals(filtro.getCategories().toUpperCase())){
+            prods.retainAll(productRepository.filterSecurity(
+                    filtro.getFrequencyMin(),
+                    filtro.getFrequencyMax(),
+                    filtro.getVoltage()
+            ));
+        } else if (CategoriesEnums.BUILDING.name().equals(filtro.getCategories().toUpperCase())){
+            prods.retainAll(productRepository.filterBuilding(
+                    filtro.getPlug(),
+                    filtro.getBattery(),
+                    filtro.getCasing()
+            ));
+        }
+
+
+        return prods;
     }
 
     public Page<Product> findAll(Pageable pageable) {
