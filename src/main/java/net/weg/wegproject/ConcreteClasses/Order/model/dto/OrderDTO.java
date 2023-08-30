@@ -1,14 +1,13 @@
 package net.weg.wegproject.ConcreteClasses.Order.model.dto;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.address.model.entity.Address;
 import net.weg.wegproject.ConcreteClasses.cart.model.entity.CartProductQuantity;
+import net.weg.wegproject.ConcreteClasses.user.model.entity.User;
 
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -17,6 +16,9 @@ import java.util.List;
 public class OrderDTO {
 
     private Address address;
+    private User user;
+    private String status;
+    private Date date;
     private List<CartProductQuantity> cartProductQuantities;
 
 }
