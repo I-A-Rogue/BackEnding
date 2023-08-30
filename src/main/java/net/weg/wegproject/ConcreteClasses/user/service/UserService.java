@@ -51,7 +51,7 @@ public class UserService implements ServiceInterface<User> {
 
     public User findUserByEmailAndPassword(String email, String password){
         try {
-            return userRepository.findUserByEmailAndPassword(email, password);
+            return userRepository.findByEmailAndPassword(email, password);
         }catch (Exception e){
             throw new NoUserException();
         }
