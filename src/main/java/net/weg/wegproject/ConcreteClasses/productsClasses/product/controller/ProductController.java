@@ -74,16 +74,43 @@ public class ProductController {
         }
     }
 
-        @GetMapping("/search/filter/{searchTerm}")  
-    public ResponseEntity<List<Product>> filterProducts(@PathVariable String searchTerm,
+        @GetMapping("/search/{searchTerm}")
+    public ResponseEntity<Page<Product>> searchBy(@PathVariable String searchTerm,
+                                                  @RequestParam("size") int size,
+                                                  @RequestParam("page") int page) {
+        try {
+            return ResponseEntity.ok(productService.searchBy(PageRequest.of(page, size), searchTerm));
+        } catch (Exception e) {
+            throw new NoProductException();
+        }
+    }
+
+    @GetMapping("/product/{categories}")
+    public ResponseEntity<Page<Product>> searchByCategories(@PathVariable CategoriesEnums categories,
                                                         @ModelAttribute FiltroDTO filtroDTO,
                                                         @RequestParam("size") int size,
                                                         @RequestParam("page") int page) {
         try {
             Filtro filtro = new Filtro();
-            System.out.print(searchTerm);
             BeanUtils.copyProperties(filtroDTO, filtro);
-            return ResponseEntity.ok(productService.filterProducts(searchTerm, PageRequest.of(page, size), filtro));
+            switch (categories) {
+                case MOTORS -> {
+                    return ResponseEntity.ok(productService.buscarCategoriaMotor(PageRequest.of(page, size), filtro));
+                }
+                case INK -> {
+                    return ResponseEntity.ok(productService.buscarCategoriaInk(PageRequest.of(page, size), filtro));
+                }
+                case AUTOMATION -> {
+                    return ResponseEntity.ok(productService.buscarCategoriaAutomation(PageRequest.of(page, size), filtro));
+                }
+                case BUILDING -> {
+                    return ResponseEntity.ok(productService.buscarCategoriaBuilding(PageRequest.of(page, size), filtro));
+                }
+                case SECURITY -> {
+                    return ResponseEntity.ok(productService.buscarCategoriaSecurity(PageRequest.of(page, size), filtro));
+                }
+                default -> throw new RuntimeException("Categoria inválida");
+            }
         } catch (Exception e) {
             throw new NoProductException();
         }

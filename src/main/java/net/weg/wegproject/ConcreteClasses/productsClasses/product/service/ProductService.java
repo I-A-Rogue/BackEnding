@@ -27,52 +27,59 @@ public class ProductService{
         return productRepository.findAllByCategories(pageable, categories);
     }
 
-    public List<Product> filterProducts(String search, Pageable pageable, Filtro filtro) {
-        // Passo 1: Obter a lista de produtos base usando a filtragem global
-        List<Product> prods = productRepository.filterProducts(pageable, search, filtro.getPriceMin(), filtro.getPriceMax());
 
-        // Passo 2 e 3: Aplicar filtros específicos da categoria na lista de produtos base
-        List<Product> filteredProds = new ArrayList<>(prods); // Nova lista para armazenar produtos filtrados
-
-        if (CategoriesEnums.INK.name().equals(filtro.getCategories().toUpperCase())) {
-            filteredProds.retainAll(productRepository.filterInk(
-                    pageable,
-                    filtro.getColor(),
-                    filtro.getDensity()
-            ));
-        } else if (CategoriesEnums.MOTORS.name().equals(filtro.getCategories().toUpperCase())) {
-            filteredProds.retainAll(productRepository.filterMotors(
-                    pageable,
-                    filtro.getFrequencyMin(),
-                    filtro.getFrequencyMax(),
-                    filtro.getCarcass(),
-                    filtro.getMaterial()
-            ));
-        } else if (CategoriesEnums.AUTOMATION.name().equals(filtro.getCategories().toUpperCase())) {
-            filteredProds.retainAll(productRepository.filterAutomation(
-                    pageable,
-                    filtro.getVoltage(),
-                    filtro.getRfi(),
-                    filtro.getTemperature()
-            ));
-        } else if (CategoriesEnums.SECURITY.name().equals(filtro.getCategories().toUpperCase())) {
-            filteredProds.retainAll(productRepository.filterSecurity(
-                    pageable,
-                    filtro.getFrequencyMin(),
-                    filtro.getFrequencyMax(),
-                    filtro.getVoltage()
-            ));
-        } else if (CategoriesEnums.BUILDING.name().equals(filtro.getCategories().toUpperCase())) {
-            filteredProds.retainAll(productRepository.filterBuilding(
-                    pageable,
-                    filtro.getPlug(),
-                    filtro.getBattery(),
-                    filtro.getCasing()
-            ));
-        }
-
-        return filteredProds; // Retorna a lista de produtos filtrados pela categoria
+    public Page<Product> searchBy(Pageable pageable, String searchTerm){
+        return productRepository.search(pageable, searchTerm);
     }
+
+    //Filtros
+
+    public Page<Product> buscarCategoriaMotor(Pageable pageable, Filtro filtro){
+        return productRepository.filterMotors(pageable,
+                filtro.getPriceMin(),
+                filtro.getPriceMax(),
+                filtro.getFrequencyMin(),
+                filtro.getFrequencyMax(),
+                filtro.getCarcass(),
+                filtro.getMaterial());
+    }
+
+    public Page<Product> buscarCategoriaInk(Pageable pageable, Filtro filtro){
+        return productRepository.filterInk(pageable,
+                filtro.getPriceMin(),
+                filtro.getPriceMax(),
+                filtro.getColor(),
+                filtro.getDensity());
+    }
+
+    public Page<Product> buscarCategoriaAutomation(Pageable pageable, Filtro filtro){
+        return productRepository.filterAutomation(pageable,
+                filtro.getPriceMin(),
+                filtro.getPriceMax(),
+                filtro.getVoltage(),
+                filtro.getRfi(),
+                filtro.getTemperature());
+    }
+
+    public Page<Product> buscarCategoriaSecurity(Pageable pageable, Filtro filtro){
+        return productRepository.filterSecurity(pageable,
+                filtro.getPriceMin(),
+                filtro.getPriceMax(),
+                filtro.getFrequencyMax(),
+                filtro.getFrequencyMin(),
+                filtro.getVoltage());
+    }
+
+    public Page<Product> buscarCategoriaBuilding(Pageable pageable, Filtro filtro){
+        return productRepository.filterBuilding(pageable,
+                filtro.getPriceMin(),
+                filtro.getPriceMax(),
+                filtro.getPlug(),
+                filtro.getBattery(),
+                filtro.getCasing());
+    }
+
+    //
 
     public Page<Product> findAll(Pageable pageable) {
         return productRepository.findAll(pageable);
