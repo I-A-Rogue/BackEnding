@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.address.model.entity.Address;
 import net.weg.wegproject.ConcreteClasses.address.model.dto.AddressDTO;
+import net.weg.wegproject.ConcreteClasses.address.repository.AddressRepository;
 import net.weg.wegproject.ConcreteClasses.address.service.AddressService;
 import net.weg.wegproject.ConcreteClasses.productsClasses.automation.model.Automation;
 import net.weg.wegproject.ConcreteClasses.productsClasses.building.model.Building;
@@ -13,9 +14,11 @@ import net.weg.wegproject.ConcreteClasses.productsClasses.ink.model.Ink;
 import net.weg.wegproject.ConcreteClasses.productsClasses.motors.model.Motors;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.controller.ProductController;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.dto.ProductDTO;
+import net.weg.wegproject.ConcreteClasses.productsClasses.product.repository.ProductRepository;
 import net.weg.wegproject.ConcreteClasses.productsClasses.security.model.Security;
 import net.weg.wegproject.ConcreteClasses.user.controller.UserController;
 import net.weg.wegproject.ConcreteClasses.user.model.dto.UserDTO;
+import net.weg.wegproject.ConcreteClasses.user.repository.UserRepository;
 import net.weg.wegproject.enums.*;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,7 +42,7 @@ public class BancoInUtil {
 
     @PostConstruct
     public void createRandomMotors() {
-        for (Long i = 1l; i <= 30; i++) {
+            for (Long i = 1l; i <= 30; i++) {
             ProductDTO productDTO = new ProductDTO();
             productDTO.setCode(i);
             productDTO.setName(faker.commerce().productName());
@@ -68,7 +71,7 @@ public class BancoInUtil {
     public UserDTO gerarUser(){
         UserDTO userDTO = new UserDTO();
         userDTO.setName(faker.name().fullName());
-        userDTO.setCpf(Long.valueOf(faker.number().digits(11)));
+        userDTO.setCpf(faker.number().randomNumber(11, true));
         userDTO.setEmail(faker.internet().emailAddress());
         userDTO.setPassword(faker.internet().password());
         AddressDTO addressDTO = new AddressDTO(faker.address().streetName(),
