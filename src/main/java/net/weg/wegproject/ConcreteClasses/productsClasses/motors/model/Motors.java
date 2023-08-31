@@ -131,9 +131,6 @@ public class Motors extends Product {
     private String tropicalizedPainting;
 
 
-    @OneToOne
-    @JsonIgnore
-    private Product product_motors;
 
     @Override
     public String toString() {

@@ -23,9 +23,6 @@ public class Ink extends Product {
     @Enumerated(EnumType.STRING)
     private InkEnums type;
 
-    @OneToOne
-    @JsonIgnore
-    private Product product_ink;
 
     @Override
     public String toString() {

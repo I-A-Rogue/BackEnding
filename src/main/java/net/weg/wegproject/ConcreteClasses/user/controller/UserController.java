@@ -13,6 +13,8 @@ import net.weg.wegproject.ConcreteClasses.user.model.dto.UserDTO;
 import net.weg.wegproject.ConcreteClasses.user.model.entity.User;
 import net.weg.wegproject.ConcreteClasses.user.service.UserService;
 import org.springframework.beans.BeanUtils;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -59,6 +61,8 @@ public class UserController {
             throw new NoUsersException();
         }
     }
+
+
     @GetMapping("/{id}")
     public ResponseEntity<User> findOne(@PathVariable Long id) {
         try {

@@ -77,10 +77,6 @@ public class Security extends Product {
     @Column(nullable = false)
     private String terminalType;
 
-    @OneToOne
-    @JsonIgnore
-    private Product product_security;
-
     @Override
     public String toString() {
         return "Security{" +

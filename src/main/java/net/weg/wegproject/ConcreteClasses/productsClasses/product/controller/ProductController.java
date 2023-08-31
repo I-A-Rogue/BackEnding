@@ -40,11 +40,6 @@ import java.util.List;
 @RequestMapping("/product")
 public class ProductController {
     ProductService productService;
-    InkService inkService;
-    BuildingService buildingService;
-    MotorsService motorsService;
-    SecurityService securityService;
-    AutomationService automationService;
 
     @PostMapping
     public ResponseEntity<Product> create(@RequestBody ProductDTO objDTO) {
@@ -59,7 +54,6 @@ public class ProductController {
                 assessment.setAmountVotes(0);
                 product.setAssessment(assessment);
                 Product productCreated = productService.create(product);
-                manager(productCreated);
                 return ResponseEntity.ok(productCreated);
             } catch (BeansException e) {
                 return ResponseEntity.badRequest().build();
@@ -138,39 +132,6 @@ public class ProductController {
             return ResponseEntity.ok(productService.delete(id));
         } catch (Exception e) {
             throw new ProductDeleteException();
-        }
-    }
-
-    public void manager(Product product) {
-        switch (product.getCategories().name()) {
-            case "MOTORS" -> {
-                Motors motors = motorsService.findOne(product.getCode());
-                motors.setProduct_motors(product);
-                motorsService.update(motors);
-            }
-            case "AUTOMATION"->{
-                Automation automation = automationService.findOne(product.getCode());
-                automation.setProduct_auto(product);
-                automationService.update(automation);
-            }
-            case "BUILDING"->{
-                Building building = buildingService.findOne(product.getCode());
-                building.setProduct_building(product);
-                buildingService.update(building);
-            }
-            case "INK"-> {
-                Ink ink = inkService.findOne(product.getCode());
-                ink.setProduct_ink(product);
-                inkService.update(ink);
-            }
-            case "SECURITY"->{
-                Security security = securityService.findOne(product.getCode());
-                security.setProduct_security(product);
-                securityService.update(security);
-            }
-            default->{
-                throw new IllegalArgumentException("Categoria inválida");
-            }
         }
     }
 

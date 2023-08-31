@@ -23,6 +23,7 @@ public class ProductService{
     }
 
     public Page<Product> findAllByCategories(Pageable pageable, CategoriesEnums categories){
+        System.out.println("a"+categories);
         return productRepository.findAllByCategories(pageable, categories);
     }
 

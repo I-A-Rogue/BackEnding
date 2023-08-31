@@ -61,9 +61,6 @@ public class Building extends Product{
     @Column(nullable = false)
     private String colorStructure;
 
-    @OneToOne
-    @JsonIgnore
-    private Product product_building;
 
     @Override
     public String toString() {

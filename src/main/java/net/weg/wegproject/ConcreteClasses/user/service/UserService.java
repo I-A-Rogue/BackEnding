@@ -5,6 +5,8 @@ import net.weg.wegproject.ConcreteClasses.user.exceptions.*;
 import net.weg.wegproject.ConcreteClasses.user.model.entity.User;
 import net.weg.wegproject.ConcreteClasses.user.repository.UserRepository;
 import net.weg.wegproject.interfaces.ServiceInterface;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
