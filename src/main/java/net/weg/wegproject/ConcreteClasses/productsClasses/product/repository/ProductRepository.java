@@ -57,7 +57,7 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
             "WHERE (:priceMin IS NULL OR :priceMin = 0 OR p.price > :priceMin) " +
             "AND (:priceMax IS NULL OR :priceMax = 99999999999 OR p.price < :priceMax) " +
             "AND (:color IS NULL OR :color = '' OR i.color = :color) " +
-            "AND (:density IS NULL OR :density = 0.0 OR i.density = :density) " +
+            "AND (:density IS NULL OR :density = '' OR i.density = :density) " +
             "AND p.code = i.code",
             nativeQuery = false)
     Page<Product> filterInk(
