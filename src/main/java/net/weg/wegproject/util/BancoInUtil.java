@@ -85,7 +85,6 @@ public class BancoInUtil {
         List<Address> addresses = new ArrayList<>();
         addresses.add(address);
         userDTO.setAddress(addresses);
-        userDTO.setCards(new ArrayList<>());
         return userDTO;
     }
 

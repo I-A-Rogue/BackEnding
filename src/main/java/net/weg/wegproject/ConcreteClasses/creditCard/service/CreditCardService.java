@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.creditCard.exceptions.*;
 import net.weg.wegproject.ConcreteClasses.creditCard.model.entity.CreditCard;
 import net.weg.wegproject.ConcreteClasses.creditCard.repository.CreditCardRepository;
+import net.weg.wegproject.ConcreteClasses.user.model.entity.User;
 import net.weg.wegproject.interfaces.ServiceInterface;
 import org.springframework.stereotype.Service;
 

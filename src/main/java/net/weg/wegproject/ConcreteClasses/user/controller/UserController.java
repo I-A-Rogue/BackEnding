@@ -45,6 +45,7 @@ public class UserController {
             BeanUtils.copyProperties(objDTO, user);
             user.setCart(cart);
             user.setSaves(saves);
+            user.setCards(new ArrayList<>());
             return ResponseEntity.ok(userService.create(user));
 //            } else {
 //                throw new InvalidCpfException();
