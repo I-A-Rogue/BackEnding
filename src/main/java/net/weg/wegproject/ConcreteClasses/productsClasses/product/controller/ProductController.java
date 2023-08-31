@@ -76,13 +76,12 @@ public class ProductController {
 
         @GetMapping("/search/{searchTerm}")
     public ResponseEntity<Page<Product>> searchBy(@PathVariable String searchTerm,
+                                                  @ModelAttribute FiltroDTO filtroDTO,
                                                   @RequestParam("size") int size,
                                                   @RequestParam("page") int page) {
-        try {
-            return ResponseEntity.ok(productService.searchBy(PageRequest.of(page, size), searchTerm));
-        } catch (Exception e) {
-            throw new NoProductException();
-        }
+            Filtro filtro = new Filtro();
+            BeanUtils.copyProperties(filtroDTO, filtro);
+            return ResponseEntity.ok(productService.searchBy(PageRequest.of(page, size), searchTerm, filtro));
     }
 
     @GetMapping("/product/{categories}")
@@ -90,7 +89,6 @@ public class ProductController {
                                                         @ModelAttribute FiltroDTO filtroDTO,
                                                         @RequestParam("size") int size,
                                                         @RequestParam("page") int page) {
-        try {
             Filtro filtro = new Filtro();
             BeanUtils.copyProperties(filtroDTO, filtro);
             switch (categories) {
@@ -111,9 +109,6 @@ public class ProductController {
                 }
                 default -> throw new RuntimeException("Categoria inválida");
             }
-        } catch (Exception e) {
-            throw new NoProductException();
-        }
     }
 
     @GetMapping("/all")

@@ -20,6 +20,8 @@ public class Filtro {
 
     private Float priceMin;
     private Float priceMax;
+    private Boolean priceDesc;
+    private Boolean priceAsc;
     private InkEnums type;
     private String Categories;
 

@@ -14,10 +14,12 @@ public class FiltroDTO {
 
     private Float priceMin;
     private Float priceMax;
+    private Boolean priceDesc;
+    private Boolean priceAsc;
     private String Categories;
 
     private InkEnums type;
-    private Integer density;
+    private Float density;
     private String color;
 
 

@@ -28,8 +28,8 @@ public class ProductService{
     }
 
 
-    public Page<Product> searchBy(Pageable pageable, String searchTerm){
-        return productRepository.search(pageable, searchTerm);
+    public Page<Product> searchBy(Pageable pageable, String searchTerm, Filtro filtro){
+        return productRepository.search(pageable, searchTerm, filtro.getPriceDesc(), filtro.getPriceAsc());
     }
 
     //Filtros
@@ -38,6 +38,8 @@ public class ProductService{
         return productRepository.filterMotors(pageable,
                 filtro.getPriceMin(),
                 filtro.getPriceMax(),
+                filtro.getPriceDesc(),
+                filtro.getPriceAsc(),
                 filtro.getFrequencyMin(),
                 filtro.getFrequencyMax(),
                 filtro.getCarcass(),
@@ -56,6 +58,8 @@ public class ProductService{
         return productRepository.filterAutomation(pageable,
                 filtro.getPriceMin(),
                 filtro.getPriceMax(),
+                filtro.getPriceDesc(),
+                filtro.getPriceAsc(),
                 filtro.getVoltage(),
                 filtro.getRfi(),
                 filtro.getTemperature());
@@ -65,6 +69,8 @@ public class ProductService{
         return productRepository.filterSecurity(pageable,
                 filtro.getPriceMin(),
                 filtro.getPriceMax(),
+                filtro.getPriceDesc(),
+                filtro.getPriceAsc(),
                 filtro.getFrequencyMax(),
                 filtro.getFrequencyMin(),
                 filtro.getVoltage());
@@ -74,6 +80,8 @@ public class ProductService{
         return productRepository.filterBuilding(pageable,
                 filtro.getPriceMin(),
                 filtro.getPriceMax(),
+                filtro.getPriceDesc(),
+                filtro.getPriceAsc(),
                 filtro.getPlug(),
                 filtro.getBattery(),
                 filtro.getCasing());
