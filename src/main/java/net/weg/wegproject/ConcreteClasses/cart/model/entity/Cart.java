@@ -30,7 +30,7 @@ public class Cart {
     private Long id;
     @Column(nullable = false)
     private Float totalPrice;
-    @Column(nullable = true)
+    @Column(nullable = false)
     private Integer size;
     @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL)
     private List<CartProductQuantity> products;
