@@ -38,7 +38,7 @@ public class OrderController {
 
             List<OrderRequestQuantity> orderRequestQuantities = new ArrayList<>();
 
-            for (CartProductQuantity cartProductQuantity : cart.getCartProductQuantities()) {
+            for (CartProductQuantity cartProductQuantity : cart.getProducts()) {
                 orderRequestQuantities.add(new OrderRequestQuantity(
                         cartProductQuantity.getProduct(),
                         order,
@@ -59,6 +59,16 @@ public class OrderController {
     @GetMapping
     public ResponseEntity<?> findAll() {
         return orderService.findAll();
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<?> findOne(@PathVariable Long id) {
+        return orderService.findOne(id);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<?> deleteOrder(@PathVariable Long id) {
+        return orderService.delete(id);
     }
 
 }

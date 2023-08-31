@@ -38,6 +38,7 @@ public class UserController {
             Cart cart = new Cart();
             cart.setTotalPrice(0f);
             cart.setSize(0);
+            cart.setProducts(new ArrayList<>());
             Saves saves = new Saves();
             saves.setQuantity(0);
             saves.setProducts(new ArrayList<>());
