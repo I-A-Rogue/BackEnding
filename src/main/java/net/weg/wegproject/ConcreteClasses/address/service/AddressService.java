@@ -25,7 +25,7 @@ public class AddressService implements ServiceInterface<Address> {
 
     @Override
     public Address findOne(Long id) {
-        return addressRepository.findById(id).get();
+        return addressRepository.findById(id).orElseThrow();
     }
 
     @Override
@@ -35,7 +35,7 @@ public class AddressService implements ServiceInterface<Address> {
 
     @Override
     public Address delete(Long id) {
-        Address address = addressRepository.findById(id).get();
+        Address address = addressRepository.findById(id).orElseThrow();
         addressRepository.deleteById(id);
         return address;
     }
