@@ -1,6 +1,10 @@
 package net.weg.wegproject.ConcreteClasses.Order.controller;
 
 import lombok.AllArgsConstructor;
+import net.weg.wegproject.ConcreteClasses.Order.exceptions.NoOrderException;
+import net.weg.wegproject.ConcreteClasses.Order.exceptions.NoOrdersException;
+import net.weg.wegproject.ConcreteClasses.Order.exceptions.OrderCreateException;
+import net.weg.wegproject.ConcreteClasses.Order.exceptions.OrderUpdateException;
 import net.weg.wegproject.ConcreteClasses.Order.model.entity.OrderRequest;
 import net.weg.wegproject.ConcreteClasses.Order.model.entity.OrderRequestQuantity;
 import net.weg.wegproject.ConcreteClasses.Order.service.OrderService;
@@ -52,23 +56,35 @@ public class OrderController {
 
             return response;
         } catch (Exception e) {
-            throw new RuntimeException(e.getMessage());
+            throw new OrderCreateException();
         }
     }
 
     @GetMapping
     public ResponseEntity<?> findAll() {
-        return orderService.findAll();
+        try {
+            return orderService.findAll();
+        }catch (Exception e){
+            throw new NoOrdersException();
+        }
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<?> findOne(@PathVariable Long id) {
-        return orderService.findOne(id);
+        try {
+            return orderService.findOne(id);
+        }catch (Exception e){
+            throw new NoOrderException();
+        }
     }
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteOrder(@PathVariable Long id) {
-        return orderService.delete(id);
+        try {
+            return orderService.delete(id);
+        }catch (Exception e){
+            throw new OrderUpdateException();
+        }
     }
 
 }

@@ -1,6 +1,10 @@
 package net.weg.wegproject.ConcreteClasses.Order.service;
 
 import lombok.AllArgsConstructor;
+import net.weg.wegproject.ConcreteClasses.Order.exceptions.NoOrderException;
+import net.weg.wegproject.ConcreteClasses.Order.exceptions.NoOrdersException;
+import net.weg.wegproject.ConcreteClasses.Order.exceptions.OrderCreateException;
+import net.weg.wegproject.ConcreteClasses.Order.exceptions.OrderDeleteException;
 import net.weg.wegproject.ConcreteClasses.Order.model.entity.OrderRequest;
 import net.weg.wegproject.ConcreteClasses.Order.repository.OrderRepository;
 import org.springframework.http.ResponseEntity;
@@ -15,20 +19,36 @@ public class OrderService {
     OrderRepository orderRepository;
 
     public ResponseEntity<OrderRequest> createOrder(OrderRequest order) {
-        return ResponseEntity.ok(orderRepository.save(order));
+        try {
+            return ResponseEntity.ok(orderRepository.save(order));
+        }catch (Exception e){
+            throw new OrderCreateException();
+        }
     }
 
     public ResponseEntity<List<OrderRequest>> findAll() {
-        return ResponseEntity.ok(orderRepository.findAll());
+        try {
+            return ResponseEntity.ok(orderRepository.findAll());
+        }catch (Exception e){
+            throw new NoOrdersException();
+        }
     }
 
     public ResponseEntity<OrderRequest> findOne(Long id) {
-        return ResponseEntity.ok(orderRepository.findById(id).orElseThrow());
+        try {
+            return ResponseEntity.ok(orderRepository.findById(id).orElseThrow());
+        }catch (Exception e){
+            throw new NoOrderException();
+        }
     }
 
     public ResponseEntity<OrderRequest> delete(Long id) {
-        OrderRequest orderRequest = findOne(id).getBody();
-                orderRepository.deleteById(id);
-        return ResponseEntity.ok().body(orderRequest);
+        try {
+            OrderRequest orderRequest = findOne(id).getBody();
+            orderRepository.deleteById(id);
+            return ResponseEntity.ok().body(orderRequest);
+        }catch (Exception e ){
+            throw new OrderDeleteException();
+        }
     }
 }

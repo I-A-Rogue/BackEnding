@@ -21,7 +21,7 @@ public class UserService implements ServiceInterface<User> {
         try {
             return userRepository.save(obj);
         } catch (Exception e) {
-            throw new RuntimeException(e.getMessage());
+            throw new UserCreateException();
         }
     }
 
@@ -64,7 +64,7 @@ public class UserService implements ServiceInterface<User> {
         try {
             return userRepository.save(obj);
         } catch (Exception e) {
-            throw new RuntimeException(e.getMessage());
+            throw new UserUpdateException();
         }
     }
 

@@ -21,7 +21,7 @@ public class CreditCardService implements ServiceInterface<CreditCard> {
         try {
             return creditCardRepository.save(obj);
         }catch (Exception e) {
-            throw new RuntimeException(e.getMessage());
+            throw new CreditCardCreateException();
         }
     }
 

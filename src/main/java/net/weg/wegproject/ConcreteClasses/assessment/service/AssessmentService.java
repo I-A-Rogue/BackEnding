@@ -1,6 +1,7 @@
 package net.weg.wegproject.ConcreteClasses.assessment.service;
 
 import lombok.AllArgsConstructor;
+import net.weg.wegproject.ConcreteClasses.assessment.exceptions.*;
 import net.weg.wegproject.ConcreteClasses.assessment.model.entity.Assessment;
 import net.weg.wegproject.ConcreteClasses.assessment.repository.AssessmentRepository;
 import net.weg.wegproject.interfaces.ServiceInterface;
@@ -16,32 +17,48 @@ public class AssessmentService implements ServiceInterface<Assessment> {
 
     @Override
     public Assessment create(Assessment obj) {
-        return assessmentRepository.save(obj);
+        try {
+            return assessmentRepository.save(obj);
+        }catch (Exception e){
+            throw new AssessmentCreateException();
+        }
     }
 
     @Override
     public List<Assessment> findAll() {
-        return assessmentRepository.findAll();
+        try {
+            return assessmentRepository.findAll();
+        } catch (Exception e) {
+            throw new NoAssessmentsException();
+        }
     }
 
     @Override
     public Assessment findOne(Long id) {
         try {
-            return assessmentRepository.findById(id).get();
-        }catch (NoSuchElementException e){
-            throw new NoSuchElementException("Avaliação inexistente");
+            return assessmentRepository.findById(id).orElseThrow();
+        }catch (Exception e){
+            throw new NoAssessmentException();
         }
     }
 
     @Override
     public Assessment update(Assessment obj) {
-        return assessmentRepository.save(obj);
+        try {
+            return assessmentRepository.save(obj);
+        }catch (Exception e){
+            throw new AssessmentUpdateException();
+        }
     }
 
     @Override
     public Assessment delete(Long id) {
-        Assessment assessment = findOne(id);
-        assessmentRepository.deleteById(id);
-        return assessment;
+        try {
+            Assessment assessment = findOne(id);
+            assessmentRepository.deleteById(id);
+            return assessment;
+        }catch (Exception e){
+            throw new AssessmentDeleteException();
+        }
     }
 }

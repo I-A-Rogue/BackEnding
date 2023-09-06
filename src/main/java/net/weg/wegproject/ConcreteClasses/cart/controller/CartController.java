@@ -44,7 +44,7 @@ public class CartController {
             }
             CartProductQuantity existingEntry = cartProductQuantityService.findByCartAndProduct(cart, product);
 
-            Float productPrice = 0f;
+            float productPrice = 0f;
 
             if (existingEntry != null) {
                 existingEntry.setQuantity(quantity);

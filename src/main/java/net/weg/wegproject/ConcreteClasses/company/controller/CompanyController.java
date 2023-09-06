@@ -23,14 +23,11 @@ public class CompanyController{
     @PostMapping
     public ResponseEntity<Company> create(@RequestBody CompanyDTO objDTO) {
         Company company = new Company();
-//        if (!CompanyService.verificarCNPJ(objDTO.getCNPJ())) {
-//            throw new CnpjException();
-//        }
         try {
             BeanUtils.copyProperties(objDTO, company);
             return ResponseEntity.ok(companyService.create(company));
         } catch (Exception e) {
-            throw new RuntimeException(e.getMessage());
+            throw new CompanyCreateException();
         }
     }
     @GetMapping

@@ -47,12 +47,20 @@ public class SavesController{
 
     @GetMapping
     public ResponseEntity<List<Saves>> findAll() {
-        return ResponseEntity.ok(savesService.findAll());
+        try {
+            return ResponseEntity.ok(savesService.findAll());
+        }catch (Exception e){
+            throw new NoProductsSavedException();
+        }
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Saves> findOne(@PathVariable Long id) {
-        return ResponseEntity.ok(savesService.findOne(id));
+        try {
+            return ResponseEntity.ok(savesService.findOne(id));
+        }catch (Exception e){
+            throw new ProductNotSavedException();
+        }
     }
 
     @PatchMapping("/{id}")

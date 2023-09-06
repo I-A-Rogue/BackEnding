@@ -28,7 +28,7 @@ public class CompanyService implements ServiceInterface<Company> {
     @Override
     public Company findOne(Long id) {
         try {
-            return companyRepository.findById(id).get();
+            return companyRepository.findById(id).orElseThrow();
         } catch (NoSuchElementException e) {
             throw new NoCompanyException();
         }

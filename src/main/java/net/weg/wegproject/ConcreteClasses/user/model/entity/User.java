@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -27,7 +28,7 @@ public class User {
     private Long id;
 
     @Column(nullable = false, unique = true)
-    @Range(min = 10000000000L, max = 99999999999L)
+    @Size(min = 11, max = 11, message = "O CPF deve ter 11 dígitos")
     private Long cpf;
 
     @Column(nullable = false)

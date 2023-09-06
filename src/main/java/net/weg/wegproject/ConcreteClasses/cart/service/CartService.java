@@ -1,6 +1,7 @@
 package net.weg.wegproject.ConcreteClasses.cart.service;
 
 import lombok.AllArgsConstructor;
+import net.weg.wegproject.ConcreteClasses.cart.exceptions.*;
 import net.weg.wegproject.ConcreteClasses.cart.model.entity.Cart;
 import net.weg.wegproject.ConcreteClasses.cart.repository.CartRepository;
 import net.weg.wegproject.interfaces.ServiceInterface;
@@ -16,32 +17,49 @@ public class CartService implements ServiceInterface<Cart> {
 
     @Override
     public Cart create(Cart obj) {
-        return cartRepository.save(obj);
+        try {
+
+            return cartRepository.save(obj);
+        }catch (Exception e){
+            throw new CartCreateException();
+        }
     }
 
     @Override
     public List<Cart> findAll() {
-        return cartRepository.findAll();
+        try {
+            return cartRepository.findAll();
+        } catch (Exception e) {
+            throw new NoCartsException();
+        }
     }
 
     @Override
     public Cart findOne(Long id) {
         try {
-            return cartRepository.findById(id).get();
+            return cartRepository.findById(id).orElseThrow();
         } catch (NoSuchElementException e) {
-            throw new NoSuchElementException("Carrinho não encontrado");
+            throw new NoCartException();
         }
     }
 
     @Override
     public Cart update(Cart obj) {
-        return cartRepository.save(obj);
+        try {
+            return cartRepository.save(obj);
+        } catch (Exception e) {
+            throw new CartUpdateException();
+        }
     }
 
     @Override
     public Cart delete(Long id) {
-        Cart cart = this.findOne(id);
-        cartRepository.delete(cart);
-        return cart;
+        try {
+            Cart cart = this.findOne(id);
+            cartRepository.delete(cart);
+            return cart;
+        }catch (Exception e){
+            throw new CartDeleteException();
+        }
     }
 }

@@ -11,8 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CompanyDTO {
     @NotBlank(message = "CNPJ não pode ser vazio")
-    @Min(14)
-    @Max(14)
+    @Size(min = 14, max = 14, message = "CNPJ deve ter 14 caracteres")
     private String CNPJ;
     @NotBlank(message = "Nome não pode ser vazio")
     private String name;
