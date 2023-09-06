@@ -1,10 +1,12 @@
 package net.weg.wegproject.ConcreteClasses.cart.controller;
 
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.cart.exceptions.*;
 import net.weg.wegproject.ConcreteClasses.cart.model.entity.Cart;
 import net.weg.wegproject.ConcreteClasses.cart.model.dto.CartDTO;
 import net.weg.wegproject.ConcreteClasses.cart.model.entity.CartProductQuantity;
+import net.weg.wegproject.ConcreteClasses.cart.repository.CartProductQuantityRepository;
 import net.weg.wegproject.ConcreteClasses.cart.service.CartProductQuantityService;
 import net.weg.wegproject.ConcreteClasses.cart.service.CartService;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
@@ -25,8 +27,9 @@ public class CartController {
     CartService cartService;
     ProductService productService;
     CartProductQuantityService cartProductQuantityService;
+    CartProductQuantityRepository cartProductQuantityRepository;
 
-    @PutMapping("add/{cartId}/{productCode}")
+    @PutMapping("/add/{cartId}/{productCode}")
     public ResponseEntity<Cart> addOnCart(
             @PathVariable Long cartId,
             @PathVariable Long productCode,
@@ -34,7 +37,7 @@ public class CartController {
     ) {
         try {
             Cart cart = cartService.findOne(cartId);
-            Product product = productService.findOne(productCode);
+            Product product = productService.findByCode(productCode);
 
             if (cart == null || product == null) {
                 return ResponseEntity.notFound().build();
@@ -50,15 +53,15 @@ public class CartController {
                 newEntry.setCart(cart);
                 newEntry.setProduct(product);
                 newEntry.setQuantity(quantity);
-                cart.getCartProductQuantities().add(newEntry);
+                cart.getProducts().add(newEntry);
             }
 
-            for ( CartProductQuantity cartProductQuantity : cart.getCartProductQuantities() ) {
+            for ( CartProductQuantity cartProductQuantity : cart.getProducts() ) {
                 productPrice += cartProductQuantity.getProduct().getPrice() * cartProductQuantity.getQuantity();
             }
 
             cart.setTotalPrice(productPrice);
-            cart.setSize(cart.getCartProductQuantities().size());
+            cart.setSize(cart.getProducts().size());
             return ResponseEntity.ok(cartService.update(cart));
         } catch (CartCreateException | ExistingProductException e) {
             return ResponseEntity.badRequest().build();
@@ -100,15 +103,32 @@ public class CartController {
         }
     }
 
-    @PutMapping("remove/{cartId}/{productCode}")
+    @Transactional
+    @DeleteMapping("/remove/all/{cartId}")
+    public ResponseEntity<Cart> deleteAllFromCart(@PathVariable Long cartId) {
+        try {
+            Cart cart = cartService.findOne(cartId);
+            cart.setSize(0);
+            cart.setTotalPrice(0f);
+            List<CartProductQuantity> cartProductQuantities = cart.getProducts();
+            cartProductQuantityRepository.deleteAll(cartProductQuantities);
+            cart.getProducts().clear();
+            cartService.update(cart);
+            return ResponseEntity.ok().body(cart);
+        } catch (CartUpdateException | EmptyCartException e) {
+            throw new RuntimeException(e.getMessage());
+        }
+    }
+
+    @PutMapping("/remove/{cartId}/{productCode}")
     public ResponseEntity<Cart> deleteFromCart(@PathVariable Long cartId, @PathVariable Long productCode) {
         try {
             Cart cart = cartService.findOne(cartId);
-            for ( CartProductQuantity cartProductQuantity : cart.getCartProductQuantities() ) {
+            for ( CartProductQuantity cartProductQuantity : cart.getProducts() ) {
                 if (cartProductQuantity.getProduct().getCode().equals(productCode)) {
-                    cart.setSize(cart.getCartProductQuantities().size() - 1);
+                    cart.setSize(cart.getProducts().size() - 1);
                     cart.setTotalPrice(cart.getTotalPrice() - cartProductQuantity.getProduct().getPrice() * cartProductQuantity.getQuantity());
-                    cart.getCartProductQuantities().remove(cartProductQuantity);
+                    cart.getProducts().remove(cartProductQuantity);
                     cartProductQuantityService.deleteByObject(cartProductQuantity);
                     break;
                 }

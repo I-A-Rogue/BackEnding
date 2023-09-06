@@ -5,6 +5,8 @@ import net.weg.wegproject.ConcreteClasses.user.exceptions.*;
 import net.weg.wegproject.ConcreteClasses.user.model.entity.User;
 import net.weg.wegproject.ConcreteClasses.user.repository.UserRepository;
 import net.weg.wegproject.interfaces.ServiceInterface;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -49,9 +51,9 @@ public class UserService implements ServiceInterface<User> {
         }
     }
 
-    public boolean existsUserByEmailAndPassword(String email, String password){
+    public User findUserByEmailAndPassword(String email, String password){
         try {
-            return userRepository.existsUserByEmailAndPassword(email, password);
+            return userRepository.findByEmailAndPassword(email, password);
         }catch (Exception e){
             throw new NoUserException();
         }

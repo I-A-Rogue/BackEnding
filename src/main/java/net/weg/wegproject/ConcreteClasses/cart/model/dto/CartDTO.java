@@ -16,8 +16,6 @@ public class CartDTO {
 
     @NotBlank(message = "O preço total não pode ser nulo")
     private Float totalPrice;
-    @NotBlank(message = "O tamanho não pode ser nulo")
-    private Integer size;
     @NotBlank(message = "O id do usuário não pode ser nulo")
     private List<CartProductQuantity> cartProductQuantities;
 }

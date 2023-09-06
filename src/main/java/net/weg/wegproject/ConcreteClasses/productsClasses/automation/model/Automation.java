@@ -41,6 +41,7 @@ public class Automation extends Product {
     @Column(nullable = false)
     private String electronicFeed; //(Interna, externa ou sem)
 
+
     @Override
     public String toString() {
         return "Automation{" +

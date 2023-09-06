@@ -1,5 +1,6 @@
 package net.weg.wegproject.ConcreteClasses.creditCard.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
@@ -33,6 +34,7 @@ public class CreditCard {
     @Column(nullable = false)
     private Long cvv;
     @ManyToMany
+    @JsonIgnore
     private List<User> user;
 
 }

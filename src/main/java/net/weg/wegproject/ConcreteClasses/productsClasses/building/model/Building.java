@@ -61,6 +61,7 @@ public class Building extends Product{
     @Column(nullable = false)
     private String colorStructure;
 
+
     @Override
     public String toString() {
         return "Building{" +

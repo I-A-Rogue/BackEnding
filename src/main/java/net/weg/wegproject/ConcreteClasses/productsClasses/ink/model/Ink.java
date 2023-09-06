@@ -23,6 +23,7 @@ public class Ink extends Product {
     @Enumerated(EnumType.STRING)
     private InkEnums type;
 
+
     @Override
     public String toString() {
         return "Ink{" +

@@ -1,5 +1,6 @@
 package net.weg.wegproject.ConcreteClasses.productsClasses.motors.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -128,6 +129,7 @@ public class Motors extends Product {
 
     @Column(nullable = false)
     private String tropicalizedPainting;
+
 
 
     @Override

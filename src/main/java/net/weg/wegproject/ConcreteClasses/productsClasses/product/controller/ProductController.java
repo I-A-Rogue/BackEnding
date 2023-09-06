@@ -2,7 +2,9 @@ package net.weg.wegproject.ConcreteClasses.productsClasses.product.controller;
 
 import lombok.AllArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.assessment.model.entity.Assessment;
+import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.dto.FiltroDTO;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.dto.ProductDTO;
+import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Filtro;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.ProductFactory;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.service.ProductService;
 import net.weg.wegproject.enums.CategoriesEnums;
@@ -40,7 +42,8 @@ public class ProductController {
                 assessment.setTotalAssessment(0);
                 assessment.setAmountVotes(0);
                 product.setAssessment(assessment);
-                return ResponseEntity.ok(productService.create(product));
+                Product productCreated = productService.create(product);
+                return ResponseEntity.ok(productCreated);
             } catch (BeansException e) {
                 return ResponseEntity.badRequest().build();
             }
@@ -53,6 +56,22 @@ public class ProductController {
         } catch (Exception e) {
             throw new NoProductsException();
         }
+    }
+
+
+    @GetMapping("/search/filter/{searchTerm}")
+    public ResponseEntity<List<Product>> filterProducts(@PathVariable String searchTerm,
+                                                        @ModelAttribute FiltroDTO filtroDTO,
+                                                        @RequestParam("size") int size,
+                                                        @RequestParam("page") int page) {
+//        try {
+            Filtro filtro = new Filtro();
+            System.out.print(searchTerm);
+            BeanUtils.copyProperties(filtroDTO, filtro);
+            return ResponseEntity.ok(productService.filterProducts(searchTerm, PageRequest.of(page, size), filtro));
+//        } catch (Exception e) {
+//            throw new NoProductException();
+//        }
     }
 
     @GetMapping("/all")
@@ -77,7 +96,7 @@ public class ProductController {
     @GetMapping("/{id}")
     public ResponseEntity<Product> findOne(@PathVariable Long id) {
         try {
-            return ResponseEntity.ok(productService.findOne(id));
+            return ResponseEntity.ok(productService.findByCode(id));
         } catch (Exception e) {
             throw new NoProductException();
         }
@@ -86,7 +105,7 @@ public class ProductController {
     public ResponseEntity<Product> update(@RequestBody ProductDTO objDTO, @PathVariable Long id) {
         try {
             try {
-                Product product = productService.findOne(id);
+                Product product = productService.findByCode(id);
                 BeanUtils.copyProperties(objDTO, product);
                 return ResponseEntity.ok(productService.update(product));
             } catch (BeansException e) {
@@ -104,6 +123,5 @@ public class ProductController {
             throw new ProductDeleteException();
         }
     }
-
 
 }

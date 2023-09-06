@@ -16,6 +16,15 @@ import java.util.List;
 @Data
 
 public class Cart {
+
+    public Cart(Long id, Float totalPrice, List<CartProductQuantity> products, User user) {
+        this.id = id;
+        this.totalPrice = totalPrice;
+        this.size = products.size();
+        this.products = products;
+        this.user = user;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -24,7 +33,7 @@ public class Cart {
     @Column(nullable = false)
     private Integer size;
     @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL)
-    private List<CartProductQuantity> cartProductQuantities;
+    private List<CartProductQuantity> products;
     @OneToOne(mappedBy = "cart")
     @JsonIgnore
     private User user;

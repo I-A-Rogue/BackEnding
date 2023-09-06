@@ -13,6 +13,8 @@ import net.weg.wegproject.ConcreteClasses.user.model.dto.UserDTO;
 import net.weg.wegproject.ConcreteClasses.user.model.entity.User;
 import net.weg.wegproject.ConcreteClasses.user.service.UserService;
 import org.springframework.beans.BeanUtils;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -36,6 +38,7 @@ public class UserController {
             Cart cart = new Cart();
             cart.setTotalPrice(0f);
             cart.setSize(0);
+            cart.setProducts(new ArrayList<>());
             Saves saves = new Saves();
             saves.setQuantity(0);
             saves.setProducts(new ArrayList<>());
@@ -43,6 +46,7 @@ public class UserController {
             BeanUtils.copyProperties(objDTO, user);
             user.setCart(cart);
             user.setSaves(saves);
+            user.setCards(new ArrayList<>());
             return ResponseEntity.ok(userService.create(user));
 //            } else {
 //                throw new InvalidCpfException();
@@ -59,6 +63,8 @@ public class UserController {
             throw new NoUsersException();
         }
     }
+
+
     @GetMapping("/{id}")
     public ResponseEntity<User> findOne(@PathVariable Long id) {
         try {
@@ -67,18 +73,11 @@ public class UserController {
             throw new NoUserException();
         }
     }
-    @GetMapping("/email/{email}")
-    public void findByEmail(@PathVariable String email){
+    @GetMapping("/login")
+    public ResponseEntity<User> existsUserByEmailAndPassword(@RequestParam("email") String email,
+                                                                @RequestParam("password") String password){
         try {
-            ResponseEntity.ok(userService.findByEmail(email));
-        }catch (Exception e){
-            throw new NoUserException();
-        }
-    }
-    @GetMapping("/{email}/{password}")
-    public void existsUserByEmailAndPassword(@PathVariable String email, @PathVariable String password){
-        try {
-            ResponseEntity.ok(userService.existsUserByEmailAndPassword(email, password));
+            return ResponseEntity.ok(userService.findUserByEmailAndPassword(email, password));
         }catch (Exception e){
             throw new NoUserException();
         }
