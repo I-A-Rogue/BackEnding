@@ -9,6 +9,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Objects;
@@ -27,50 +28,67 @@ public class ProductService{
         return productRepository.findAllByCategories(pageable, categories);
     }
 
-    public List<Product> filterProducts(String search, Pageable pageable, Filtro filtro) {
-        List<Product> prods = productRepository.filterProducts(pageable,
-                search,
+
+    public Page<Product> searchBy(Pageable pageable, String searchTerm, Filtro filtro){
+        return productRepository.search(pageable, searchTerm, filtro.getPriceDesc(), filtro.getPriceAsc());
+    }
+
+    //Filtros
+
+    public Page<Product> buscarCategoriaMotor(Pageable pageable, Filtro filtro){
+        return productRepository.filterMotors(pageable,
                 filtro.getPriceMin(),
-                filtro.getPriceMax()
-        );
+                filtro.getPriceMax(),
+                filtro.getPriceDesc(),
+                filtro.getPriceAsc(),
+                filtro.getFrequencyMin(),
+                filtro.getFrequencyMax(),
+                filtro.getCarcass(),
+                filtro.getMaterial());
+    }
 
-        if (CategoriesEnums.INK.name().equals(filtro.getCategories().toUpperCase())){
-            prods.retainAll(productRepository.filterInk(
-                    filtro.getColor(),
-                    filtro.getDensity()
-            ));
+    public Page<Product> buscarCategoriaInk(Pageable pageable, Filtro filtro){
+        return productRepository.filterInk(pageable,
+                filtro.getPriceMin(),
+                filtro.getPriceMax(),
+                filtro.getColor(),
+                filtro.getDensity());
+    }
 
-        }else if (CategoriesEnums.MOTORS.name().equals(filtro.getCategories().toUpperCase())) {
-            prods.retainAll(productRepository.filterMotors(
-                    filtro.getFrequencyMin(),
-                    filtro.getFrequencyMax(),
-                    filtro.getCarcass(),
-                    filtro.getMaterial()
-
-            ));
-        } else if (CategoriesEnums.AUTOMATION.name().equals(filtro.getCategories().toUpperCase())){
-        prods.retainAll(productRepository.filterAutomation(
+    public Page<Product> buscarCategoriaAutomation(Pageable pageable, Filtro filtro){
+        return productRepository.filterAutomation(pageable,
+                filtro.getPriceMin(),
+                filtro.getPriceMax(),
+                filtro.getPriceDesc(),
+                filtro.getPriceAsc(),
                 filtro.getVoltage(),
                 filtro.getRfi(),
-                filtro.getTemperature()
-        ));
-        } else if (CategoriesEnums.SECURITY.name().equals(filtro.getCategories().toUpperCase())){
-            prods.retainAll(productRepository.filterSecurity(
-                    filtro.getFrequencyMin(),
-                    filtro.getFrequencyMax(),
-                    filtro.getVoltage()
-            ));
-        } else if (CategoriesEnums.BUILDING.name().equals(filtro.getCategories().toUpperCase())){
-            prods.retainAll(productRepository.filterBuilding(
-                    filtro.getPlug(),
-                    filtro.getBattery(),
-                    filtro.getCasing()
-            ));
-        }
-
-
-        return prods;
+                filtro.getTemperature());
     }
+
+    public Page<Product> buscarCategoriaSecurity(Pageable pageable, Filtro filtro){
+        return productRepository.filterSecurity(pageable,
+                filtro.getPriceMin(),
+                filtro.getPriceMax(),
+                filtro.getPriceDesc(),
+                filtro.getPriceAsc(),
+                filtro.getFrequencyMax(),
+                filtro.getFrequencyMin(),
+                filtro.getVoltage());
+    }
+
+    public Page<Product> buscarCategoriaBuilding(Pageable pageable, Filtro filtro){
+        return productRepository.filterBuilding(pageable,
+                filtro.getPriceMin(),
+                filtro.getPriceMax(),
+                filtro.getPriceDesc(),
+                filtro.getPriceAsc(),
+                filtro.getPlug(),
+                filtro.getBattery(),
+                filtro.getCasing());
+    }
+
+    //
 
     public Page<Product> findAll(Pageable pageable) {
         return productRepository.findAll(pageable);
