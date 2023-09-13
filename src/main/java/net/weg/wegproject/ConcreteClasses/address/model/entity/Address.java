@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.user.model.entity.User;
+import org.springframework.validation.annotation.Validated;
 
 import java.util.List;
 
@@ -14,6 +15,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Validated
 public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
