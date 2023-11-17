@@ -3,7 +3,6 @@ package net.weg.wegproject.ConcreteClasses.productsClasses.product.model.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import net.weg.wegproject.enums.InkEnums;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -17,8 +16,6 @@ public class FiltroDTO {
     private Boolean priceDesc;
     private Boolean priceAsc;
     private String Categories;
-
-    private InkEnums type;
     private Float density;
     private String color;
 

@@ -7,7 +7,6 @@ import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import net.weg.wegproject.enums.InkEnums;
 
 @Entity
 @AllArgsConstructor
@@ -22,7 +21,6 @@ public class Filtro {
     private Float priceMax;
     private Boolean priceDesc;
     private Boolean priceAsc;
-    private InkEnums type;
     private String Categories;
 
     private Float density;
@@ -47,8 +45,4 @@ public class Filtro {
     private String plug;
     private String battery;
     private String casing;
-
-    public String getType() {
-        return type.name();
-    }
 }
