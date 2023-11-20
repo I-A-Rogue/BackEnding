@@ -35,6 +35,11 @@ public class ProductController {
             try {
                 Product product = new Product();
                 BeanUtils.copyProperties(objDTO, product);
+                Assessment assessment = new Assessment();
+                assessment.setAssessment(0);
+                assessment.setTotalAssessment(0);
+                assessment.setAmountVotes(0);
+                product.setAssessment(assessment);
                 return ResponseEntity.ok(productService.create(product));
             } catch (BeansException e) {
                 return ResponseEntity.badRequest().build();
