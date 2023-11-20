@@ -14,7 +14,6 @@ import net.weg.wegproject.enums.CategoriesEnums;
 @Data
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long code;
     @Column(nullable = false)
     private Float price;

@@ -12,20 +12,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
 
-    @Query(value = "SELECT p " +
-            "FROM Product p " +
-            "WHERE LOWER(p.name) LIKE %:searchTerm% " +
-            "ORDER BY " +
-            "CASE " +
-            "    WHEN :priceDesc = TRUE THEN p.price END DESC, " +
-            "CASE " +
-            "    WHEN :priceAsc = TRUE THEN p.price END ASC")
-    Page<Product> search(Pageable pageable,
-                         String searchTerm,
-                         Boolean priceDesc,
-                         Boolean priceAsc);
-
-
     Page<Product> findAll(Pageable pageable);
 
     Product findByCode(Long code);

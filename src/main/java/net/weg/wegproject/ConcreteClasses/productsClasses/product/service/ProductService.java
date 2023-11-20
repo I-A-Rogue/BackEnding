@@ -22,10 +22,6 @@ public class ProductService{
     }
 
 
-    public Page<Product> searchBy(Pageable pageable, String searchTerm, Filtro filtro){
-        return productRepository.search(pageable, searchTerm, filtro.getPriceDesc(), filtro.getPriceAsc());
-    }
-
     public Page<Product> findAll(Pageable pageable) {
         return productRepository.findAll(pageable);
     }

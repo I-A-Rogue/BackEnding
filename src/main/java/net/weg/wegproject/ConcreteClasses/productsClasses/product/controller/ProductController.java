@@ -58,16 +58,6 @@ public class ProductController {
         }
     }
 
-        @GetMapping("/search/{searchTerm}")
-    public ResponseEntity<Page<Product>> searchBy(@PathVariable String searchTerm,
-                                                  @ModelAttribute FiltroDTO filtroDTO,
-                                                  @RequestParam("size") int size,
-                                                  @RequestParam("page") int page) {
-            Filtro filtro = new Filtro();
-            BeanUtils.copyProperties(filtroDTO, filtro);
-            return ResponseEntity.ok(productService.searchBy(PageRequest.of(page, size), searchTerm, filtro));
-    }
-
     @GetMapping("/all")
     public ResponseEntity<List<Product>> findAll() {
         try {
