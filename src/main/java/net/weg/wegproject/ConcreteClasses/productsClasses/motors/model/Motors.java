@@ -5,75 +5,79 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
 
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 public class Motors extends Product {
 
     private String standard;
-    private String frequency;
-    private String nominalTension;
-    private String poles;
-    private String powerHP;
+    private Integer frequency;
+    private List<Integer> nominalTension;
+    private List<Integer> poles;
+    private List<Double> powerHP;
     private String codeDaCarcaca;
     private String typeDaCarcaca;
-    private String ipIn;
-    private String conjugateFromStart;
-    private String maximumConjugate;
-    private String momentOfInertia;
-    private String rotorTimeBlocked;
-    private String weight;
-    private String noiseLevel;
-    private String factorOfService;
-    private String nominalRotation;
-    private String income50;
-    private String income75;
-    private String income100;
-    private String powerfactor50;
-    private String powerfactor75;
-    private String powerfactor100;
-    private String nominalchain;
-    private String altitude;
+    private List<Double> ipIn;
+    private List<Double> conjugateFromStart;
+    private List<Double> maximumConjugate;
+    private Double momentOfInertia;
+    private Integer rotorTimeBlocked;
+    private Double weight;
+    private Integer noiseLevel;
+    private Double factorOfService;
+    private List<Integer> nominalRotation;
+    private Double income50;
+    private Double income75;
+    private Double income100;
+    private Double powerfactor50;
+    private Double powerfactor75;
+    private Double powerfactor100;
+    private List<Double> nominalchain;
+    private Integer altitude;
     private String regime;
-    private String roomTemperature;
+    private Integer temperatureMin;
+    private Integer temperatureMax;
     private String protection;
     private String model;
     private String image;
-    private String conjugateNominal;
+    private List<Double> conjugateNominal;
 
     @Override
     public String toString() {
         return "Motors{" +
                 "standard='" + standard + '\'' +
-                ", frequency='" + frequency + '\'' +
-                ", nominalTension='" + nominalTension + '\'' +
-                ", poles='" + poles + '\'' +
-                ", powerHP='" + powerHP + '\'' +
+                ", frequency=" + frequency +
+                ", nominalTension=" + nominalTension +
+                ", poles=" + poles +
+                ", powerHP=" + powerHP +
                 ", codeDaCarcaca='" + codeDaCarcaca + '\'' +
                 ", typeDaCarcaca='" + typeDaCarcaca + '\'' +
-                ", ipIn='" + ipIn + '\'' +
-                ", conjugateFromStart='" + conjugateFromStart + '\'' +
-                ", maximumConjugate='" + maximumConjugate + '\'' +
-                ", momentOfInertia='" + momentOfInertia + '\'' +
-                ", rotorTimeBlocked='" + rotorTimeBlocked + '\'' +
-                ", weight='" + weight + '\'' +
-                ", noiseLevel='" + noiseLevel + '\'' +
-                ", factorOfService='" + factorOfService + '\'' +
-                ", nominalRotation='" + nominalRotation + '\'' +
-                ", income50='" + income50 + '\'' +
-                ", income75='" + income75 + '\'' +
-                ", income100='" + income100 + '\'' +
-                ", powerfactor50='" + powerfactor50 + '\'' +
-                ", powerfactor75='" + powerfactor75 + '\'' +
-                ", powerfactor100='" + powerfactor100 + '\'' +
-                ", nominalchain='" + nominalchain + '\'' +
-                ", altitude='" + altitude + '\'' +
+                ", ipIn=" + ipIn +
+                ", conjugateFromStart=" + conjugateFromStart +
+                ", maximumConjugate=" + maximumConjugate +
+                ", momentOfInertia=" + momentOfInertia +
+                ", rotorTimeBlocked=" + rotorTimeBlocked +
+                ", weight=" + weight +
+                ", noiseLevel=" + noiseLevel +
+                ", factorOfService=" + factorOfService +
+                ", nominalRotation=" + nominalRotation +
+                ", income50=" + income50 +
+                ", income75=" + income75 +
+                ", income100=" + income100 +
+                ", powerfactor50=" + powerfactor50 +
+                ", powerfactor75=" + powerfactor75 +
+                ", powerfactor100=" + powerfactor100 +
+                ", nominalchain=" + nominalchain +
+                ", altitude=" + altitude +
                 ", regime='" + regime + '\'' +
-                ", roomTemperature='" + roomTemperature + '\'' +
+                ", temperatureMin=" + temperatureMin +
+                ", temperatureMax=" + temperatureMax +
                 ", protection='" + protection + '\'' +
                 ", model='" + model + '\'' +
                 ", image='" + image + '\'' +
-                ", conjugateNominal='" + conjugateNominal + '\'' +
+                ", conjugateNominal=" + conjugateNominal +
                 '}';
     }
 }

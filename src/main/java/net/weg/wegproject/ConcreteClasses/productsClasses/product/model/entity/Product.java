@@ -17,8 +17,6 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long code;
     @Column(nullable = false)
-    private String name;
-    @Column(nullable = false)
     private Float price;
     @OneToOne(cascade = CascadeType.ALL)
     private Assessment assessment;
