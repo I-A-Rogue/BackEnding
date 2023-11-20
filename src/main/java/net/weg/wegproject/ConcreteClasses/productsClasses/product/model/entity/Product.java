@@ -1,5 +1,6 @@
 package net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

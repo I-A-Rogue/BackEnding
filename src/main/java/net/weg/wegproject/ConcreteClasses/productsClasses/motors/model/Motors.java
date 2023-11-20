@@ -1,20 +1,27 @@
 package net.weg.wegproject.ConcreteClasses.productsClasses.motors.model;
 
-import jakarta.persistence.Entity;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 @Entity
-public class Motors extends Product {
+public class Motors {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long code;
 
     private String standard;
     private Integer frequency;
-    private List<Integer> nominalTension;
+    private ArrayList<Integer> nominalTension;
     private List<Integer> poles;
     private List<Double> powerHP;
     private String codeDaCarcaca;
@@ -43,6 +50,9 @@ public class Motors extends Product {
     private String model;
     private String image;
     private List<Double> conjugateNominal;
+    @OneToOne(mappedBy = "motors")
+    @JsonIgnore
+    private Product product;
 
     @Override
     public String toString() {
