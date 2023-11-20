@@ -1,14 +1,14 @@
 package net.weg.wegproject.ConcreteClasses.productsClasses.motors.model;
 
+import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.NoArgsConstructor;
+import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
-
-public class Motors {
+@Entity
+public class Motors extends Product {
 
     private String standard;
     private String frequency;

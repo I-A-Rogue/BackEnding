@@ -5,7 +5,6 @@ import net.weg.wegproject.ConcreteClasses.assessment.model.entity.Assessment;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.dto.FiltroDTO;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.dto.ProductDTO;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Filtro;
-import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.ProductFactory;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.service.ProductService;
 import net.weg.wegproject.enums.CategoriesEnums;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.exceptions.NoProductException;
@@ -32,21 +31,17 @@ public class ProductController {
 
     @PostMapping
     public ResponseEntity<Product> create(@RequestBody ProductDTO objDTO) {
+        try {
             try {
-                Product prod = new Product();
-                BeanUtils.copyProperties(objDTO, prod);
-                Product product = ProductFactory.criarProduto(objDTO);
-                BeanUtils.copyProperties(prod, product);
-                Assessment assessment = new Assessment();
-                assessment.setAssessment(0);
-                assessment.setTotalAssessment(0);
-                assessment.setAmountVotes(0);
-                product.setAssessment(assessment);
-                Product productCreated = productService.create(product);
-                return ResponseEntity.ok(productCreated);
+                Product product = new Product();
+                BeanUtils.copyProperties(objDTO, product);
+                return ResponseEntity.ok(productService.create(product));
             } catch (BeansException e) {
                 return ResponseEntity.badRequest().build();
             }
+        } catch (Exception e) {
+            throw new RuntimeException("Erro ao criar produto");
+        }
     }
     @GetMapping
     public ResponseEntity<Page<Product>> findAll(@RequestParam("size") int size,
@@ -68,33 +63,6 @@ public class ProductController {
             return ResponseEntity.ok(productService.searchBy(PageRequest.of(page, size), searchTerm, filtro));
     }
 
-    @GetMapping("/product/{categories}")
-    public ResponseEntity<Page<Product>> searchByCategories(@PathVariable CategoriesEnums categories,
-                                                        @ModelAttribute FiltroDTO filtroDTO,
-                                                        @RequestParam("size") int size,
-                                                        @RequestParam("page") int page) {
-            Filtro filtro = new Filtro();
-            BeanUtils.copyProperties(filtroDTO, filtro);
-            switch (categories) {
-                case MOTORS -> {
-                    return ResponseEntity.ok(productService.buscarCategoriaMotor(PageRequest.of(page, size), filtro));
-                }
-                case INK -> {
-                    return ResponseEntity.ok(productService.buscarCategoriaInk(PageRequest.of(page, size), filtro));
-                }
-                case AUTOMATION -> {
-                    return ResponseEntity.ok(productService.buscarCategoriaAutomation(PageRequest.of(page, size), filtro));
-                }
-                case BUILDING -> {
-                    return ResponseEntity.ok(productService.buscarCategoriaBuilding(PageRequest.of(page, size), filtro));
-                }
-                case SECURITY -> {
-                    return ResponseEntity.ok(productService.buscarCategoriaSecurity(PageRequest.of(page, size), filtro));
-                }
-                default -> throw new RuntimeException("Categoria inválida");
-            }
-    }
-
     @GetMapping("/all")
     public ResponseEntity<List<Product>> findAll() {
         try {
@@ -104,16 +72,6 @@ public class ProductController {
         }
     }
 
-    @GetMapping("/category")
-    public ResponseEntity<Page<Product>> findAllByCategories(@RequestParam CategoriesEnums categories,
-                                                             @RequestParam("size") int size,
-                                                             @RequestParam("page") int page) {
-        try {
-            return ResponseEntity.ok(productService.findAllByCategories(PageRequest.of(page, size), categories));
-        } catch (Exception e) {
-            throw new NoProductsException();
-        }
-    }
     @GetMapping("/{id}")
     public ResponseEntity<Product> findOne(@PathVariable Long id) {
         try {

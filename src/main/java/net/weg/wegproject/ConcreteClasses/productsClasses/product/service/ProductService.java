@@ -2,17 +2,15 @@ package net.weg.wegproject.ConcreteClasses.productsClasses.product.service;
 
 import lombok.AllArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Filtro;
-import net.weg.wegproject.enums.CategoriesEnums;
-import net.weg.wegproject.ConcreteClasses.productsClasses.product.repository.ProductRepository;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
+import net.weg.wegproject.ConcreteClasses.productsClasses.product.repository.ProductRepository;
+import net.weg.wegproject.enums.CategoriesEnums;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Objects;
 
 @Service
 @AllArgsConstructor
@@ -23,72 +21,10 @@ public class ProductService{
         return productRepository.save(obj);
     }
 
-    public Page<Product> findAllByCategories(Pageable pageable, CategoriesEnums categories){
-        System.out.println("a"+categories);
-        return productRepository.findAllByCategories(pageable, categories);
-    }
-
 
     public Page<Product> searchBy(Pageable pageable, String searchTerm, Filtro filtro){
         return productRepository.search(pageable, searchTerm, filtro.getPriceDesc(), filtro.getPriceAsc());
     }
-
-    //Filtros
-
-    public Page<Product> buscarCategoriaMotor(Pageable pageable, Filtro filtro){
-        return productRepository.filterMotors(pageable,
-                filtro.getPriceMin(),
-                filtro.getPriceMax(),
-                filtro.getPriceDesc(),
-                filtro.getPriceAsc(),
-                filtro.getFrequencyMin(),
-                filtro.getFrequencyMax(),
-                filtro.getCarcass(),
-                filtro.getMaterial());
-    }
-
-    public Page<Product> buscarCategoriaInk(Pageable pageable, Filtro filtro){
-        return productRepository.filterInk(pageable,
-                filtro.getPriceMin(),
-                filtro.getPriceMax(),
-                filtro.getColor(),
-                filtro.getDensity());
-    }
-
-    public Page<Product> buscarCategoriaAutomation(Pageable pageable, Filtro filtro){
-        return productRepository.filterAutomation(pageable,
-                filtro.getPriceMin(),
-                filtro.getPriceMax(),
-                filtro.getPriceDesc(),
-                filtro.getPriceAsc(),
-                filtro.getVoltage(),
-                filtro.getRfi(),
-                filtro.getTemperature());
-    }
-
-    public Page<Product> buscarCategoriaSecurity(Pageable pageable, Filtro filtro){
-        return productRepository.filterSecurity(pageable,
-                filtro.getPriceMin(),
-                filtro.getPriceMax(),
-                filtro.getPriceDesc(),
-                filtro.getPriceAsc(),
-                filtro.getFrequencyMax(),
-                filtro.getFrequencyMin(),
-                filtro.getVoltage());
-    }
-
-    public Page<Product> buscarCategoriaBuilding(Pageable pageable, Filtro filtro){
-        return productRepository.filterBuilding(pageable,
-                filtro.getPriceMin(),
-                filtro.getPriceMax(),
-                filtro.getPriceDesc(),
-                filtro.getPriceAsc(),
-                filtro.getPlug(),
-                filtro.getBattery(),
-                filtro.getCasing());
-    }
-
-    //
 
     public Page<Product> findAll(Pageable pageable) {
         return productRepository.findAll(pageable);
