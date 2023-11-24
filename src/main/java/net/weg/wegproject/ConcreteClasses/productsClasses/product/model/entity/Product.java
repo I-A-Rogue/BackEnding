@@ -16,10 +16,8 @@ public class Product {
     private Long code;
     @Column(nullable = false)
     private Float price;
-    @Column(nullable = false)
-    private String image;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private Assessment assessment;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private Motors motors;
 }

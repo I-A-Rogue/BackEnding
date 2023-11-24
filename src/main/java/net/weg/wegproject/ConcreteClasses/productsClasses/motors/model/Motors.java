@@ -18,7 +18,6 @@ public class Motors {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long code;
-
     private String standard;
     private Integer frequency;
     private ArrayList<Integer> nominalTension;
@@ -49,7 +48,7 @@ public class Motors {
     private String protection;
     private String model;
     private List<Double> conjugateNominal;
-    @OneToOne(mappedBy = "motors")
+    @OneToOne(mappedBy = "motors", cascade = CascadeType.ALL)
     @JsonIgnore
     private Product product;
 

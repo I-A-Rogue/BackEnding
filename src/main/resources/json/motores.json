@@ -1,6 +1,6 @@
 [
   {
-    "code": 919,
+    "code": 1,
     "price": 276.60,
     "image": "https://ecatalog.weg.net/files/produtos/monofasico-jet-pump-flange-incorporada-brasil-G.jpg",
     "motors":{
@@ -36,9 +36,8 @@
     }
 },
   {
-    "code": 803,
-    "price": "970.10",
-    "image": "https://ecatalog.weg.net/files/produtos/motosserra-brasil-G.jpg",
+    "code": 2,
+    "price": "970.10",  
     "motors": {
     	"standard": "IEC",
      	"frequency": 60,
@@ -73,7 +72,7 @@
  	}
 },
   {
-    "code": 348,
+    "code": 3,
     "price": "638.3",
     "image": "https://ecatalog.weg.net/files/produtos/motosserra-brasil-G.jpg",
     "motors": {
@@ -110,7 +109,7 @@
  	  }
 },
   {
-    "code": 594,
+    "code": 4,
     "price": "530.0",
     "image": "https://ecatalog.weg.net/files/produtos/nema4856-monofasico-brasil-G.jpg",
     "motors": {
@@ -146,7 +145,7 @@
     }
  },
   {
-    "code": 722,
+    "code": 5,
     "price": "774.4",
     "image": "https://ecatalog.weg.net/files/produtos/nema4856-monofasico-brasil-G.jpg",
     "motors":{
@@ -182,7 +181,7 @@
     }
  },
   {
-    "code": 630,
+    "code": 6,
     "price": "114.2",
     "image": "https://ecatalog.weg.net/files/produtos/motofreio-a-prova-de-explosao-brasil-G.jpg",
     "motors":{
@@ -219,7 +218,7 @@
     }
  },
   {
-    "code": 624,
+    "code": 7,
     "price": "795.9",
     "image": "https://ecatalog.weg.net/files/produtos/motofreio-a-prova-de-explosao-brasil-G.jpg",
     "motors":{
@@ -256,7 +255,7 @@
     }
  },
   {
-    "code": 275,
+    "code": 8,
     "price": "774.2",
     "image": "https://ecatalog.weg.net/files/produtos/W22-B3D-All-Frames-RAL-5009-G.jpg",
     "motors":{
@@ -293,9 +292,8 @@
     }
 },
   {
-    "code": 919,
-    "price": "494.7",
-    "image": "https://ecatalog.weg.net/files/produtos/W22-Motofreio-Premium_G.jpg",
+    "code": 9,
+    "price": "494.7",  
     "motors":{
       "standard": "IEC",
       "frequency": 60,
@@ -330,7 +328,7 @@
     }
 },
   {
-    "code": 668,
+    "code": 10,
     "price": "453.6",
     "image": "https://ecatalog.weg.net/files/produtos/motor-mono-jet-pump-split-phase-rosca-brasil-G.jpg",
     "motors":{
