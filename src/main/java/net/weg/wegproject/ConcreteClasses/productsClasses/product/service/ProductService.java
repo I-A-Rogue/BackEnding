@@ -1,6 +1,7 @@
 package net.weg.wegproject.ConcreteClasses.productsClasses.product.service;
 
 import lombok.AllArgsConstructor;
+import net.weg.wegproject.ConcreteClasses.assessment.model.entity.Assessment;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Filtro;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.repository.ProductRepository;
@@ -18,6 +19,11 @@ public class ProductService{
     ProductRepository productRepository;
 
     public Product create(Product obj) {
+        Assessment assessment = new Assessment();
+        assessment.setAssessment(0);
+        assessment.setTotalAssessment(0);
+        assessment.setAmountVotes(0);
+        obj.setAssessment(assessment);
         return productRepository.save(obj);
     }
 
