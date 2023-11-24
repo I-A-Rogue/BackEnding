@@ -30,16 +30,12 @@ public class ProductController {
     @PostMapping
     public ResponseEntity<Product> create(@RequestBody ProductDTO objDTO) {
         Product product = new Product();
-<<<<<<< Updated upstream
         BeanUtils.copyProperties(objDTO, product);
-=======
-        BeanUtils.copyProperties(objDTO, product);  
         Assessment assessment = new Assessment();
         assessment.setAssessment(0);
         assessment.setTotalAssessment(0);
         assessment.setAmountVotes(0);
         product.setAssessment(assessment);
->>>>>>> Stashed changes
         return ResponseEntity.ok(productService.create(product));
 
     }

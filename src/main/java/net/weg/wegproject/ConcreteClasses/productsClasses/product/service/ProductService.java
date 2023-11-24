@@ -1,11 +1,7 @@
 package net.weg.wegproject.ConcreteClasses.productsClasses.product.service;
 
 import lombok.AllArgsConstructor;
-<<<<<<< Updated upstream
 import net.weg.wegproject.ConcreteClasses.assessment.model.entity.Assessment;
-import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Filtro;
-=======
->>>>>>> Stashed changes
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.projections.ProductResum;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.repository.ProductRepository;
