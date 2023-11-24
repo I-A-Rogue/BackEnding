@@ -1,20 +1,17 @@
 package net.weg.wegproject.ConcreteClasses.productsClasses.product.repository;
 
-import net.weg.wegproject.enums.CategoriesEnums;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
+import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.projections.ProductResum;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
 
-    Page<Product> findAll(Pageable pageable);
-
+    @Query(value = "SELECT p.code, p.price, p.image FROM Product p", nativeQuery = true)
+    List<ProductResum> findAllMinimizado();
     Product findByCode(Long code);
-
-
 }

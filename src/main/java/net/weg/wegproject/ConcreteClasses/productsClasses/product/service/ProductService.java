@@ -1,11 +1,14 @@
 package net.weg.wegproject.ConcreteClasses.productsClasses.product.service;
 
 import lombok.AllArgsConstructor;
+<<<<<<< Updated upstream
 import net.weg.wegproject.ConcreteClasses.assessment.model.entity.Assessment;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Filtro;
+=======
+>>>>>>> Stashed changes
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
+import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.projections.ProductResum;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.repository.ProductRepository;
-import net.weg.wegproject.enums.CategoriesEnums;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -29,6 +32,10 @@ public class ProductService{
 
     public Page<Product> findAll(Pageable pageable) {
         return productRepository.findAll(pageable);
+    }
+
+    public List<ProductResum> buscarCard(){
+        return productRepository.findAllMinimizado();
     }
 
     public List<Product> findAll() {

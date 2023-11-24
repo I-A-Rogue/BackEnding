@@ -22,5 +22,6 @@ public class Product {
     private Assessment assessment;
     @OneToOne(cascade = CascadeType.ALL)
     private Motors motors;
-
+    @Column(nullable = false)
+    private String image;
 }

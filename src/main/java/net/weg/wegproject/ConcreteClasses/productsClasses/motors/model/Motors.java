@@ -48,7 +48,6 @@ public class Motors {
     private Integer temperatureMax;
     private String protection;
     private String model;
-    private String image;
     private List<Double> conjugateNominal;
     @OneToOne(mappedBy = "motors")
     @JsonIgnore
@@ -86,7 +85,6 @@ public class Motors {
                 ", temperatureMax=" + temperatureMax +
                 ", protection='" + protection + '\'' +
                 ", model='" + model + '\'' +
-                ", image='" + image + '\'' +
                 ", conjugateNominal=" + conjugateNominal +
                 '}';
     }
