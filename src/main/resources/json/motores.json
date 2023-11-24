@@ -37,7 +37,8 @@
 },
   {
     "code": 2,
-    "price": "970.10",  
+    "price": "970.10",
+    "image": "https://ecatalog.weg.net/files/produtos/monofasico-jet-pump-flange-incorporada-brasil-G.jpg",
     "motors": {
     	"standard": "IEC",
      	"frequency": 60,
@@ -293,7 +294,8 @@
 },
   {
     "code": 9,
-    "price": "494.7",  
+    "price": "494.7",
+    "image": "https://ecatalog.weg.net/files/produtos/motor-mono-jet-pump-split-phase-rosca-brasil-G.jpg",
     "motors":{
       "standard": "IEC",
       "frequency": 60,
