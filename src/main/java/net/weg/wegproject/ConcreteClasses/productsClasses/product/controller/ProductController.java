@@ -2,11 +2,9 @@ package net.weg.wegproject.ConcreteClasses.productsClasses.product.controller;
 
 import lombok.AllArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.assessment.model.entity.Assessment;
-import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.dto.FiltroDTO;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.dto.ProductDTO;
-import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Filtro;
+import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.projections.ProductResum;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.service.ProductService;
-import net.weg.wegproject.enums.CategoriesEnums;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.exceptions.NoProductException;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.exceptions.NoProductsException;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.exceptions.ProductDeleteException;
@@ -32,16 +30,37 @@ public class ProductController {
     @PostMapping
     public ResponseEntity<Product> create(@RequestBody ProductDTO objDTO) {
         Product product = new Product();
+<<<<<<< Updated upstream
         BeanUtils.copyProperties(objDTO, product);
+=======
+        BeanUtils.copyProperties(objDTO, product);  
+        Assessment assessment = new Assessment();
+        assessment.setAssessment(0);
+        assessment.setTotalAssessment(0);
+        assessment.setAmountVotes(0);
+        product.setAssessment(assessment);
+>>>>>>> Stashed changes
         return ResponseEntity.ok(productService.create(product));
 
     }
-    @GetMapping
+    @GetMapping("/completo")
     public ResponseEntity<Page<Product>> findAll(@RequestParam("size") int size,
                                         @RequestParam("page") int page) {
         try {
             return ResponseEntity.ok(productService.findAll(PageRequest.of(page, size)));
         } catch (Exception e) {
+            throw new NoProductsException();
+        }
+    }
+
+    @GetMapping("/resumo")
+    public ResponseEntity<List<ProductResum>> buscarCard(
+            @RequestParam("size") int size,
+            @RequestParam("page") int page
+    ){
+        try {
+            return ResponseEntity.ok(productService.buscarCard());
+        }catch (Exception e){
             throw new NoProductsException();
         }
     }
