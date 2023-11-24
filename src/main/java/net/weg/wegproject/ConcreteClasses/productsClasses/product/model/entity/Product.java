@@ -18,9 +18,10 @@ public class Product {
     private Long code;
     @Column(nullable = false)
     private Float price;
+    @Column(nullable = false)
+    private String image;
     @OneToOne(cascade = CascadeType.ALL)
     private Assessment assessment;
     @OneToOne(cascade = CascadeType.ALL)
     private Motors motors;
-
 }

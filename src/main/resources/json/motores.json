@@ -2,6 +2,7 @@
   {
     "code": 919,
     "price": 276.60,
+    "image": "https://ecatalog.weg.net/files/produtos/monofasico-jet-pump-flange-incorporada-brasil-G.jpg",
     "motors":{
       "standard": "NEMA",
       "frequency": 60,
@@ -31,13 +32,13 @@
       "temperatureMax": 40,
       "protection": "IP21",
       "model": "Motor Jet Pump - Flange Incorporada",
-      "image": "https://ecatalog.weg.net/files/produtos/monofasico-jet-pump-flange-incorporada-brasil-G.jpg",
       "conjugateNominal": [0.05170104667824818]
     }
 },
   {
     "code": 803,
-    "price": "970.10",  
+    "price": "970.10",
+    "image": "https://ecatalog.weg.net/files/produtos/motosserra-brasil-G.jpg",
     "motors": {
     	"standard": "IEC",
      	"frequency": 60,
@@ -68,13 +69,13 @@
  	    "temperatureMax": 40,
     	"protection": "IP54",
     	"model": "Motosserra",
-    	"image": "https://ecatalog.weg.net/files/produtos/motosserra-brasil-G.jpg",
     	"conjugateNominal": [1.2479358659529016]
  	}
 },
   {
     "code": 348,
     "price": "638.3",
+    "image": "https://ecatalog.weg.net/files/produtos/motosserra-brasil-G.jpg",
     "motors": {
     	"standard": "IEC",
     	"frequency": 60,
@@ -105,13 +106,13 @@
       "temperatureMax": 40,
       "protection": "IP54",
       "model": "Motosserra",
-      "image": "https://ecatalog.weg.net/files/produtos/motosserra-brasil-G.jpg",
       "conjugateNominal": [3.1468902978147595]
  	  }
 },
   {
     "code": 594,
     "price": "530.0",
+    "image": "https://ecatalog.weg.net/files/produtos/nema4856-monofasico-brasil-G.jpg",
     "motors": {
       "standard": "NEMA",
       "frequency": 60,
@@ -141,13 +142,13 @@
       "temperatureMax": 40,
       "protection": "IP21",
       "model": "Steel Motor - MonofÃ¡sico",
-      "image": "https://ecatalog.weg.net/files/produtos/nema4856-monofasico-brasil-G.jpg",
       "conjugateNominal": [0.06543167958198126]
     }
  },
   {
     "code": 722,
     "price": "774.4",
+    "image": "https://ecatalog.weg.net/files/produtos/nema4856-monofasico-brasil-G.jpg",
     "motors":{
       "standard": "NEMA",
       "frequency": 60,
@@ -177,13 +178,13 @@
       "temperatureMax": 40,
       "protection": "IP21",
       "model": "Steel Motor - MonofÃ¡sico",
-      "image": "https://ecatalog.weg.net/files/produtos/nema4856-monofasico-brasil-G.jpg",
       "conjugateNominal": [0.1364907632305752]
     }
  },
   {
     "code": 630,
     "price": "114.2",
+    "image": "https://ecatalog.weg.net/files/produtos/motofreio-a-prova-de-explosao-brasil-G.jpg",
     "motors":{
       "standard": "IEC",
       "frequency": 60,
@@ -214,13 +215,13 @@
       "temperatureMax": 40,
       "protection": "IP66",
       "model": "W21Xdb Motofreio Ã  Prova de Explosão IR2",
-      "image": "https://ecatalog.weg.net/files/produtos/motofreio-a-prova-de-explosao-brasil-G.jpg",
       "conjugateNominal": [0.42202482288523513]
     }
  },
   {
     "code": 624,
     "price": "795.9",
+    "image": "https://ecatalog.weg.net/files/produtos/motofreio-a-prova-de-explosao-brasil-G.jpg",
     "motors":{
       "standard": "IEC",
       "frequency": 60,
@@ -251,13 +252,13 @@
       "temperatureMax": 40,
       "protection": "IP66",
       "model": "W21Xdb Motofreio Ã  Prova de Explosão IR2",
-      "image": "https://ecatalog.weg.net/files/produtos/motofreio-a-prova-de-explosao-brasil-G.jpg",
       "conjugateNominal": [1.2660744686557053]
     }
  },
   {
     "code": 275,
     "price": "774.2",
+    "image": "https://ecatalog.weg.net/files/produtos/W22-B3D-All-Frames-RAL-5009-G.jpg",
     "motors":{
       "standard": "IEC",
       "frequency": 60,
@@ -288,13 +289,13 @@
       "temperatureMax": 40,
       "protection": "IP55",
       "model": "W22 10 & 12 polos",
-      "image": "https://ecatalog.weg.net/files/produtos/W22-B3D-All-Frames-RAL-5009-G.jpg",
       "conjugateNominal": [3.133306598687501]
     }
 },
   {
     "code": 919,
-    "price": "494.7",  
+    "price": "494.7",
+    "image": "https://ecatalog.weg.net/files/produtos/W22-Motofreio-Premium_G.jpg",
     "motors":{
       "standard": "IEC",
       "frequency": 60,
@@ -325,13 +326,13 @@
       "temperatureMax": 40,
       "protection": "IP55",
       "model": "W22 Motofreio IR3 Premium",
-      "image": "https://ecatalog.weg.net/files/produtos/W22-Motofreio-Premium_G.jpg",
       "conjugateNominal": [16.497333985513738]
     }
 },
   {
     "code": 668,
     "price": "453.6",
+    "image": "https://ecatalog.weg.net/files/produtos/motor-mono-jet-pump-split-phase-rosca-brasil-G.jpg",
     "motors":{
       "standard": "NEMA",
       "frequency": 60,
@@ -361,7 +362,6 @@
       "temperatureMax": 40,
       "protection": "IP21",
       "model": "WJet Pump - Capacitor de Partida - Forma J",
-      "image": "https://ecatalog.weg.net/files/produtos/motor-mono-jet-pump-split-phase-rosca-brasil-G.jpg",
       "conjugateNominal": [0.6293780595629518]
     }
  }

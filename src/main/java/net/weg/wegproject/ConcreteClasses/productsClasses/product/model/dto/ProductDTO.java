@@ -28,4 +28,6 @@ public class ProductDTO {
     private Assessment assessment;
     @NotBlank(message = "A o produto não pode ser nulo.")
     private Motors motors;
+    @NotBlank(message = "A imagem do produto não pode ser nula.")
+    private String image;
 }
