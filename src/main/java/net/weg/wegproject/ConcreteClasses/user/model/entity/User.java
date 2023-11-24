@@ -26,7 +26,6 @@ public class User {
     private Long id;
 
     @Column(nullable = false, unique = true)
-    @Size(min = 11, max = 11, message = "O CPF deve ter 11 dígitos")
     private Long cpf;
 
     @Column(nullable = false)

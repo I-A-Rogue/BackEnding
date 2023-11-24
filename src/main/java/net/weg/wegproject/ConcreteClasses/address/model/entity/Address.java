@@ -23,7 +23,6 @@ public class Address {
     @Column(nullable = false)
     private String rua;
     @Column(nullable = false)
-    @Size(min = 1, max = 5, message = "O número deve ter entre 1 e 5 dígitos")
     private Integer numero;
     private String complemento;
     @Column(nullable = false)
