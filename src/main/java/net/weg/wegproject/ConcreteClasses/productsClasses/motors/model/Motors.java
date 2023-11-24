@@ -16,7 +16,7 @@ import java.util.List;
 @Entity
 public class Motors {
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long code;
     private String standard;
     private Integer frequency;
