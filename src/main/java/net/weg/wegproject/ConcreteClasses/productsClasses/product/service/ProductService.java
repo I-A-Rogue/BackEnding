@@ -26,6 +26,10 @@ public class ProductService{
         return productRepository.save(obj);
     }
 
+    public void deleteALl(){
+        productRepository.deleteAll();
+    }
+
     public Page<Product> findAll(Pageable pageable) {
         return productRepository.findAll(pageable);
     }

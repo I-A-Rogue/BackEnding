@@ -16,7 +16,7 @@ import java.util.List;
 @Entity
 public class Motors {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     private Long code;
     private String standard;
     private Integer frequency;
