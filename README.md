@@ -21,10 +21,14 @@ MIT
 
 ## Contact
 If you want to get in touch, you can find us at the following emails: 
-inacio_vitkoski@estudante.sc.senai.com, vitor_m_andrade@estudante.sesisenai.org.br;
+inacio_vitkoski@estudante.sc.senai.com;
+vitor_m_andrade@estudante.sesisenai.org.br;
 gustavo_g_abreu@estudante.sesisenai.org.br;
 maria_cb_farias@estudante.sesisenai.org.br;
 bruno_martins4@estudante.sesisenai.org.br;
+
 Feel free to report issues, make suggestions, or just chat about the project.
 
-I hope this project is useful! Thank you for using our Java software.
+I hope this project is useful! 
+
+Thank you for using our Java software.
