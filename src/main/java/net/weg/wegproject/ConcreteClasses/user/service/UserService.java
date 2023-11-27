@@ -18,11 +18,11 @@ public class UserService implements ServiceInterface<User> {
 
     @Override
     public User create(User obj) {
-        try {
+//        try {
             return userRepository.save(obj);
-        } catch (Exception e) {
-            throw new UserCreateException();
-        }
+//        } catch (Exception e) {
+//            throw new UserCreateException();
+//        }
     }
 
     @Override

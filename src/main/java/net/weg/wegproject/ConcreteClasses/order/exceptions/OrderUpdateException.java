@@ -1,4 +1,4 @@
-package net.weg.wegproject.ConcreteClasses.Order.exceptions;
+package net.weg.wegproject.ConcreteClasses.order.exceptions;
 
 public class OrderUpdateException extends RuntimeException{
     public OrderUpdateException() {

@@ -38,9 +38,9 @@ public class Address {
     private String uf;
     @Column(nullable = false)
     private String cep;
-    @ManyToMany(mappedBy = "address")
-    @JsonIgnore
-    private List<User> user;
+//    @ManyToMany(mappedBy = "address")
+//    @JsonIgnore
+//    private List<User> user;
 
     public Address(String rua, int numero, String complemento, String bairro, String cidade, String estado, String pais, String uf, String cep) {
         this.rua = rua;

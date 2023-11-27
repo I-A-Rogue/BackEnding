@@ -18,7 +18,6 @@ public class CartService implements ServiceInterface<Cart> {
     @Override
     public Cart create(Cart obj) {
         try {
-
             return cartRepository.save(obj);
         }catch (Exception e){
             throw new CartCreateException();

@@ -33,27 +33,13 @@ public class UserController {
 
     @PostMapping
     public ResponseEntity<User> create(@RequestBody UserDTO objDTO) {
-        try {
-//            if (userService.verifyCPF(String.valueOf(objDTO.getRegister()))) {
-            Cart cart = new Cart();
-            cart.setTotalPrice(0f);
-            cart.setSize(0);
-            cart.setProducts(new ArrayList<>());
-            Saves saves = new Saves();
-            saves.setQuantity(0);
-            saves.setProducts(new ArrayList<>());
+//        try {
             User user = new User();
             BeanUtils.copyProperties(objDTO, user);
-            user.setCart(cart);
-            user.setSaves(saves);
-            user.setCards(new ArrayList<>());
             return ResponseEntity.ok(userService.create(user));
-//            } else {
-//                throw new InvalidCpfException();
-//            }
-        } catch (Exception e) {
-            throw new RuntimeException(e.getMessage());
-        }
+//        } catch (Exception e) {
+//            throw new RuntimeException(e.getMessage());
+//        }
     }
     @GetMapping
     public ResponseEntity<List<User>> findAll() {
@@ -98,7 +84,7 @@ public class UserController {
         try {
             User user = userService.findOne(user_id);
             Address address = addressService.findOne(address_id);
-            user.getAddress().remove(address);
+//            user.getAddress().remove(address);
             addressService.delete(address_id);
             userService.update(user);
             return ResponseEntity.ok(address);

@@ -1,4 +1,4 @@
-package net.weg.wegproject.ConcreteClasses.Order.model.entity;
+package net.weg.wegproject.ConcreteClasses.order.model.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -44,36 +44,35 @@ public class BancoInUtil {
     @PostConstruct
     public void createRandomUsers(){
         userRepository.deleteAll();
-        userRepository.save(generateUser());
+//        userRepository.save(generateUser());
     }
 
-    public User generateUser(){
-        User user = new User();
-        user.setEmail(faker.internet().emailAddress());
-        user.setPassword(faker.internet().password());
-        user.setName(faker.name().fullName());
-        user.setCpf(faker.number().randomNumber(11, true));
-        user.setAddress(generateAddress());
-        return user;
-    }
-
-    private List<Address> generateAddress() {
-        Address address = new Address(
-                faker.address().streetName(),
-                faker.number().numberBetween(1, 1000),
-                faker.address().secondaryAddress(),
-                faker.address().city(),
-                faker.address().city(),
-                faker.address().state(),
-                faker.address().country(),
-                faker.address().stateAbbr(),
-                faker.address().zipCode()
-        );
-
-        List<Address> addresses = new ArrayList<>();
-        addresses.add(address);
-        return addresses;
-    }
+//    public User generateUser(){
+//        User user = new User();
+//        user.setEmail(faker.internet().emailAddress());
+//        user.setPassword(faker.internet().password());
+//        user.setName(faker.name().fullName());
+//        user.setCpf(faker.number().randomNumber(11, true));
+//        user.setAddress(generateAddress());
+//        return user;
+//    }
+//
+//    private List<Address> generateAddress() {
+//        Address address = new Address(
+//                faker.address().streetName(),
+//                faker.number().numberBetween(1, 1000),
+//                faker.address().secondaryAddress(),
+//                faker.address().city(),
+//                faker.address().city(),
+//                faker.address().state(),
+//                faker.address().country(),
+//                faker.address().stateAbbr(),
+//                faker.address().zipCode()
+//        );
+//        List<Address> addresses = new ArrayList<>();
+//        addresses.add(address);
+//        return addresses;
+//    }
 }
 
 
