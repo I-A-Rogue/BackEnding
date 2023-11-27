@@ -73,15 +73,7 @@ public class UserController {
             throw new NoUserException();
         }
     }
-    @GetMapping("/login")
-    public ResponseEntity<User> existsUserByEmailAndPassword(@RequestParam("email") String email,
-                                                                @RequestParam("password") String password){
-        try {
-            return ResponseEntity.ok(userService.findUserByEmailAndPassword(email, password));
-        }catch (Exception e){
-            throw new NoUserException();
-        }
-    }
+
     @PutMapping("/{id}")
     public ResponseEntity<User> update(@RequestBody UserDTO objDTO, @PathVariable Long id) {
         try {

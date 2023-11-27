@@ -10,6 +10,8 @@ import net.weg.wegproject.ConcreteClasses.address.model.entity.Address;
 import net.weg.wegproject.ConcreteClasses.cart.model.entity.Cart;
 import net.weg.wegproject.ConcreteClasses.creditCard.model.entity.CreditCard;
 import net.weg.wegproject.ConcreteClasses.saves.model.entity.Saves;
+import net.weg.wegproject.security.model.Profile;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.validation.annotation.Validated;
 
 import java.util.List;
@@ -20,7 +22,7 @@ import java.util.List;
 @NoArgsConstructor
 @Validated
 
-public class User {
+public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -50,4 +52,15 @@ public class User {
 
     @ManyToMany(mappedBy = "user")
     private List<CreditCard> cards;
+
+    @Enumerated(EnumType.STRING)
+    private List<Profile> authorities;
+    private boolean accountNonExpired;
+    private boolean accountNonLocked;
+    private boolean credentialsNonExpired;
+    private boolean enabled;
+
+    public String getUsername() {
+        return this.getEmail();
+    }
 }

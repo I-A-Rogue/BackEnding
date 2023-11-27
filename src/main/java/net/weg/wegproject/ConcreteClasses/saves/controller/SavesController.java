@@ -63,13 +63,6 @@ public class SavesController{
         }
     }
 
-    @PatchMapping("/{id}")
-    public ResponseEntity<Saves> update(@RequestBody SavesDTO objDTO, @PathVariable Long id) {
-        Saves obj = new Saves();
-        BeanUtils.copyProperties(objDTO, obj);
-        return ResponseEntity.ok(savesService.update(obj));
-    }
-
     @PutMapping("/remove/{savesId}/{productCode}")
     public ResponseEntity<Saves> removeFromSaves(@PathVariable Long savesId, @PathVariable Long productCode) {
         Saves saves = findOne(savesId).getBody();

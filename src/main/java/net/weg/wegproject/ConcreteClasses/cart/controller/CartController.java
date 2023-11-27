@@ -88,21 +88,6 @@ public class CartController {
         }
     }
 
-    @PatchMapping("/{id}")
-    public ResponseEntity<Cart> update(@RequestBody CartDTO objDTO, @PathVariable Long id) {
-        try {
-            try {
-                Cart cart = cartService.findOne(id);
-                BeanUtils.copyProperties(objDTO, cart);
-                return ResponseEntity.ok(cartService.update(cart));
-            } catch (BeansException e) {
-                return ResponseEntity.badRequest().build();
-            }
-        } catch (Exception e) {
-            throw new CartUpdateException();
-        }
-    }
-
     @Transactional
     @DeleteMapping("/remove/all/{cartId}")
     public ResponseEntity<Cart> deleteAllFromCart(@PathVariable Long cartId) {

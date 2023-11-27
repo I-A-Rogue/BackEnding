@@ -75,7 +75,7 @@ public class ProductController {
         }
     }
 
-    @GetMapping("/all")
+    @GetMapping()
     public ResponseEntity<List<Product>> findAll() {
         try {
             return ResponseEntity.ok(productService.findAll());
@@ -87,6 +87,7 @@ public class ProductController {
     @GetMapping("/{id}")
     public ResponseEntity<Product> findOne(@PathVariable Long id) {
         try {
+            System.out.println("aaaaaaaaaaaaa" + productService.findByCode(id));
             return ResponseEntity.ok(productService.findByCode(id));
         } catch (Exception e) {
             throw new NoProductException();

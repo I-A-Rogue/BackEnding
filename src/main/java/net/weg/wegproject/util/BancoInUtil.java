@@ -11,8 +11,10 @@ import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.P
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.repository.ProductRepository;
 import net.weg.wegproject.ConcreteClasses.user.model.entity.User;
 import net.weg.wegproject.ConcreteClasses.user.repository.UserRepository;
+import net.weg.wegproject.security.model.Profile;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -50,10 +52,15 @@ public class BancoInUtil {
     public User generateUser(){
         User user = new User();
         user.setEmail(faker.internet().emailAddress());
-        user.setPassword(faker.internet().password());
+        user.setPassword(new BCryptPasswordEncoder().encode("teste"));
         user.setName(faker.name().fullName());
         user.setCpf(faker.number().randomNumber(11, true));
         user.setAddress(generateAddress());
+        user.setAuthorities(List.of(Profile.ADMIN));
+        user.setAccountNonExpired(true);
+        user.setAccountNonLocked(true);
+        user.setEnabled(true);
+        user.setCredentialsNonExpired(true);
         return user;
     }
 
