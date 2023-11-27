@@ -2,15 +2,11 @@ package net.weg.wegproject.ConcreteClasses.creditCard.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.user.model.entity.User;
-import org.hibernate.validator.constraints.Range;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 import java.util.List;

@@ -2,6 +2,7 @@
   {
     "code": 1,
     "price": 276.60,
+    "category": "AGRICULTIURE",
     "image": "https://ecatalog.weg.net/files/produtos/monofasico-jet-pump-flange-incorporada-brasil-G.jpg",
     "motors":{
       "standard": "NEMA",
@@ -38,6 +39,7 @@
   {
     "code": 2,
     "price": "970.10",
+    "category": "AGRICULTIURE",
     "image": "https://ecatalog.weg.net/files/produtos/monofasico-jet-pump-flange-incorporada-brasil-G.jpg",
     "motors": {
     	"standard": "IEC",
@@ -75,6 +77,7 @@
   {
     "code": 3,
     "price": "638.3",
+    "category": "AGRICULTIURE",
     "image": "https://ecatalog.weg.net/files/produtos/motosserra-brasil-G.jpg",
     "motors": {
     	"standard": "IEC",
@@ -112,6 +115,7 @@
   {
     "code": 4,
     "price": "530.0",
+    "category": "AGRICULTIURE",
     "image": "https://ecatalog.weg.net/files/produtos/nema4856-monofasico-brasil-G.jpg",
     "motors": {
       "standard": "NEMA",
@@ -148,6 +152,7 @@
   {
     "code": 5,
     "price": "774.4",
+    "category": "INDUSTRY",
     "image": "https://ecatalog.weg.net/files/produtos/nema4856-monofasico-brasil-G.jpg",
     "motors":{
       "standard": "NEMA",
@@ -184,6 +189,7 @@
   {
     "code": 6,
     "price": "114.2",
+    "category": "INDUSTRY",
     "image": "https://ecatalog.weg.net/files/produtos/motofreio-a-prova-de-explosao-brasil-G.jpg",
     "motors":{
       "standard": "IEC",
@@ -221,6 +227,7 @@
   {
     "code": 7,
     "price": "795.9",
+    "category": "INDUSTRY",
     "image": "https://ecatalog.weg.net/files/produtos/motofreio-a-prova-de-explosao-brasil-G.jpg",
     "motors":{
       "standard": "IEC",
@@ -258,6 +265,7 @@
   {
     "code": 8,
     "price": "774.2",
+    "category": "HOME",
     "image": "https://ecatalog.weg.net/files/produtos/W22-B3D-All-Frames-RAL-5009-G.jpg",
     "motors":{
       "standard": "IEC",
@@ -295,6 +303,7 @@
   {
     "code": 9,
     "price": "494.7",
+    "category": "HOME",
     "image": "https://ecatalog.weg.net/files/produtos/motor-mono-jet-pump-split-phase-rosca-brasil-G.jpg",
     "motors":{
       "standard": "IEC",
@@ -332,6 +341,7 @@
   {
     "code": 10,
     "price": "453.6",
+    "category": "HOME",
     "image": "https://ecatalog.weg.net/files/produtos/motor-mono-jet-pump-split-phase-rosca-brasil-G.jpg",
     "motors":{
       "standard": "NEMA",

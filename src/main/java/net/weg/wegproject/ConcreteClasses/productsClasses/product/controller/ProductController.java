@@ -10,6 +10,7 @@ import net.weg.wegproject.ConcreteClasses.productsClasses.product.exceptions.NoP
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.exceptions.ProductDeleteException;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.exceptions.ProductUpdateException;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
+import net.weg.wegproject.enums.Category;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.data.domain.Page;
@@ -56,6 +57,19 @@ public class ProductController {
     ){
         try {
             return ResponseEntity.ok(productService.buscarCard());
+        }catch (Exception e){
+            throw new NoProductsException();
+        }
+    }
+
+    @GetMapping("/resumo/{category}")
+    public ResponseEntity<List<ProductResum>> buscarCardPorCategoria(
+            @PathVariable Category category,
+            @RequestParam("size") int size,
+            @RequestParam("page") int page
+    ){
+        try {
+            return ResponseEntity.ok(productService.buscarCardPorCategoria(category));
         }catch (Exception e){
             throw new NoProductsException();
         }
