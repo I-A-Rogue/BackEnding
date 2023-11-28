@@ -12,10 +12,12 @@ import net.weg.wegproject.ConcreteClasses.user.exceptions.*;
 import net.weg.wegproject.ConcreteClasses.user.model.dto.UserDTO;
 import net.weg.wegproject.ConcreteClasses.user.model.entity.User;
 import net.weg.wegproject.ConcreteClasses.user.service.UserService;
+import net.weg.wegproject.security.model.Profile;
 import org.springframework.beans.BeanUtils;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -44,9 +46,15 @@ public class UserController {
             saves.setProducts(new ArrayList<>());
             User user = new User();
             BeanUtils.copyProperties(objDTO, user);
+            user.setPassword(new BCryptPasswordEncoder().encode(objDTO.getPassword()));
             user.setCart(cart);
             user.setSaves(saves);
             user.setCards(new ArrayList<>());
+            user.setAccountNonExpired(true);
+            user.setAccountNonLocked(true);
+            user.setEnabled(true);
+            user.setCredentialsNonExpired(true);
+            user.setAuthorities(List.of(Profile.CLIENT));
             return ResponseEntity.ok(userService.create(user));
 //            } else {
 //                throw new InvalidCpfException();

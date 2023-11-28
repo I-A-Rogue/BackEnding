@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
 
 @Entity
 @NoArgsConstructor
@@ -21,5 +22,7 @@ public class Assessment {
     private Integer assessment;
     @Column(nullable = false)
     private Integer totalAssessment;
+    @OneToOne(mappedBy = "assessment")
+    private Product product;
 
 }

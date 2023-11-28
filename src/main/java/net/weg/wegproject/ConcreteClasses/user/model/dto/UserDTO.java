@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.address.model.entity.Address;
+import net.weg.wegproject.security.model.Profile;
 
 import java.util.List;
 

@@ -41,16 +41,16 @@ public class User implements UserDetails {
     private String password;
 
     @Column(nullable = false)
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Address> address;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Saves saves;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Cart cart;
 
-    @ManyToMany(mappedBy = "user")
+    @ManyToMany(mappedBy = "user", fetch = FetchType.EAGER)
     private List<CreditCard> cards;
 
     @Enumerated(EnumType.STRING)
