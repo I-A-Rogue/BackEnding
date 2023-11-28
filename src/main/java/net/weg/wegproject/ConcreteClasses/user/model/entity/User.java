@@ -2,21 +2,19 @@ package net.weg.wegproject.ConcreteClasses.user.model.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import net.weg.wegproject.ConcreteClasses.address.model.entity.Address;
 import net.weg.wegproject.ConcreteClasses.cart.model.entity.Cart;
 import net.weg.wegproject.ConcreteClasses.creditCard.model.entity.CreditCard;
 import net.weg.wegproject.ConcreteClasses.saves.model.entity.Saves;
-import net.weg.wegproject.security.model.Profile;
-import org.springframework.security.core.userdetails.UserDetails;
+import net.weg.wegproject.listener.UserEntityListener;
 import org.springframework.validation.annotation.Validated;
 
 import java.util.List;
 
 @Entity
+@EntityListeners(UserEntityListener.class)
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

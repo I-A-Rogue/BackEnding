@@ -1,12 +1,12 @@
-package net.weg.wegproject.ConcreteClasses.Order.service;
+package net.weg.wegproject.ConcreteClasses.order.service;
 
 import lombok.AllArgsConstructor;
-import net.weg.wegproject.ConcreteClasses.Order.exceptions.NoOrderException;
-import net.weg.wegproject.ConcreteClasses.Order.exceptions.NoOrdersException;
-import net.weg.wegproject.ConcreteClasses.Order.exceptions.OrderCreateException;
-import net.weg.wegproject.ConcreteClasses.Order.exceptions.OrderDeleteException;
-import net.weg.wegproject.ConcreteClasses.Order.model.entity.OrderRequest;
-import net.weg.wegproject.ConcreteClasses.Order.repository.OrderRepository;
+import net.weg.wegproject.ConcreteClasses.order.exceptions.NoOrderException;
+import net.weg.wegproject.ConcreteClasses.order.exceptions.NoOrdersException;
+import net.weg.wegproject.ConcreteClasses.order.exceptions.OrderCreateException;
+import net.weg.wegproject.ConcreteClasses.order.exceptions.OrderDeleteException;
+import net.weg.wegproject.ConcreteClasses.order.model.entity.OrderRequest;
+import net.weg.wegproject.ConcreteClasses.order.repository.OrderRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 

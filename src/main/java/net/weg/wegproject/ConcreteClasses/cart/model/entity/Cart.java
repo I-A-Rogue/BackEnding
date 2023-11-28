@@ -16,11 +16,10 @@ import java.util.List;
 
 public class Cart {
 
-    public Cart(Long id, Float totalPrice, List<CartProductQuantity> products, User user) {
-        this.id = id;
-        this.totalPrice = totalPrice;
-        this.size = products.size();
-        this.products = products;
+    public Cart(User user) {
+        this.totalPrice = 0f;
+        this.size = 0;
+        this.products = null;
         this.user = user;
     }
 
@@ -33,7 +32,7 @@ public class Cart {
     private Integer size;
     @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL)
     private List<CartProductQuantity> products;
-    @OneToOne(mappedBy = "cart")
+    @OneToOne(mappedBy = "cart", cascade = CascadeType.ALL)
     @JsonIgnore
     private User user;
 

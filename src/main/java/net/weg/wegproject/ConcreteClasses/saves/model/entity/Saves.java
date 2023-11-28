@@ -15,12 +15,19 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Saves {
+
+    public Saves(User user) {
+        this.quantity = 0;
+        this.products = null;
+        this.user = user;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     @Column(nullable = false)
     Integer quantity;
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     private List<Product> products;
     @OneToOne(mappedBy = "saves")
     @JsonIgnore

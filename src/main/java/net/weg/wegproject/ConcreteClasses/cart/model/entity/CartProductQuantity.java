@@ -15,7 +15,7 @@ import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.P
 public class CartProductQuantity {
 
     @Id
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "product_id")
     Product product;
     @Id

@@ -46,7 +46,7 @@ public class BancoInUtil {
     @PostConstruct
     public void createRandomUsers(){
         userRepository.deleteAll();
-        userRepository.save(generateUser());
+//        userRepository.save(generateUser());
     }
 
     public User generateUser(){

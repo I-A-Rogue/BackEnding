@@ -1,6 +1,6 @@
-package net.weg.wegproject.ConcreteClasses.Order.repository;
+package net.weg.wegproject.ConcreteClasses.order.repository;
 
-import net.weg.wegproject.ConcreteClasses.Order.model.entity.OrderRequest;
+import net.weg.wegproject.ConcreteClasses.order.model.entity.OrderRequest;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
