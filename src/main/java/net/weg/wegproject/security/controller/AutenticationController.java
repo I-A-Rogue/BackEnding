@@ -34,7 +34,7 @@ public class AutenticationController {
             User user = (User) authentication.getPrincipal();
             Cookie cookie = CookieUtil.generateCookie(user);
             response.addCookie(cookie);
-            return ResponseEntity.ok().build();
+            return ResponseEntity.ok(user);
         }
         return ResponseEntity.status(401).build();
     }
