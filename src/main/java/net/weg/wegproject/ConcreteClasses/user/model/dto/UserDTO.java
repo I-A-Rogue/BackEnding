@@ -24,5 +24,6 @@ public class UserDTO {
     @NotBlank(message = "Senha não pode ser nula")
     private String password;
     private List<Address> address;
+    private List<Profile> authorities;
 
 }

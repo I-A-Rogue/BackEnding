@@ -44,9 +44,11 @@ public class UserController {
 //            throw new RuntimeException(e.getMessage());
 //        }
     }
+
     @GetMapping
     public ResponseEntity<List<User>> findAll() {
         try {
+            System.out.println("ENTREIIIIIIIAADKJABDBKSJFNBKJ");
             return ResponseEntity.ok(userService.findAll());
         } catch (Exception e) {
             throw new NoUsersException();

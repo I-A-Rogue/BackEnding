@@ -30,9 +30,9 @@ public class Cart {
     private Float totalPrice;
     @Column(nullable = false)
     private Integer size;
-    @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<CartProductQuantity> products;
-    @OneToOne(mappedBy = "cart", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "cart", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JsonIgnore
     private User user;
 
