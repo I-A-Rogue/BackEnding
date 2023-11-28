@@ -39,11 +39,6 @@ public class UserController {
             User user = new User();
             BeanUtils.copyProperties(objDTO, user);
             user.setPassword(new BCryptPasswordEncoder().encode(objDTO.getPassword()));
-            user.setAccountNonExpired(true);
-            user.setAccountNonLocked(true);
-            user.setEnabled(true);
-            user.setCredentialsNonExpired(true);
-            user.setAuthorities(List.of(Profile.CLIENT));
             return ResponseEntity.ok(userService.create(user));
 //        } catch (Exception e) {
 //            throw new RuntimeException(e.getMessage());

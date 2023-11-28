@@ -24,6 +24,23 @@ import java.util.List;
 @Validated
 
 public class User implements UserDetails {
+
+    public User(Long id, Long cpf, String name, String email, String password, List<Address> address, Saves saves, Cart cart, List<CreditCard> cards) {
+        this.id = id;
+        this.cpf = cpf;
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.address = address;
+        this.saves = saves;
+        this.cart = cart;
+        this.cards = cards;
+        this.accountNonExpired = true;
+        this.accountNonLocked = true;
+        this.credentialsNonExpired = true;
+        this.enabled = true;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
