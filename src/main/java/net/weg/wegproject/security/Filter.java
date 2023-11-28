@@ -23,7 +23,7 @@ public class Filter extends OncePerRequestFilter {
                                     FilterChain filterChain)
 
             throws ServletException, IOException {
-        if(!rotaPublicas(request.getRequestURI())) {
+        if(!rotaPublicas(request.getRequestURI(), request.getMethod())) {
             try{
                 String token = CookieUtil.getCookie(request);
                 User user = JWTUtil.getUsuario(token);
@@ -46,7 +46,11 @@ public class Filter extends OncePerRequestFilter {
         filterChain.doFilter(request, response);
     }
 
-    private boolean rotaPublicas(String url) {
-        return url.equals("/login") || url.equals("/user") || url.equals("/company");
+    private boolean rotaPublicas(String url, String method) {
+        if(method.equals("GET") && url.equals("/product") || url.startsWith("/product/") ){
+            return true;
+        }else{
+            return url.equals("/login") || url.equals("/user") || url.equals("/company");
+        }
     }
 }
