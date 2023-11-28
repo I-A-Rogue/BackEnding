@@ -89,6 +89,7 @@ public class Settings {
         );
         http.csrf(AbstractHttpConfigurer::disable);
         http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+        http.cors();
         http.addFilterBefore(
                 new Filter(),
                 UsernamePasswordAuthenticationFilter.class);
