@@ -65,6 +65,15 @@ public class UserController {
         }
     }
 
+    @GetMapping("/email")
+    public ResponseEntity<User> findByEmail(@RequestParam(name = "email") String email) {
+        try {
+            return ResponseEntity.ok(userService.findByEmail(email));
+        } catch (Exception e) {
+            throw new NoUserException();
+        }
+    }
+
     @PutMapping("/{id}")
     public ResponseEntity<User> update(@RequestBody UserDTO objDTO, @PathVariable Long id) {
         try {

@@ -43,21 +43,14 @@ public class UserService implements ServiceInterface<User> {
         }
     }
 
-    public boolean findByEmail(String email){
+    public User findByEmail(String email){
         try {
-            return userRepository.existsByEmail(email);
+            return userRepository.findByEmail(email);
         }catch (Exception e){
             throw new NoUserException();
         }
     }
 
-    public User findUserByEmailAndPassword(String email, String password){
-        try {
-            return userRepository.findByEmailAndPassword(email, password);
-        }catch (Exception e){
-            throw new NoUserException();
-        }
-    }
 
     @Override
     public User update(User obj) {
