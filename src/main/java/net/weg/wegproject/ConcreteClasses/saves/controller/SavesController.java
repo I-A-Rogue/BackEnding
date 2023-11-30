@@ -19,7 +19,7 @@ import java.util.List;
 
 @Controller
 @AllArgsConstructor
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
 @RequestMapping("/saves")
 public class SavesController{
 
