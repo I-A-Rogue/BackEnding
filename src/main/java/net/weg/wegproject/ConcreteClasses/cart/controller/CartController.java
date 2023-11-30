@@ -105,6 +105,7 @@ public class CartController {
         }
     }
 
+    @Transactional
     @PutMapping("/remove/{cartId}/{productCode}")
     public ResponseEntity<Cart> deleteFromCart(@PathVariable Long cartId, @PathVariable Long productCode) {
         try {
