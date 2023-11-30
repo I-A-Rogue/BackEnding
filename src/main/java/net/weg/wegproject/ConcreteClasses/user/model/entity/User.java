@@ -65,4 +65,22 @@ public class User implements UserDetails {
     public String getUsername() {
         return this.getEmail();
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", cpf=" + cpf +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", address=" + address +
+                ", cards=" + cards +
+                ", authorities=" + authorities +
+                ", accountNonExpired=" + accountNonExpired +
+                ", accountNonLocked=" + accountNonLocked +
+                ", credentialsNonExpired=" + credentialsNonExpired +
+                ", enabled=" + enabled +
+                '}';
+    }
 }

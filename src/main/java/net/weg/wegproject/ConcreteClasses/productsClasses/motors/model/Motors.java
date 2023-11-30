@@ -4,17 +4,19 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Entity
-public class Motors {
+public class Motors{
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -79,9 +81,6 @@ public class Motors {
     private String model;
     @Column(nullable = false)
     private List<Double> conjugateNominal;
-    @OneToOne(mappedBy = "motors", cascade = CascadeType.ALL)
-    @JsonIgnore
-    private Product product;
 
     @Override
     public String toString() {

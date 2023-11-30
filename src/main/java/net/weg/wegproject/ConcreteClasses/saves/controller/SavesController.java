@@ -65,7 +65,7 @@ public class SavesController{
 
     @PutMapping("/remove/{savesId}/{productCode}")
     public ResponseEntity<Saves> removeFromSaves(@PathVariable Long savesId, @PathVariable Long productCode) {
-        Saves saves = findOne(savesId).getBody();
+        Saves saves = savesService.findOne(savesId);
         Product product = productService.findByCode(productCode);
         try {
             if (saves != null && saves.getQuantity() > 0) {

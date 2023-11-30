@@ -38,7 +38,7 @@ public class Address {
     private String uf;
     @Column(nullable = false)
     private String cep;
-    @ManyToMany(mappedBy = "address")
+    @ManyToMany(mappedBy = "address", fetch = FetchType.EAGER)
     @JsonIgnore
     private List<User> user;
 
@@ -52,5 +52,21 @@ public class Address {
         this.pais = pais;
         this.uf = uf;
         this.cep = cep;
+    }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "id=" + id +
+                ", rua='" + rua + '\'' +
+                ", numero=" + numero +
+                ", complemento='" + complemento + '\'' +
+                ", bairro='" + bairro + '\'' +
+                ", cidade='" + cidade + '\'' +
+                ", estado='" + estado + '\'' +
+                ", pais='" + pais + '\'' +
+                ", uf='" + uf + '\'' +
+                ", cep='" + cep + '\'' +
+                '}';
     }
 }
