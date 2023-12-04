@@ -1,6 +1,8 @@
 package net.weg.wegproject.ConcreteClasses.user.service;
 
 import lombok.AllArgsConstructor;
+import net.weg.wegproject.ConcreteClasses.address.model.entity.Address;
+import net.weg.wegproject.ConcreteClasses.address.repository.AddressRepository;
 import net.weg.wegproject.ConcreteClasses.user.exceptions.*;
 import net.weg.wegproject.ConcreteClasses.user.model.entity.User;
 import net.weg.wegproject.ConcreteClasses.user.repository.UserRepository;
@@ -9,12 +11,14 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 @AllArgsConstructor
 public class UserService implements ServiceInterface<User> {
     UserRepository userRepository;
+    AddressRepository addressRepository;
 
     @Override
     public User create(User obj) {
@@ -55,9 +59,15 @@ public class UserService implements ServiceInterface<User> {
     @Override
     public User update(User obj) {
         try {
+            List<Address> addresses = new ArrayList<>();
+            for (Address address:obj.getAddress()) {
+                addresses.add(addressRepository.findById(address.getId()).get());
+            }
+            obj.setAddress(addresses);
+            System.out.println("\n\n\n"+obj+"\n\n\n");
             return userRepository.save(obj);
         } catch (Exception e) {
-            throw new UserUpdateException();
+            throw new RuntimeException(e.getMessage());
         }
     }
 
