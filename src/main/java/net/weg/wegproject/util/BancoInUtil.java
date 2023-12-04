@@ -51,7 +51,7 @@ public class BancoInUtil {
 
     public User generateUser(){
         User user = new User();
-        user.setEmail(faker.internet().emailAddress());
+        user.setEmail("teste@teste");
         user.setPassword(new BCryptPasswordEncoder().encode("teste"));
         user.setName(faker.name().fullName());
         user.setCpf(faker.number().randomNumber(11, true));
