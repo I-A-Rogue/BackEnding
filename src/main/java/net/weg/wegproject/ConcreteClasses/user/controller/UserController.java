@@ -80,7 +80,6 @@ public class UserController {
             User user = userService.findOne(id);
             BeanUtils.copyProperties(objDTO, user);
             user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
-            System.out.println(objDTO);
             return ResponseEntity.ok(userService.update(user));
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage());

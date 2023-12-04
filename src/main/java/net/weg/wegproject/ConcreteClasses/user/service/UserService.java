@@ -64,7 +64,6 @@ public class UserService implements ServiceInterface<User> {
                 addresses.add(addressRepository.findById(address.getId()).get());
             }
             obj.setAddress(addresses);
-            System.out.println("\n\n\n"+obj+"\n\n\n");
             return userRepository.save(obj);
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
