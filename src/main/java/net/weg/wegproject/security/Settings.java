@@ -70,6 +70,7 @@ public class Settings {
                         .requestMatchers(HttpMethod.PUT, "/user/**").hasAuthority("ADMIN")
                         .requestMatchers(HttpMethod.PUT, "/saves/**").hasAnyAuthority("ADMIN", "CLIENT")
                         .requestMatchers(HttpMethod.GET, "/saves/**").hasAnyAuthority("ADMIN", "CLIENT")
+                        .requestMatchers(HttpMethod.DELETE, "/saves/**").hasAnyAuthority("ADMIN", "CLIENT")
                         .requestMatchers(HttpMethod.GET, "/saves").hasAnyAuthority("ADMIN", "CLIENT")
                         .requestMatchers(HttpMethod.POST, "/product").hasAuthority("ADMIN")
                         .requestMatchers(HttpMethod.GET, "/product/**").permitAll()

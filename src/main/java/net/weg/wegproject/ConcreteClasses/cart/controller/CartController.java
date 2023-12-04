@@ -21,7 +21,7 @@ import java.util.List;
 
 @AllArgsConstructor
 @Controller
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
 @RequestMapping("/cart")
 public class CartController {
     CartService cartService;
@@ -42,21 +42,27 @@ public class CartController {
             if (cart == null || product == null) {
                 return ResponseEntity.notFound().build();
             }
+
             CartProductQuantity existingEntry = cartProductQuantityService.findByCartAndProduct(cart, product);
 
             float productPrice = 0f;
 
+            CartProductQuantity newEntry = new CartProductQuantity();
             if (existingEntry != null) {
-                existingEntry.setQuantity(quantity);
+                newEntry = existingEntry;
             } else {
-                CartProductQuantity newEntry = new CartProductQuantity();
                 newEntry.setCart(cart);
                 newEntry.setProduct(product);
-                newEntry.setQuantity(quantity);
-                cart.getProducts().add(newEntry);
             }
+            newEntry.setQuantity(quantity);
+            cart.getProducts().add(newEntry);
+
+            cart.getProducts().remove(existingEntry);
 
             for ( CartProductQuantity cartProductQuantity : cart.getProducts() ) {
+                if(cartProductQuantity.getProduct().getCode().equals(newEntry.getProduct().getCode())){
+                    cartProductQuantity.setQuantity(quantity);
+                }
                 productPrice += cartProductQuantity.getProduct().getPrice() * cartProductQuantity.getQuantity();
             }
 
@@ -105,6 +111,7 @@ public class CartController {
         }
     }
 
+    @Transactional
     @PutMapping("/remove/{cartId}/{productCode}")
     public ResponseEntity<Cart> deleteFromCart(@PathVariable Long cartId, @PathVariable Long productCode) {
         try {

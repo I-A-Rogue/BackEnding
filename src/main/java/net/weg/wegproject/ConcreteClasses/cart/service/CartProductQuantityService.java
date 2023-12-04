@@ -47,8 +47,7 @@ public class CartProductQuantityService implements ServiceInterface<CartProductQ
 
 
 
-    public CartProductQuantity deleteByObject(CartProductQuantity obj) {
+    public void deleteByObject(CartProductQuantity obj) {
         cartProductQuantityRepository.delete(obj);
-        return obj;
     }
 }
