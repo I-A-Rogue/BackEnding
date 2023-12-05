@@ -43,6 +43,14 @@ public class ProductService{
         return productRepository.findByCategory(category);
     }
 
+//    public List<ProductResum> filterProducts(Pageable pageable,
+//                                             String searchTerm,
+//                                             Float priceMin,
+//                                             Float priceMax) {
+//        System.out.println("Entrou no service: "+ searchTerm);
+//        return productRepository.filterProducts(pageable, searchTerm, priceMin, priceMax);
+//    }
+
     public List<Product> findAll() {
         return productRepository.findAll();
     }

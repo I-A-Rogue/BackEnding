@@ -15,10 +15,16 @@ public class ProductDTO {
 
     @NotBlank(message = "O código do produto não pode ser nulo.")
     private Long code;
+    @NotBlank(message = "O modelo do produto não pode ser nulo.")
+    private String model;
     @NotBlank(message = "O preço do produto não pode ser nulo.")
     private Float price;
     @NotBlank(message = "A categoria do produto não pode ser nula.")
     private Assessment assessment;
+    @NotBlank(message = "A proteção do produto não pode ser nula.")
+    private String protection;
+    @NotBlank(message = "A categoria do produto não pode ser nula.")
+    private String category;
     @NotBlank(message = "A o produto não pode ser nulo.")
     private Motors motors;
     @NotBlank(message = "A imagem do produto não pode ser nula.")

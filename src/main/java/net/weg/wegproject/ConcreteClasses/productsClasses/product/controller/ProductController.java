@@ -75,6 +75,21 @@ public class ProductController {
         }
     }
 
+//    @GetMapping("/filtro/{searchTerm}")
+//    public ResponseEntity<List<ProductResum>> filterProducts(
+//            @RequestParam("size") int size,
+//            @RequestParam("page") int page,
+//            @PathVariable String searchTerm,
+//            @RequestParam(value = "priceMin", required = false) Float priceMin,
+//            @RequestParam(value = "priceMax", required = false) Float priceMax
+//    ){
+//        try {
+//            return ResponseEntity.ok(productService.filterProducts(PageRequest.of(page, size), searchTerm, priceMin, priceMax));
+//        }catch (Exception e){
+//            throw new NoProductsException();
+//        }
+//    }
+
     @GetMapping()
     public ResponseEntity<List<Product>> findAll() {
         try {
