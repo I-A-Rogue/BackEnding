@@ -23,7 +23,7 @@ public class Motors{
     @Column(nullable = false)
     private Integer frequency;
     @Column(nullable = false)
-    private ArrayList<Integer> nominalTension;
+    private List<Integer> nominalTension;
     @Column(nullable = false)
     private List<Integer> poles;
     @Column(nullable = false)
