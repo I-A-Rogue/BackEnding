@@ -341,7 +341,7 @@
   {
     "code": 10,
     "model": "WJet Pump - Capacitor de Partida - Forma J",
-    "price": "453.6",
+    "price": "12.34",
     "protection": "IP21",
     "category": "HOME",
     "image": "https://ecatalog.weg.net/files/produtos/motor-mono-jet-pump-split-phase-rosca-brasil-G.jpg",
@@ -399,7 +399,7 @@
     "code":11,
     "model": "W21Xdb Motofreio Ã  Prova de ExplosÃ£o IR2",
     "protection": "IP66",
-    "price": "774.2",
+    "price": "45.67",
     "category": "AGRICULTIURE",
     "image": "https://ecatalog.weg.net/files/produtos/motofreio-a-prova-de-explosao-brasil-G.jpg",
     "motors":{
@@ -437,7 +437,7 @@
     "code":12,
     "model": "Motor Jet Pump - Flange Incorporada",
     "protection": "IP21",
-    "price":131,
+    "price":"89.01",
     "category": "AGRICULTIURE",
     "image": "https://ecatalog.weg.net/files/produtos/monofasico-jet-pump-flange-incorporada-brasil-G.jpg",
     "motors":{
@@ -473,7 +473,7 @@
   "code":13,
   "protection": "IP55",
   "model": "W22 Categoria D",
-  "price":131,
+  "price":"23.45",
   "category": "AGRICULTIURE",
   "image": "https://ecatalog.weg.net/files/produtos/W22-B3D-All-Frames-RAL-5009-G.jpg",
   "motors":{
@@ -509,7 +509,7 @@
   }
 },{
   "code":14,
-  "price":131,
+  "price":"67.89",
   "category": "AGRICULTIURE",
   "protection": "IPW55",
   "model": "W22 10 & 12 polos",
@@ -546,7 +546,7 @@
   }
 },{
   "code":15,
-  "price":131,
+  "price":"34.56",
   "category": "AGRICULTIURE",
   "protection": "IP55",
   "model": "W50 Baixa TensÃ£o",
@@ -584,7 +584,7 @@
   }
 },{
   "code":16,
-  "price":131,
+  "price":"78.90",
   "category": "INDUSTRY",
   "protection": "IP55",
   "model": "W50 Baixa TensÃ£o",
@@ -621,7 +621,7 @@
   }
 },{
   "code":17,
-  "price":131,
+  "price":"56.78",
   "category": "INDUSTRY",
   "protection": "IP21",
   "model": "WJet Pump - Capacitor de Partida - Forma J",
@@ -657,7 +657,7 @@
   }
 },{
   "code":18,
-  "price":131,
+  "price":"90.12",
   "category": "INDUSTRY",
   "protection": "IP21",
   "model": "WJet Pump - Capacitor de Partida - Forma C",
@@ -693,7 +693,7 @@
   }
 },{
   "code":19,
-  "price":131,
+  "price":"43.21",
   "category": "OTHERS",
   "protection": "IP55",
   "model": "W22 Wash IR3 Premium",
@@ -730,7 +730,7 @@
   }
 },{
   "code":20,
-  "price":131,
+  "price":"87.65",
   "category": "OTHERS",
   "protection": "IP55",
   "model": "W22 Motofreio IR3 Premium",
@@ -767,7 +767,7 @@
   }
 },{
   "code":21,
-  "price":131,
+  "price":"32.10",
   "category": "OTHERS",
   "protection": "IP21",
   "model": "WJet Pump - Capacitor de Partida - Forma J",
@@ -804,7 +804,7 @@
   }
 },{
   "code":22,
-  "price":131,
+  "price":"65.43",
   "category": "OTHERS",
   "protection": "IP54",
   "model": "Motosserra",
@@ -842,7 +842,7 @@
   }
 },{
   "code":23,
-  "price":131,
+  "price":"98.76",
   "category": "OTHERS",
   "protection": "IP21",
   "model": "WJet Pump - Capacitor de Partida - Forma C",
@@ -880,7 +880,7 @@
   }
 },{
   "code":24,
-  "price":131,
+  "price":"21.09",
   "category": "OTHERS",
   "protection": "IP55",
   "model": "W22 para Bomba Monobloco JP IR3 Premium",
@@ -918,7 +918,7 @@
   }
 },{
   "code":25,
-  "price":131,
+  "price":"54.32",
   "category": "OTHERS",
   "protection": "IPW66",
   "model": "W22 WELL IR3 Premium",
@@ -956,7 +956,7 @@
   }
 },{
   "code":26,
-  "price":131,
+  "price":"87.09",
   "category": "OTHERS",
   "protection": "IPW55",
   "model": "W22 para Redutor Tipo 1 IR3 Premium",
@@ -994,7 +994,7 @@
   }
 },{
   "code":27,
-  "price":131,
+  "price":"10.23",
   "category": "OTHERS",
   "protection": "IP21",
   "model": "WJet Pump - Capacitor de Partida - Forma J",
@@ -1030,7 +1030,7 @@
   }
 },{
   "code":28,
-  "price":131,
+  "price":"43.65",
   "category": "OTHERS",
   "protection": "IP21",
   "model": "WJet Pump - Capacitor de Partida - Forma J",
@@ -1066,7 +1066,7 @@
   }
 },{
   "code":29,
-  "price":131,
+  "price":"76.21",
   "category": "OTHERS",
   "protection": "IPW66",
   "model": "W22 WELL IR3 Premium",
@@ -1104,7 +1104,7 @@
 },
   {
     "code": 31,
-    "price": 276.60,
+    "price": "276.60",
     "category": "AGRICULTIURE",
     "protection": "IP55",
     "model": "W22 Categoria D",
@@ -1142,7 +1142,7 @@
   },
   {
     "code": 32,
-    "price": 276.60,
+    "price": "98.10",
     "category": "AGRICULTIURE",
     "protection": "IP55",
     "model": "W22 Dahlander 4-2 polos",
@@ -1181,7 +1181,7 @@
   },
   {
     "code": 33,
-    "price": 276.60,
+    "price": "32.76",
     "category": "AGRICULTIURE",
     "protection": "IP66",
     "model": "W21Xdb Motofreio Ã  Prova de ExplosÃ£o IR2",
@@ -1220,7 +1220,7 @@
   },
   {
     "code": 34,
-    "price": 276.60,
+    "price": "65.43",
     "category": "AGRICULTIURE",
     "protection": "IP66",
     "model": "W21Xdb Motofreio Ã  Prova de ExplosÃ£o IR2",
@@ -1258,7 +1258,7 @@
     }
   },    {
   "code": 35,
-  "price": 276.60,
+  "price": "21.98",
   "category": "AGRICULTIURE",
   "protection": "IPW66",
   "model": "W22Xdb WELL IR2",
@@ -1296,7 +1296,7 @@
   }
 },    {
   "code": 36,
-  "price": 276.60,
+  "price": "54.32",
   "category": "AGRICULTIURE",
   "protection": "IPW66",
   "model": "W22Xdb WELL IR2",
@@ -1335,7 +1335,7 @@
 },
   {
     "code": 37,
-    "price": 276.60,
+    "price": "87.09",
     "category": "AGRICULTIURE",
     "protection": "IPW66",
     "model": "W22Xdb WELL IR2",
@@ -1373,7 +1373,7 @@
     }
   },    {
   "code": 38,
-  "price": 276.60,
+  "price": "10.23",
   "category": "AGRICULTIURE",
   "protection": "IPW66",
   "model": "W22Xec WELL IR3 Premium - Temperatura Ambiente 50ÂºC",
@@ -1411,7 +1411,7 @@
   }
 },    {
   "code": 39,
-  "price": 276.60,
+  "price": "43.65",
   "category": "AGRICULTIURE",
   "protection": "IPW66",
   "model": "W22Xec WELL IR3 Premium - Temperatura Ambiente 50ÂºC",
@@ -1449,7 +1449,7 @@
   }
 },     {
   "code": 40,
-  "price": 276.60,
+  "price": "76.21",
   "category": "AGRICULTIURE",
   "protection": "IP55",
   "model": "W50 Alta TensÃ£o",
@@ -1486,7 +1486,7 @@
   }
 },     {
   "code": 41,
-  "price": 276.60,
+  "price": "43.65",
   "category": "AGRICULTIURE",
   "protection": "IP55",
   "model": "W50 Alta TensÃ£o",
@@ -1524,7 +1524,7 @@
   }
 },     {
   "code": 42,
-  "price": 276.60,
+  "price": "276.60",
   "category": "AGRICULTIURE",
   "protection": "IP55",
   "model": "W50 Alta TensÃ£o",
@@ -1562,7 +1562,7 @@
   }
 },     {
   "code": 43,
-  "price": 276.60,
+  "price": "276.60",
   "category": "AGRICULTIURE",
   "protection": "IP55",
   "model": "W50 Baixa TensÃ£o",
@@ -1600,7 +1600,7 @@
   }
 },     {
   "code": 44,
-  "price": 276.60,
+  "price": "276.60",
   "category": "AGRICULTIURE",
   "protection": "IP55",
   "model": "W50 Baixa TensÃ£o",
@@ -1638,7 +1638,7 @@
   }
 },     {
   "code": 45,
-  "price": 276.60,
+  "price": "276.60",
   "category": "AGRICULTIURE",
   "protection": "IP21",
   "model": "WJet Pump - Capacitor de Partida - Forma J",
@@ -1675,7 +1675,7 @@
   }
 },     {
   "code": 46,
-  "price": 276.60,
+  "price": "276.60",
   "category": "AGRICULTIURE",
   "protection": "IP21",
   "model": "WJet Pump - Capacitor de Partida - Forma C",
@@ -1712,7 +1712,7 @@
   }
 },     {
   "code": 47,
-  "price": 276.60,
+  "price": "276.60",
   "category": "AGRICULTIURE",
   "protection": "IP54",
   "model": "Motor Para Bomba de CombustÃ­vel - TrifÃ¡sico",
@@ -1750,7 +1750,7 @@
   }
 },     {
   "code": 48,
-  "price": 276.60,
+  "price": "276.60",
   "category": "AGRICULTIURE",
   "protection": "IP54",
   "model": "Motosserra",
@@ -1788,7 +1788,7 @@
   }
 },     {
   "code": 49,
-  "price": 276.60,
+  "price": "276.60",
   "category": "AGRICULTIURE",
   "protection": "IP66",
   "model": "W21Xdb Motofreio Ã  Prova de ExplosÃ£o IR2",
@@ -1826,7 +1826,7 @@
   }
 },     {
   "code": 50,
-  "price": 276.60,
+  "price": "276.60",
   "category": "AGRICULTIURE",
   "protection": "IP55",
   "model": "W22 10 & 12 polos",
@@ -1864,8 +1864,8 @@
   }
 },
   {
-    "code": 50,
-    "price":131,
+    "code": 51,
+    "price":"131",
     "category": "OTHERS",
     "protection": "IP21",
     "model": "WJet Pump - Capacitor de Partida - Forma J",
