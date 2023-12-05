@@ -8,6 +8,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -23,26 +25,37 @@ public class Filtro {
     private Boolean priceAsc;
     private String Categories;
 
-    private Float density;
-    private String color;
-
     private Boolean assesment;
 
     //  Motors
-    private Float power;
-    private Float frequencyMin;
-    private Float frequencyMax;
-    private String material;
-    private String  carcass;
-
-    private Float voltage;
-    private String rfi;
-    private Float temperature;
-
-    private Float voltageMin;
-    private Float voltageMax;
-
-    private String plug;
-    private String battery;
-    private String casing;
+    private String standard;
+    private Integer frequency;
+    private List<Integer> nominalTension;
+    private List<Integer> poles;
+    private List<Double> powerHP;
+    private String codeDaCarcaca;
+    private String typeDaCarcaca;
+    private List<Double> ipIn;
+    private List<Double> conjugateFromStart;
+    private List<Double> maximumConjugate;
+    private Double momentOfInertia;
+    private Integer rotorTimeBlocked;
+    private Double weight;
+    private Integer noiseLevel;
+    private Double factorOfService;
+    private List<Integer> nominalRotation;
+    private Double income50;
+    private Double income75;
+    private Double income100;
+    private Double powerfactor50;
+    private Double powerfactor75;
+    private Double powerfactor100;
+    private List<Double> nominalchain;
+    private Integer altitude;
+    private String regime;
+    private Integer temperatureMin;
+    private Integer temperatureMax;
+    private String protection;
+    private String model;
+    private List<Double> conjugateNominal;
 }

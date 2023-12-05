@@ -1,16 +1,12 @@
 package net.weg.wegproject.ConcreteClasses.productsClasses.motors.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import net.weg.wegproject.ConcreteClasses.productsClasses.product.model.entity.Product;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -27,7 +23,7 @@ public class Motors{
     @Column(nullable = false)
     private Integer frequency;
     @Column(nullable = false)
-    private ArrayList<Integer> nominalTension;
+    private List<Integer> nominalTension;
     @Column(nullable = false)
     private List<Integer> poles;
     @Column(nullable = false)
@@ -76,45 +72,5 @@ public class Motors{
     @Column(nullable = false)
     private Integer temperatureMax;
     @Column(nullable = false)
-    private String protection;
-    @Column(nullable = false)
-    private String model;
-    @Column(nullable = false)
     private List<Double> conjugateNominal;
-
-    @Override
-    public String toString() {
-        return "Motors{" +
-                "standard='" + standard + '\'' +
-                ", frequency=" + frequency +
-                ", nominalTension=" + nominalTension +
-                ", poles=" + poles +
-                ", powerHP=" + powerHP +
-                ", codeDaCarcaca='" + codeDaCarcaca + '\'' +
-                ", typeDaCarcaca='" + typeDaCarcaca + '\'' +
-                ", ipIn=" + ipIn +
-                ", conjugateFromStart=" + conjugateFromStart +
-                ", maximumConjugate=" + maximumConjugate +
-                ", momentOfInertia=" + momentOfInertia +
-                ", rotorTimeBlocked=" + rotorTimeBlocked +
-                ", weight=" + weight +
-                ", noiseLevel=" + noiseLevel +
-                ", factorOfService=" + factorOfService +
-                ", nominalRotation=" + nominalRotation +
-                ", income50=" + income50 +
-                ", income75=" + income75 +
-                ", income100=" + income100 +
-                ", powerfactor50=" + powerfactor50 +
-                ", powerfactor75=" + powerfactor75 +
-                ", powerfactor100=" + powerfactor100 +
-                ", nominalchain=" + nominalchain +
-                ", altitude=" + altitude +
-                ", regime='" + regime + '\'' +
-                ", temperatureMin=" + temperatureMin +
-                ", temperatureMax=" + temperatureMax +
-                ", protection='" + protection + '\'' +
-                ", model='" + model + '\'' +
-                ", conjugateNominal=" + conjugateNominal +
-                '}';
-    }
 }

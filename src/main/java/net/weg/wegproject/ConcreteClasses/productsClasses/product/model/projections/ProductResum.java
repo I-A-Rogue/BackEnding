@@ -4,4 +4,7 @@ public interface ProductResum {
     String getCode();
     Double getPrice();
     String getImage();
+    String getModel();
+    String getCategory();
+    String getProtection();
 }

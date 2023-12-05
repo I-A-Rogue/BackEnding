@@ -1,8 +1,10 @@
 [
   {
     "code": 1,
+    "model": "Motor Jet Pump - Flange Incorporada",
     "price": 276.60,
     "category": "AGRICULTIURE",
+    "protection": "IP21",
     "image": "https://ecatalog.weg.net/files/produtos/monofasico-jet-pump-flange-incorporada-brasil-G.jpg",
     "motors":{
       "standard": "NEMA",
@@ -31,13 +33,13 @@
       "regime": "S1",
       "temperatureMin": 20,
       "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "Motor Jet Pump - Flange Incorporada",
       "conjugateNominal": [0.05170104667824818]
     }
   },
   {
     "code": 2,
+    "model": "Motosserra",
+    "protection": "IP54",
     "price": "970.10",
     "category": "AGRICULTIURE",
     "image": "https://ecatalog.weg.net/files/produtos/monofasico-jet-pump-flange-incorporada-brasil-G.jpg",
@@ -69,13 +71,13 @@
       "regime": "S6 50%",
       "temperatureMin": 20,
       "temperatureMax": 40,
-      "protection": "IP54",
-      "model": "Motosserra",
       "conjugateNominal": [1.2479358659529016]
     }
   },
   {
     "code": 3,
+    "model": "Motosserra",
+    "protection": "IP54",
     "price": "638.3",
     "category": "AGRICULTIURE",
     "image": "https://ecatalog.weg.net/files/produtos/motosserra-brasil-G.jpg",
@@ -107,13 +109,13 @@
       "regime": "S6 50%",
       "temperatureMin": 20,
       "temperatureMax": 40,
-      "protection": "IP54",
-      "model": "Motosserra",
       "conjugateNominal": [3.1468902978147595]
     }
   },
   {
     "code": 4,
+    "model": "Steel Motor - Monofásico",
+    "protection": "IP21",
     "price": "530.0",
     "category": "AGRICULTIURE",
     "image": "https://ecatalog.weg.net/files/produtos/nema4856-monofasico-brasil-G.jpg",
@@ -144,13 +146,13 @@
       "regime": "S1",
       "temperatureMin": 20,
       "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "Steel Motor - MonofÃ¡sico",
       "conjugateNominal": [0.06543167958198126]
     }
   },
   {
     "code": 5,
+    "model": "Steel Motor - Monofásico",
+    "protection": "IP21",
     "price": "774.4",
     "category": "INDUSTRY",
     "image": "https://ecatalog.weg.net/files/produtos/nema4856-monofasico-brasil-G.jpg",
@@ -181,13 +183,13 @@
       "regime": "S1",
       "temperatureMin": 20,
       "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "Steel Motor - MonofÃ¡sico",
       "conjugateNominal": [0.1364907632305752]
     }
   },
   {
     "code": 6,
+    "model": "W21Xdb Motofreio à Prova de Explosão IR2",
+    "protection": "IP66",
     "price": "114.2",
     "category": "INDUSTRY",
     "image": "https://ecatalog.weg.net/files/produtos/motofreio-a-prova-de-explosao-brasil-G.jpg",
@@ -219,13 +221,13 @@
       "regime": "S1",
       "temperatureMin": 20,
       "temperatureMax": 40,
-      "protection": "IP66",
-      "model": "W21Xdb Motofreio Ã  Prova de Explosão IR2",
       "conjugateNominal": [0.42202482288523513]
     }
   },
   {
     "code": 7,
+    "model": "W21Xdb Motofreio à Prova de Explosão IR2",
+    "protection": "IP66",
     "price": "795.9",
     "category": "INDUSTRY",
     "image": "https://ecatalog.weg.net/files/produtos/motofreio-a-prova-de-explosao-brasil-G.jpg",
@@ -257,13 +259,13 @@
       "regime": "S1",
       "temperatureMin": 20,
       "temperatureMax": 40,
-      "protection": "IP66",
-      "model": "W21Xdb Motofreio Ã  Prova de Explosão IR2",
       "conjugateNominal": [1.2660744686557053]
     }
   },
   {
     "code": 8,
+    "model": "W22 10 & 12 polos",
+    "protection": "IP55",
     "price": "774.2",
     "category": "HOME",
     "image": "https://ecatalog.weg.net/files/produtos/W22-B3D-All-Frames-RAL-5009-G.jpg",
@@ -295,13 +297,13 @@
       "regime": "S1",
       "temperatureMin": 20,
       "temperatureMax": 40,
-      "protection": "IP55",
-      "model": "W22 10 & 12 polos",
       "conjugateNominal": [3.133306598687501]
     }
   },
   {
     "code": 9,
+    "model": "W22 Motofreio IR3 Premium",
+    "protection": "IP55",
     "price": "494.7",
     "category": "HOME",
     "image": "https://ecatalog.weg.net/files/produtos/motor-mono-jet-pump-split-phase-rosca-brasil-G.jpg",
@@ -333,14 +335,14 @@
       "regime": "S1",
       "temperatureMin": 20,
       "temperatureMax": 40,
-      "protection": "IP55",
-      "model": "W22 Motofreio IR3 Premium",
       "conjugateNominal": [16.497333985513738]
     }
   },
   {
     "code": 10,
+    "model": "WJet Pump - Capacitor de Partida - Forma J",
     "price": "453.6",
+    "protection": "IP21",
     "category": "HOME",
     "image": "https://ecatalog.weg.net/files/produtos/motor-mono-jet-pump-split-phase-rosca-brasil-G.jpg",
     "motors": {
@@ -388,2005 +390,1514 @@
       "regime": "S1",
       "temperatureMin": 20,
       "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "WJet Pump - Capacitor de Partida - Forma J",
       "conjugateNominal": [
         0.6293780595629518
       ]
     }
   },
   {
-    "code": 11,
-    "price": "499.6",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W22Xd_WELL_G.jpg",
-    "motors": {
-      "standard": "NEMA",
+    "code":11,
+    "model": "W21Xdb Motofreio Ã  Prova de ExplosÃ£o IR2",
+    "protection": "IP66",
+    "price": "774.2",
+    "category": "AGRICULTIURE",
+    "image": "https://ecatalog.weg.net/files/produtos/motofreio-a-prova-de-explosao-brasil-G.jpg",
+    "motors":{
+      "standard": "IEC",
       "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
+      "nominalTension": [220,380],
+      "poles": [8],
+      "powerHP": [3.0],
+      "codeDaCarcaca": "132M",
+      "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+      "ipIn": [7.0],
+      "conjugateFromStart": [2.3],
+      "maximumConjugate": [2.5],
+      "momentOfInertia": 0.07397,
+      "rotorTimeBlocked": 30,
+      "weight": 89.9,
+      "noiseLevel": 52,
       "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
+      "nominalRotation": [870],
+      "income50": 83.0,
+      "income75": 84.5,
+      "income100": 84.5,
+      "powerfactor50": 0.55,
+      "powerfactor75": 0.67,
+      "powerfactor100": 0.73,
+      "nominalchain": [9.36,5.42],
       "altitude": 1000,
       "regime": "S1",
       "temperatureMin": 20,
       "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22Xdb WELL IR2",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
+      "conjugateNominal": [2.503043777112429]
     }
   },
+  {
+    "code":12,
+    "model": "Motor Jet Pump - Flange Incorporada",
+    "protection": "IP21",
+    "price":131,
+    "category": "AGRICULTIURE",
+    "image": "https://ecatalog.weg.net/files/produtos/monofasico-jet-pump-flange-incorporada-brasil-G.jpg",
+    "motors":{
+      "standard": "NEMA",
+      "frequency": 60,
+      "nominalTension": [110,220],
+      "poles": [2],
+      "powerHP": [1.0],
+      "codeDaCarcaca": "W56",
+      "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+      "ipIn": [7.5],
+      "conjugateFromStart": [1.5],
+      "maximumConjugate": [2.7],
+      "momentOfInertia": 0,
+      "rotorTimeBlocked": 6,
+      "weight": 14.0,
+      "factorOfService": 1.4,
+      "nominalRotation": [3470],
+      "income50": 55.0,
+      "income75": 62.5,
+      "income100": 66.0,
+      "powerfactor50": 0.51,
+      "powerfactor75": 0.62,
+      "powerfactor100": 0.71,
+      "nominalchain": [14.4,7.20],
+      "altitude": 1000,
+      "regime": "S1",
+      "temperatureMin": 20,
+      "temperatureMax": 40,
+      "conjugateNominal": [0.20918809664628368]
+    }
+  },{
+  "code":13,
+  "protection": "IP55",
+  "model": "W22 Categoria D",
+  "price":131,
+  "category": "AGRICULTIURE",
+  "image": "https://ecatalog.weg.net/files/produtos/W22-B3D-All-Frames-RAL-5009-G.jpg",
+  "motors":{
+    "standard": "IEC",
+    "frequency": 60,
+    "nominalTension": [380,660],
+    "poles": [6],
+    "powerHP": [3.0],
+    "codeDaCarcaca": "132S",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [4.7],
+    "conjugateFromStart": [3.5],
+    "maximumConjugate": [0],
+    "momentOfInertia": 0.02883,
+    "rotorTimeBlocked": 27,
+    "weight": 52.0,
+    "noiseLevel": 55,
+    "factorOfService": 1.0,
+    "nominalRotation": [1040],
+    "income50": 72.0,
+    "income75": 73.0,
+    "income100": 74.4,
+    "powerfactor50": 0.55,
+    "powerfactor75": 0.69,
+    "powerfactor100": 0.76,
+    "nominalchain": [5.92,3.41],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin": 20,
+    "temperatureMax": 40,
 
-  {
-    "code": 12,
-    "price": "600.6",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W22Xd_WELL_G.jpg",
-    "motors":{
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [110,220],
-      "poles": [4],
-      "powerHP": [1.5],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [5.7],
-      "conjugateFromStart": [2.6],
-      "maximumConjugate": [2.4],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [1730],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [20.0,10.0],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22Xdb WELL IR2",
-      "conjugateNominal": [0.6293780595629518]
-    }
-  },
-  {
-    "code": 13,
-    "price": "5678.6",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W22Xd_WELL_G.jpg",
-    "motors":{
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [110,220],
-      "poles": [4],
-      "powerHP": [1.5],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [5.7],
-      "conjugateFromStart": [2.6],
-      "maximumConjugate": [2.4],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [1730],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [20.0,10.0],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22Xdb WELL IR2",
-      "conjugateNominal": [0.6293780595629518]
-    }
-  },
-  {
-    "code": 14,
-    "price": "155.5",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W22Xd_WELL_G.jpg",
-    "motors":{
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [110,220],
-      "poles": [4],
-      "powerHP": [1.5],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [5.7],
-      "conjugateFromStart": [2.6],
-      "maximumConjugate": [2.4],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [1730],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [20.0,10.0],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22Xdb WELL IR2",
-      "conjugateNominal": [0.6293780595629518]
-    }
-  },
-  {
-    "code": 15,
-    "price": "6.6",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W22-B3D-All-Frames-RAL-6002-G.jpg",
-    "motors": {
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22Xec IR3 Premium",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
-    }
-  },
-  {
-    "code": 16,
-    "price": "10.99",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W22Xtb-Brasil-G.jpg",
-    "motors": {
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22Xtb IR3 Premium",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
-    }
-  },
-  {
-    "code": 42,
-    "price": "200.7",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W50_G.jpg",
-    "motors": {
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W50 Alta Tensão",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
-    }
-  },
-  {
-    "code": 17,
-    "price": "800.6",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W50_G.jpg",
-    "motors": {
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W50 Alta Tensão",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
-    }
-  },
-  {
-    "code": 18,
-    "price": "60.6",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W50_G.jpg",
-    "motors": {
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W50 Baixa Tensão",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
-    }
-  },
-  {
-    "code": 43,
-    "price": "1000.6",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/motor-mono-jet-pump-split-phase-rosca-brasil-G.jpg",
-    "motors": {
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W50 Baixa Tensão",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
-    }
-  },
-  {
-    "code": 44,
-    "price": "60.6",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W50_G.jpg",
-    "motors": {
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W50 Baixa Tensão",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
-    }
-  },
-  {
-    "code": 19,
-    "price": "100.2",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/wwash-brasil-G.jpg",
-    "motors": {
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22 Wash IR3 Premium",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
-    }
-  },
-  {
-    "code": 20,
-    "price": "788.3",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W22-bomba-monobloco-B3D-verde-G.jpg",
-    "motors": {
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22 para Bomba Monobloco JP IR3 Premium",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
-    }
-  },
-  {
-    "code": 21,
-    "price": "666.3",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/wmining-brasil-G.jpg",
-    "motors": {
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22 Mining IR3 Premium",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
-    }
-  },
-  {
-    "code": 22,
-    "price": "4093.3",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W22-B3D-All-Frames-RAL-5009-G.jpg",
-    "motors": {
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22 Categoria D",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
-    }
-  },
-  {
-    "code": 23,
-    "price": "49003.3",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W22-Motofreio-Premium_G.jpg",
-    "motors": {
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22 Motofreio IR3 Premium",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
-    }
-  },
-  {
-    "code": 24,
-    "price": "49003.3",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/smoke-pad-mounted-europa-G.jpg",
-    "motors": {
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22 Smoke Extraction",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
-    }
-  },
-  {
-    "code": 25,
-    "price": "9099.9",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W22xn-WELL-G.jpg",
-    "motors": {
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22Xec WELL IR3 Premium - Temperatura Ambiente 50ºCs",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
-    }
-  },
-  {
-    "code": 26,
-    "price": "533.0",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W22-bomba-monobloco-B3D-verde-G.jpg",
-    "motors": {
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22 para Bomba Monobloco JP IR3 Premium",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
-    }
-  },
-  {
-    "code": 27,
-    "price": "5367.0",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/smoke-pad-mounted-europa-G.jpg",
-    "motors": {
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22 Smoke Extraction",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
-    }
-  },
-  {
-    "code": 28,
-    "price": "5899.0",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W22-B3D-Cor-RAL-6002-G.jpg",
-    "motors": {
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22 Super Premium",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
-    }
-  },
-  {
-    "code": 29,
-    "price": "58.0",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/well-brasil-G.jpg",
-    "motors": {
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22 WELL IR3 Premium",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
-    }
-  },
-  {
-    "code": 30,
-    "price": "5897.0",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W22Xd_WELL_G.jpg",
-    "motors": {
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22Xdb WELL IR2",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
-    }
-  },
+    "conjugateNominal": [2.0938923904690516]
+  }
+},{
+  "code":14,
+  "price":131,
+  "category": "AGRICULTIURE",
+  "protection": "IPW55",
+  "model": "W22 10 & 12 polos",
+  "image": "https://ecatalog.weg.net/files/produtos/W22-B3D-All-Frames-RAL-5009-G.jpg",
+  "motors":{
+    "standard": "IEC",
+    "frequency": 60,
+    "nominalTension": [440],
+    "poles": [12],
+    "powerHP": [25.0],
+    "codeDaCarcaca": "250S/M",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [6.7],
+    "conjugateFromStart": [1.7],
+    "maximumConjugate": [2.4],
+    "momentOfInertia": 125099,
+    "rotorTimeBlocked": 28,
+    "weight": 450,
+    "noiseLevel": 60,
+    "factorOfService": 1.15,
+    "nominalRotation": [585],
+    "income50": 86.0,
+    "income75": 88.0,
+    "income100": 89.0,
+    "powerfactor50": 0.49,
+    "powerfactor75": 0.62,
+    "powerfactor100": 0.69,
+    "nominalchain": [39.6],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin": 20,
+    "temperatureMax": 40,
+    "conjugateNominal": [31.020628006948904]
+  }
+},{
+  "code":15,
+  "price":131,
+  "category": "AGRICULTIURE",
+  "protection": "IP55",
+  "model": "W50 Baixa TensÃ£o",
+  "image": "https://ecatalog.weg.net/files/produtos/W50_G.jpg",
+  "motors":{
+    "standard": "IEC",
+    "frequency": 60,
+    "nominalTension": [460],
+    "poles": [12],
+    "powerHP": [340.0],
+    "codeDaCarcaca": "400L/K",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [5.5],
+    "conjugateFromStart": [1.0],
+    "maximumConjugate": [2.0],
+    "momentOfInertia": 3063053,
+    "rotorTimeBlocked": 20,
+    "weight": 3090,
+    "noiseLevel": 79,
+    "factorOfService": 1.0,
+    "nominalRotation": [592],
+    "income50": 94.0,
+    "income75": 94.9,
+    "income100": 95.0,
+    "powerfactor50": 0.57,
+    "powerfactor75": 0.69,
+    "powerfactor100": 0.76,
+    "nominalchain": [434],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin": 20,
+    "temperatureMax": 40,
+
+    "conjugateNominal": [416.89208855284716]
+  }
+},{
+  "code":16,
+  "price":131,
+  "category": "INDUSTRY",
+  "protection": "IP55",
+  "model": "W50 Baixa TensÃ£o",
+  "image": "https://ecatalog.weg.net/files/produtos/W50_G.jpg",
+  "motors":{
+    "standard": "IEC",
+    "frequency": 60,
+    "nominalTension": [525],
+    "poles": [10],
+    "powerHP": [220.0],
+    "codeDaCarcaca": "315H/G",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [5.8],
+    "conjugateFromStart": [1.6],
+    "maximumConjugate": [2.0],
+    "momentOfInertia": 1193062,
+    "rotorTimeBlocked": 15,
+    "weight": 1683,
+    "noiseLevel": 75,
+    "factorOfService": 1.0,
+    "nominalRotation": [710],
+    "income50": 92.8,
+    "income75": 93.9,
+    "income100": 93.9,
+    "powerfactor50": 0.51,
+    "powerfactor75": 0.63,
+    "powerfactor100": 0.7,
+    "nominalchain": [267],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin": 20,
+    "temperatureMax": 40,
+    "conjugateNominal": [224.92139856306054]
+  }
+},{
+  "code":17,
+  "price":131,
+  "category": "INDUSTRY",
+  "protection": "IP21",
+  "model": "WJet Pump - Capacitor de Partida - Forma J",
+  "image": "https://ecatalog.weg.net/files/produtos/motor-mono-jet-pump-split-phase-rosca-brasil-G.jpg",
+  "motors":{
+    "standard": "NEMA",
+    "frequency": 60,
+    "nominalTension": [110,220],
+    "poles": [2],
+    "powerHP": [0.33],
+    "codeDaCarcaca": "C56",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [5.1],
+    "conjugateFromStart": [3.4],
+    "maximumConjugate": [3.0],
+    "momentOfInertia": 0.00080,
+    "rotorTimeBlocked": 6,
+    "weight": 10.0,
+    "factorOfService": 1.75,
+    "nominalRotation": [3470],
+    "income50": 48.0,
+    "income75": 56.0,
+    "income100": 60.4,
+    "powerfactor50": 0.53,
+    "powerfactor75": 0.62,
+    "powerfactor100": 0.69,
+    "nominalchain": [5.30,2.65],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin": 20,
+    "temperatureMax": 40,
+    "conjugateNominal": [0.06903207189327362]
+  }
+},{
+  "code":18,
+  "price":131,
+  "category": "INDUSTRY",
+  "protection": "IP21",
+  "model": "WJet Pump - Capacitor de Partida - Forma C",
+  "image": "https://ecatalog.weg.net/files/produtos/motor-mono-jet-pump-split-phase-chaveta-brasil-G.jpg",
+  "motors":{
+    "standard": "NEMA",
+    "frequency": 60,
+    "nominalTension": [110,220],
+    "poles": [2],
+    "powerHP": [0.16],
+    "codeDaCarcaca": 56,
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [5.0],
+    "conjugateFromStart": [3.6],
+    "maximumConjugate": [3.0],
+    "momentOfInertia": 0.00054,
+    "rotorTimeBlocked": 6,
+    "weight": 8.1,
+    "factorOfService": 1.75,
+    "nominalRotation": [3440],
+    "income50": 37.0,
+    "income75": 43.0,
+    "income100": 50.5,
+    "powerfactor50": 0.55,
+    "powerfactor75": 0.6,
+    "powerfactor100": 0.69,
+    "nominalchain": [3.20,1.60],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin": 20,
+    "temperatureMax": 40,
+    "conjugateNominal": [0.03376198583081881]
+  }
+},{
+  "code":19,
+  "price":131,
+  "category": "OTHERS",
+  "protection": "IP55",
+  "model": "W22 Wash IR3 Premium",
+  "image": "https://ecatalog.weg.net/files/produtos/wwash-brasil-G.jpg",
+  "motors":{
+    "standard": "IEC",
+    "frequency": 60,
+    "nominalTension": [220,380,440],
+    "poles": [8],
+    "powerHP": [2.0],
+    "codeDaCarcaca": "132S",
+    "typeDaCarcaca": "CarcaÃ§a Superior",
+    "ipIn": [6.0],
+    "conjugateFromStart": [1.8],
+    "maximumConjugate": [2.6],
+    "momentOfInertia": 0.05918,
+    "rotorTimeBlocked": 56,
+    "weight": 62.0,
+    "noiseLevel": 52,
+    "factorOfService": 1.25,
+    "nominalRotation": [870],
+    "income50": 82.0,
+    "income75": 84.0,
+    "income100": 84.5,
+    "powerfactor50": 0.52,
+    "powerfactor75": 0.64,
+    "powerfactor100": 0.72,
+    "nominalchain": [6.48,3.75,3.24],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin": 20,
+    "temperatureMax": 40,
+    "conjugateNominal": [1.6686958514082864]
+  }
+},{
+  "code":20,
+  "price":131,
+  "category": "OTHERS",
+  "protection": "IP55",
+  "model": "W22 Motofreio IR3 Premium",
+  "image": "https://ecatalog.weg.net/files/produtos/W22-Motofreio-Premium_G.jpg",
+  "motors":{
+    "standard": "IEC",
+    "frequency": 60,
+    "nominalTension": [440],
+    "poles": [2],
+    "powerHP": [6.0],
+    "codeDaCarcaca": "112M",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [7.6],
+    "conjugateFromStart": [2.2],
+    "maximumConjugate": [3.0],
+    "momentOfInertia": 0.00803,
+    "rotorTimeBlocked": 12,
+    "weight": 46.0,
+    "noiseLevel": 66,
+    "factorOfService": 1.25,
+    "nominalRotation": [3500],
+    "income50": 87.0,
+    "income75": 88.0,
+    "income100": 88.5,
+    "powerfactor50": 0.74,
+    "powerfactor75": 0.83,
+    "powerfactor100": 0.87,
+    "nominalchain": [7.67],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin": 20,
+    "temperatureMax": 40,
+    "conjugateNominal": [1.2443703349073219]
+  }
+},{
+  "code":21,
+  "price":131,
+  "category": "OTHERS",
+  "protection": "IP21",
+  "model": "WJet Pump - Capacitor de Partida - Forma J",
+  "image": "https://ecatalog.weg.net/files/produtos/motor-mono-jet-pump-split-phase-rosca-brasil-G.jpg",
+  "motors":{
+    "standard": "NEMA",
+    "frequency": 60,
+    "nominalTension": [110,220],
+    "poles": [4],
+    "powerHP": [1.0],
+    "codeDaCarcaca": "D56",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [5.6],
+    "conjugateFromStart": [2.5],
+    "maximumConjugate": [2.4],
+    "momentOfInertia": 0.00564,
+    "rotorTimeBlocked": 6,
+    "weight": 0,
+    "factorOfService": 1.4,
+    "nominalRotation": [1730],
+    "income50": 66.0,
+    "income75": 71.0,
+    "income100": 71.8,
+    "powerfactor50": 0.49,
+    "powerfactor75": 0.61,
+    "powerfactor100": 0.69,
+    "nominalchain": [13.5,6.75],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin": 20,
+    "temperatureMax": 40,
+
+    "conjugateNominal": [0.41958537304196786]
+  }
+},{
+  "code":22,
+  "price":131,
+  "category": "OTHERS",
+  "protection": "IP54",
+  "model": "Motosserra",
+  "image": "https://ecatalog.weg.net/files/produtos/motosserra-brasil-G.jpg",
+  "motors":{
+    "standard": "IEC",
+    "frequency": 60,
+    "nominalTension": [220,380],
+    "poles": [4],
+    "powerHP": [5.0],
+    "codeDaCarcaca": "90L/MS",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [8.0],
+    "conjugateFromStart": [3.8],
+    "maximumConjugate": [4.1],
+    "momentOfInertia": 0.01121,
+    "rotorTimeBlocked": 8,
+    "weight": 68.7,
+    "noiseLevel": 55,
+    "factorOfService": 1.15,
+    "nominalRotation": [1740],
+    "income50": 82.0,
+    "income75": 84.0,
+    "income100": 84.5,
+    "powerfactor50": 0.58,
+    "powerfactor75": 0.71,
+    "powerfactor100": 0.78,
+    "nominalchain": [14.7,8.51],
+    "altitude": 1000,
+    "regime": "S6 50%",
+    "temperatureMin": 20,
+    "temperatureMax": 40,
+
+    "conjugateNominal": [2.0858698142603576]
+  }
+},{
+  "code":23,
+  "price":131,
+  "category": "OTHERS",
+  "protection": "IP21",
+  "model": "WJet Pump - Capacitor de Partida - Forma C",
+  "image": "https://ecatalog.weg.net/files/produtos/motor-mono-jet-pump-split-phase-chaveta-brasil-G.jpg",
+  "motors":{
+    "standard": "NEMA",
+    "frequency": 60,
+    "nominalTension": [110,220],
+    "poles": [2],
+    "powerHP": [1.0],
+    "codeDaCarcaca": "D56",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [7.0],
+    "conjugateFromStart": [2.8],
+    "maximumConjugate": [2.9],
+    "momentOfInertia": 0.00175,
+    "rotorTimeBlocked": 6,
+    "weight": 17.8,
+    "noiseLevel": 1.4,
+    "factorOfService": 1.25,
+    "nominalRotation": [3520],
+    "income50": 54.5,
+    "income75": 62.1,
+    "income100": 66.4,
+    "powerfactor50": 0.53,
+    "powerfactor75": 0.63,
+    "powerfactor100": 0.71,
+    "nominalchain": [14.2,7.10],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin": 20,
+    "temperatureMax": 40,
+
+    "conjugateNominal": [0.20621667481892172]
+  }
+},{
+  "code":24,
+  "price":131,
+  "category": "OTHERS",
+  "protection": "IP55",
+  "model": "W22 para Bomba Monobloco JP IR3 Premium",
+  "image": "https://ecatalog.weg.net/files/produtos/W22-bomba-monobloco-B3D-verde-G.jpg",
+  "motors":{
+    "standard": "IEC",
+    "frequency": 60,
+    "nominalTension": [220,380],
+    "poles": [6],
+    "powerHP": [1.5],
+    "codeDaCarcaca": "100L",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [6.6],
+    "conjugateFromStart": [2.4],
+    "maximumConjugate": [2.6],
+    "momentOfInertia": 0.01755,
+    "rotorTimeBlocked": 61,
+    "weight": 38.0,
+    "noiseLevel": 48,
+    "factorOfService": 1.25,
+    "nominalRotation": [1165],
+    "income50": 82.5,
+    "income75": 85.5,
+    "income100": 87.5,
+    "powerfactor50": 0.46,
+    "powerfactor75": 0.59,
+    "powerfactor100": 0.68,
+    "nominalchain": [4.86,2.81],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin": 20,
+    "temperatureMax": 40,
+
+    "conjugateNominal": [0.93461291248404]
+  }
+},{
+  "code":25,
+  "price":131,
+  "category": "OTHERS",
+  "protection": "IPW66",
+  "model": "W22 WELL IR3 Premium",
+  "image": "https://ecatalog.weg.net/files/produtos/well-brasil-G.jpg",
+  "motors":{
+    "standard": "IEC",
+    "frequency": 60,
+    "nominalTension": [220,380,440],
+    "poles": [4],
+    "powerHP": [150.0],
+    "codeDaCarcaca": "280S/M",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [7.9],
+    "conjugateFromStart": [2.4],
+    "maximumConjugate": [2.7],
+    "momentOfInertia": 233154,
+    "rotorTimeBlocked": 20,
+    "weight": 753,
+    "noiseLevel": 73,
+    "factorOfService": 1.25,
+    "nominalRotation": [1785],
+    "income50": 94.8,
+    "income75": 95.5,
+    "income100": 95.8,
+    "powerfactor50": 0.75,
+    "powerfactor75": 0.83,
+    "powerfactor100": 0.86,
+    "nominalchain": [350,203,175],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin": 20,
+    "temperatureMax": 40,
+
+    "conjugateNominal": [60.998545828790284]
+  }
+},{
+  "code":26,
+  "price":131,
+  "category": "OTHERS",
+  "protection": "IPW55",
+  "model": "W22 para Redutor Tipo 1 IR3 Premium",
+  "image": "https://ecatalog.weg.net/files/produtos/W22-Motorredutor-Verde-G.jpg",
+  "motors":{
+    "standard": "IEC",
+    "frequency": 60,
+    "nominalTension": [220,380,440],
+    "poles": [8],
+    "powerHP": [2.0],
+    "codeDaCarcaca": "112M",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [5.3],
+    "conjugateFromStart": [2.4],
+    "maximumConjugate": [2.5],
+    "momentOfInertia": 0.02567,
+    "rotorTimeBlocked": 30,
+    "weight": 42.0,
+    "noiseLevel": 54,
+    "factorOfService": 1.25,
+    "nominalRotation": [855],
+    "income50": 80.0,
+    "income75": 83.0,
+    "income100": 84.0,
+    "powerfactor50": 0.48,
+    "powerfactor75": 0.62,
+    "powerfactor100": 0.7,
+    "nominalchain": [6.70,3.88,3.35],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin": 20,
+    "temperatureMax": 40,
+
+    "conjugateNominal": [1.6979712172224666]
+  }
+},{
+  "code":27,
+  "price":131,
+  "category": "OTHERS",
+  "protection": "IP21",
+  "model": "WJet Pump - Capacitor de Partida - Forma J",
+  "image": "https://ecatalog.weg.net/files/produtos/motor-mono-jet-pump-split-phase-rosca-brasil-G.jpg",
+  "motors":{
+    "standard": "NEMA",
+    "frequency": 60,
+    "nominalTension": [110,220],
+    "poles": [4],
+    "powerHP": [1.5],
+    "codeDaCarcaca": "F56H",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [5.7],
+    "conjugateFromStart": [2.6],
+    "maximumConjugate": [2.4],
+    "momentOfInertia": 0.00824,
+    "rotorTimeBlocked": 6,
+    "weight": 20.2,
+    "factorOfService": 1.15,
+    "nominalRotation": [1730],
+    "income50": 67.5,
+    "income75": 72.0,
+    "income100": 71.7,
+    "powerfactor50": 0.49,
+    "powerfactor75": 0.61,
+    "powerfactor100": 0.7,
+    "nominalchain": [20.0,10.0],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin": 20,
+    "temperatureMax": 40,
+    "conjugateNominal": [0.6293780595629518]
+  }
+},{
+  "code":28,
+  "price":131,
+  "category": "OTHERS",
+  "protection": "IP21",
+  "model": "WJet Pump - Capacitor de Partida - Forma J",
+  "image": "https://ecatalog.weg.net/files/produtos/motor-mono-jet-pump-split-phase-rosca-brasil-G.jpg",
+  "motors":{
+    "standard": "NEMA",
+    "frequency": 60,
+    "nominalTension": [110,220],
+    "poles": [2],
+    "powerHP": [3.0],
+    "codeDaCarcaca": "G56H",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [7.0],
+    "conjugateFromStart": [2.2],
+    "maximumConjugate": [2.3],
+    "momentOfInertia": 0.00304,
+    "rotorTimeBlocked": 6,
+    "weight": 22.3,
+    "factorOfService": 1.0,
+    "nominalRotation": [3480],
+    "income50": 77.0,
+    "income75": 79.2,
+    "income100": 78.5,
+    "powerfactor50": 0.65,
+    "powerfactor75": 0.77,
+    "powerfactor100": 0.83,
+    "nominalchain": [30.8,15.4],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin": 20,
+    "temperatureMax": 40,
+    "conjugateNominal": [0.6257609442781072]
+  }
+},{
+  "code":29,
+  "price":131,
+  "category": "OTHERS",
+  "protection": "IPW66",
+  "model": "W22 WELL IR3 Premium",
+  "image": "https://ecatalog.weg.net/files/produtos/well-brasil-G.jpg",
+  "motors":{
+    "standard": "IEC",
+    "frequency": 60,
+    "nominalTension": [220,380],
+    "poles": [6],
+    "powerHP": [5.0],
+    "codeDaCarcaca": "132S",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [7.5],
+    "conjugateFromStart": [2.4],
+    "maximumConjugate": [3.0],
+    "momentOfInertia": 0.05677,
+    "rotorTimeBlocked": 22,
+    "weight": 63.0,
+    "noiseLevel": 55,
+    "factorOfService": 1.25,
+    "nominalRotation": [1175],
+    "income50": 87.5,
+    "income75": 89.0,
+    "income100": 89.5,
+    "powerfactor50": 0.5,
+    "powerfactor75": 0.63,
+    "powerfactor100": 0.71,
+    "nominalchain": [15.3,8.85],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin": 20,
+    "temperatureMax": 40,
+    "conjugateNominal": [3.0888625334578914]
+  }
+},
   {
     "code": 31,
-    "price": "443.0",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W22Xtb-Brasil-G.jpg",
-    "motors": {
-      "standard": "NEMA",
+    "price": 276.60,
+    "category": "AGRICULTIURE",
+    "protection": "IP55",
+    "model": "W22 Categoria D",
+    "image": "https://ecatalog.weg.net/files/produtos/W22-B3D-All-Frames-RAL-5009-G.jpg",
+    "motors":{
+      "standard": "IEC",
       "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
+      "nominalTension": [380,660],
+      "poles": [6],
+      "powerHP": [50.0],
+      "codeDaCarcaca": "250S/M",
+      "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+      "ipIn": [7.8],
+      "conjugateFromStart": [3.6],
+      "maximumConjugate": [0],
+      "momentOfInertia": 142816,
+      "rotorTimeBlocked": 15,
+      "weight": 474,
+      "noiseLevel": 68,
+      "factorOfService": 1.0,
+      "nominalRotation": [1130],
+      "income50": 84.5,
+      "income75": 85.5,
+      "income100": 86.5,
+      "powerfactor50": 0.71,
+      "powerfactor75": 0.82,
+      "powerfactor100": 0.86,
+      "nominalchain": [75.6,43.5],
       "altitude": 1000,
       "regime": "S1",
-      "temperatureMin": 20,
+      "temperatureMin" :  20,
       "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22Xtb IR2",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
+      "conjugateNominal": [32.11870333462851]
     }
   },
   {
     "code": 32,
-    "price": "367.0",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/wmining-brasil-G.jpg",
-    "motors": {
-      "standard": "NEMA",
+    "price": 276.60,
+    "category": "AGRICULTIURE",
+    "protection": "IP55",
+    "model": "W22 Dahlander 4-2 polos",
+    "image": "https://ecatalog.weg.net/files/produtos/W22-B3D-All-Frames-RAL-5009-G.jpg",
+    "motors":{
+      "standard": "IEC",
       "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
+      "nominalTension": [220],
+      "poles": [4,2],
+      "powerHP": [0.50,0.80],
+      "codeDaCarcaca": 80,
+      "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+      "ipIn": [5.0,6.5],
+      "conjugateFromStart": [280,240],
+      "maximumConjugate": [290,260],
+      "momentOfInertia": 0.00096,
+      "rotorTimeBlocked": 8,
+      "weight": 15.5,
+      "noiseLevel": 48,
+      "factorOfService": 1.0,
+      "nominalRotation": [1705,3415],
+      "income50":  54.9,
+      "income75":  62.1,
+      "income100":  65.6,
+      "powerfactor50": 0.4,
+      "powerfactor75": 0.5,
+      "powerfactor100":  0.59,
+      "nominalchain": [2.51,2.58],
       "altitude": 1000,
       "regime": "S1",
-      "temperatureMin": 20,
+      "temperatureMin" :  20,
       "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22 Mining IR3 Premium",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
+
+      "conjugateNominal": [0.2128688256195321, 0.170045726585676]
     }
   },
   {
     "code": 33,
-    "price": "3547.0",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W22Xd_WELL_N2919_M.jpg",
-    "motors": {
-      "standard": "NEMA",
+    "price": 276.60,
+    "category": "AGRICULTIURE",
+    "protection": "IP66",
+    "model": "W21Xdb Motofreio Ã  Prova de ExplosÃ£o IR2",
+    "image": "https://ecatalog.weg.net/files/produtos/motofreio-a-prova-de-explosao-brasil-G.jpg",
+    "motors":{
+      "standard": "IEC",
       "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
+      "nominalTension": [380,660],
+      "poles": [8],
+      "powerHP": [15.0],
+      "codeDaCarcaca": "180M",
+      "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+      "ipIn": [8.0],
+      "conjugateFromStart": [2.5],
+      "maximumConjugate": [3.0],
+      "momentOfInertia": 0.26890,
+      "rotorTimeBlocked": 12,
+      "weight": 202,
+      "noiseLevel": 54,
       "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
+      "nominalRotation": [875],
+      "income50": 89.5,
+      "income75": 90.4,
+      "income100": 90.4,
+      "powerfactor50": 0.57,
+      "powerfactor75": 0.7,
+      "powerfactor100": 0.78,
+      "nominalchain": [23.7,13.6],
       "altitude": 1000,
       "regime": "S1",
-      "temperatureMin": 20,
+      "temperatureMin" :  20,
       "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22Xdb WELL N-2919 IR3 Premium",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
+
+      "conjugateNominal": [12.44370334907322]
     }
   },
   {
     "code": 34,
-    "price": "1235.0",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W22Xd_WELL_G.jpg",
-    "motors": {
-      "standard": "NEMA",
+    "price": 276.60,
+    "category": "AGRICULTIURE",
+    "protection": "IP66",
+    "model": "W21Xdb Motofreio Ã  Prova de ExplosÃ£o IR2",
+    "image": "https://ecatalog.weg.net/files/produtos/motofreio-a-prova-de-explosao-brasil-G.jpg",
+    "motors":{
+      "standard": "IEC",
       "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
+      "nominalTension": [440],
+      "poles": [8],
+      "powerHP": [25.0],
+      "codeDaCarcaca": "200L",
+      "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+      "ipIn": [4.6],
+      "conjugateFromStart": [1.8],
+      "maximumConjugate": [1.8],
+      "momentOfInertia": 0.41258,
+      "rotorTimeBlocked": 36,
+      "weight": 277,
+      "noiseLevel": 56,
       "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
+      "nominalRotation": [875],
+      "income50": 90.5,
+      "income75": 91.8,
+      "income100": 91.0,
+      "powerfactor50": 0.58,
+      "powerfactor75": 0.7,
+      "powerfactor100": 0.75,
+      "nominalchain": [35.6],
       "altitude": 1000,
       "regime": "S1",
-      "temperatureMin": 20,
+      "temperatureMin" :  20,
       "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22Xdb WELL IR3 Premium",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
+
+      "conjugateNominal": [20.7395055817887]
     }
-  },
-  {
-    "code": 35,
-    "price": "988.3",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W22Xd_B3D_RAL_6002_G.jpg",
-    "motors": {
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22Xdb IR3 Premium",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
-    }
-  },
-  {
-    "code": 36,
-    "price": "8667.3",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W22Xd_B3D_RAL_5009_G.jpg",
-    "motors": {
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22Xdb IR2",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
-    }
-  },
-  {
-    "code": 44,
-    "price": "777.3",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/WQuattro-B3D-G.jpg",
-    "motors": {
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22 Quattro Super Premium",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
-    }
-  },
+  },    {
+  "code": 35,
+  "price": 276.60,
+  "category": "AGRICULTIURE",
+  "protection": "IPW66",
+  "model": "W22Xdb WELL IR2",
+  "image": "https://ecatalog.weg.net/files/produtos/W22Xd_WELL_G.jpg",
+  "motors":{
+    "standard": "IEC",
+    "frequency": 60,
+    "nominalTension": [440],
+    "poles": [6],
+    "powerHP": [1.0],
+    "codeDaCarcaca": "90S/L",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [5.5],
+    "conjugateFromStart": [2.0],
+    "maximumConjugate": [2.5],
+    "momentOfInertia": 0.00494,
+    "rotorTimeBlocked": 16,
+    "weight": 44.0,
+    "noiseLevel": 50,
+    "factorOfService": 1.0,
+    "nominalRotation": [1155],
+    "income50": 73.0,
+    "income75": 75.0,
+    "income100": 76.0,
+    "powerfactor50": 0.5,
+    "powerfactor75": 0.62,
+    "powerfactor100": 0.7,
+    "nominalchain": [1.85],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin" :  20,
+    "temperatureMax": 40,
+
+    "conjugateNominal": [0.628469866114809]
+  }
+},    {
+  "code": 36,
+  "price": 276.60,
+  "category": "AGRICULTIURE",
+  "protection": "IPW66",
+  "model": "W22Xdb WELL IR2",
+  "image": "https://ecatalog.weg.net/files/produtos/W22Xd_WELL_G.jpg",
+  "motors":{
+    "standard": "IEC",
+    "frequency": 60,
+    "nominalTension": [380,660],
+    "poles": [8],
+    "powerHP": [2.0],
+    "codeDaCarcaca": "112M",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [5.3],
+    "conjugateFromStart": [2.4],
+    "maximumConjugate": [2.5],
+    "momentOfInertia": 0.02201,
+    "rotorTimeBlocked": 43,
+    "weight": 68.0,
+    "noiseLevel": 50,
+    "factorOfService": 1.0,
+    "nominalRotation": [855],
+    "income50": 80.0,
+    "income75": 83.0,
+    "income100": 83.5,
+    "powerfactor50": 0.48,
+    "powerfactor75": 0.62,
+    "powerfactor100": 0.7,
+    "nominalchain": [3.90,2.25],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin" :  20,
+    "temperatureMax": 40,
+
+    "conjugateNominal": [1.6979712172224666]
+  }
+},
   {
     "code": 37,
-    "price": "8888.3",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W22-Motorredutor-Verde-G.jpg",
-    "motors": {
-      "standard": "NEMA",
+    "price": 276.60,
+    "category": "AGRICULTIURE",
+    "protection": "IPW66",
+    "model": "W22Xdb WELL IR2",
+    "image": "https://ecatalog.weg.net/files/produtos/W22Xd_WELL_G.jpg",
+    "motors":{
+      "standard": "IEC",
       "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
+      "nominalTension": [380,660],
+      "poles": [2],
+      "powerHP": [15.0],
+      "codeDaCarcaca": "132S/M",
+      "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+      "ipIn": [8.3],
+      "conjugateFromStart": [2.9],
+      "maximumConjugate": [3.3],
+      "momentOfInertia": 0.02698,
+      "rotorTimeBlocked": 7,
+      "weight": 102,
+      "noiseLevel": 72,
+      "factorOfService": 1.0,
+      "nominalRotation": [3540],
+      "income50": 88.3,
+      "income75": 90.0,
+      "income100": 90.5,
+      "powerfactor50": 0.72,
+      "powerfactor75": 0.83,
+      "powerfactor100": 0.87,
+      "nominalchain": [21.2,12.2],
       "altitude": 1000,
       "regime": "S1",
-      "temperatureMin": 20,
+      "temperatureMin" :  20,
       "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22 para Redutor Tipo 1 IR3 Premium",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
-    }
-  },
-  {
-    "code": 39,
-    "price": "898.3",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W22-Magnet-B3D-G.jpg",
-    "motors": {
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22 Magnet Ultra Premium",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
-    }
-  },
-  {
-    "code": 38,
-    "price": "9221.3",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W22-bomba-monobloco-B3D-verde-G.jpg",
-    "motors": {
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22 para Bomba Monobloco JM IR3 Premium",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
-    }
-  },
 
-  {
-    "code": 40,
-    "price": "1111.1",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W22-Magnet-B3D-G.jpg",
-    "motors": {
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22 Magnet Super Premium",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
+      "conjugateNominal": [3.075774132892392]
     }
-  },
+  },    {
+  "code": 38,
+  "price": 276.60,
+  "category": "AGRICULTIURE",
+  "protection": "IPW66",
+  "model": "W22Xec WELL IR3 Premium - Temperatura Ambiente 50ÂºC",
+  "image": "https://ecatalog.weg.net/files/produtos/W22xn-WELL-G.jpg",
+  "motors":{
+    "standard": "IEC",
+    "frequency": 60,
+    "nominalTension": [380,660],
+    "poles": [2],
+    "powerHP": [60.0],
+    "codeDaCarcaca": "225S/M",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [7.4],
+    "conjugateFromStart": [2.5],
+    "maximumConjugate": [2.8],
+    "momentOfInertia": 0.30147,
+    "rotorTimeBlocked": 18,
+    "weight": 393,
+    "noiseLevel": 79,
+    "factorOfService": 1.0,
+    "nominalRotation": [3560],
+    "income50": 92.1,
+    "income75": 93.0,
+    "income100": 93.6,
+    "powerfactor50": 0.84,
+    "powerfactor75": 0.89,
+    "powerfactor100": 0.9,
+    "nominalchain": [81.2,46.7],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin" :  20,
+    "temperatureMax": 50,
+
+    "conjugateNominal": [12.23397801172929]
+  }
+},    {
+  "code": 39,
+  "price": 276.60,
+  "category": "AGRICULTIURE",
+  "protection": "IPW66",
+  "model": "W22Xec WELL IR3 Premium - Temperatura Ambiente 50ÂºC",
+  "image": "https://ecatalog.weg.net/files/produtos/W22xn-WELL-G.jpg",
+  "motors":{
+    "standard": "IEC",
+    "frequency": 60,
+    "nominalTension": [380,660],
+    "poles": [6],
+    "powerHP": [60.0],
+    "codeDaCarcaca": "250S/M",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [7.5],
+    "conjugateFromStart": [2.4],
+    "maximumConjugate": [2.6],
+    "momentOfInertia": 119260,
+    "rotorTimeBlocked": 15,
+    "weight": 463,
+    "noiseLevel": 68,
+    "factorOfService": 1.0,
+    "nominalRotation": [1185],
+    "income50":  93.6,
+    "income75":  94.1,
+    "income100":  94.5,
+    "powerfactor50": 0.7,
+    "powerfactor75":  0.79,
+    "powerfactor100":  0.84,
+    "nominalchain": [86.1,49.6],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin" :  20,
+    "temperatureMax": 50,
+
+    "conjugateNominal": [36.753554195574914]
+  }
+},     {
+  "code": 40,
+  "price": 276.60,
+  "category": "AGRICULTIURE",
+  "protection": "IP55",
+  "model": "W50 Alta TensÃ£o",
+  "image": "https://ecatalog.weg.net/files/produtos/W50_G.jpg",
+  "motors":{
+    "standard": "IEC",
+    "frequency": 60,
+    "nominalTension": [5500],
+    "poles": [2],
+    "powerHP": [200.0],
+    "codeDaCarcaca": "315H/G",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [6.0],
+    "conjugateFromStart": [0.9],
+    "maximumConjugate": [2.2],
+    "momentOfInertia": 313155,
+    "rotorTimeBlocked": 25,
+    "weight": 1580,
+    "noiseLevel": 79,
+    "factorOfService": 1.0,
+    "nominalRotation": [3577],
+    "income50": 92.7,
+    "income75": 93.5,
+    "income100": 93.8,
+    "powerfactor50": 0.84,
+    "powerfactor75": 0.88,
+    "powerfactor100": 0.89,
+    "nominalchain": [18.8],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin" :  20,
+    "temperatureMax": 40,
+    "conjugateNominal": [40.586116598412325]
+  }
+},     {
+  "code": 41,
+  "price": 276.60,
+  "category": "AGRICULTIURE",
+  "protection": "IP55",
+  "model": "W50 Alta TensÃ£o",
+  "image": "https://ecatalog.weg.net/files/produtos/W50_G.jpg",
+  "motors":{
+    "standard": "IEC",
+    "frequency": 60,
+    "nominalTension": [4000],
+    "poles": [8],
+    "powerHP": [200.0],
+    "codeDaCarcaca": "315H/G",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [6.3],
+    "conjugateFromStart": [1.3],
+    "maximumConjugate": [2.5],
+    "momentOfInertia": 838871,
+    "rotorTimeBlocked": 12,
+    "weight": 1730,
+    "noiseLevel": 75,
+    "factorOfService": 1.0,
+    "nominalRotation": [889],
+    "income50": 92.4,
+    "income75": 93.0,
+    "income100": 93.0,
+    "powerfactor50": 0.52,
+    "powerfactor75": 0.65,
+    "powerfactor100": 0.75,
+    "nominalchain": [31.0],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin" :  20,
+    "temperatureMax": 40,
+
+    "conjugateNominal": [163.30319355739132]
+  }
+},     {
+  "code": 42,
+  "price": 276.60,
+  "category": "AGRICULTIURE",
+  "protection": "IP55",
+  "model": "W50 Alta TensÃ£o",
+  "image": "https://ecatalog.weg.net/files/produtos/W50_G.jpg",
+  "motors":{
+    "standard": "IEC",
+    "frequency": 60,
+    "nominalTension": [6600],
+    "poles": [2],
+    "powerHP": [300.0],
+    "codeDaCarcaca": "315H/G",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [6.7],
+    "conjugateFromStart": [1.0],
+    "maximumConjugate": [2.2],
+    "momentOfInertia": 361332,
+    "rotorTimeBlocked": 20,
+    "weight": 1700,
+    "noiseLevel": 79,
+    "factorOfService": 1.0,
+    "nominalRotation": [3577],
+    "income50": 93.3,
+    "income75": 94.0,
+    "income100": 94.2,
+    "powerfactor50": 0.84,
+    "powerfactor75": 0.88,
+    "powerfactor100": 0.89,
+    "nominalchain": [23.0],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin" :  20,
+    "temperatureMax": 40,
+
+    "conjugateNominal": [60.87917489761848]
+  }
+},     {
+  "code": 43,
+  "price": 276.60,
+  "category": "AGRICULTIURE",
+  "protection": "IP55",
+  "model": "W50 Baixa TensÃ£o",
+  "image": "https://ecatalog.weg.net/files/produtos/W50_G.jpg",
+  "motors":{
+    "standard": "IEC",
+    "frequency": 60,
+    "nominalTension": [500],
+    "poles": [8],
+    "powerHP": [800.0],
+    "codeDaCarcaca": "400J/H",
+    "typeDaCarcaca": "CarcaÃ§a Reduzida",
+    "ipIn": [7.1],
+    "conjugateFromStart": [1.1],
+    "maximumConjugate": [2.3],
+    "momentOfInertia": 4355278,
+    "rotorTimeBlocked": 22,
+    "weight": 3944,
+    "noiseLevel": 79,
+    "factorOfService": 1.0,
+    "nominalRotation": [893],
+    "income50": 95.4,
+    "income75": 96.1,
+    "income100": 96.4,
+    "powerfactor50": 0.67,
+    "powerfactor75": 0.78,
+    "powerfactor100": 0.82,
+    "nominalchain": [862],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin" :  20,
+    "temperatureMax": 40,
+
+    "conjugateNominal": [650.2868491490298]
+  }
+},     {
+  "code": 44,
+  "price": 276.60,
+  "category": "AGRICULTIURE",
+  "protection": "IP55",
+  "model": "W50 Baixa TensÃ£o",
+  "image": "https://ecatalog.weg.net/files/produtos/W50_G.jpg",
+  "motors":{
+    "standard": "IEC",
+    "frequency": 60,
+    "nominalTension": [575],
+    "poles": [8],
+    "powerHP": [800.0],
+    "codeDaCarcaca": "400J/H",
+    "typeDaCarcaca": "CarcaÃ§a Reduzida",
+    "ipIn": [7.1],
+    "conjugateFromStart": [1.1],
+    "maximumConjugate": [2.3],
+    "momentOfInertia": 4355278,
+    "rotorTimeBlocked": 22,
+    "weight": 3944,
+    "noiseLevel": 79,
+    "factorOfService": 1.0,
+    "nominalRotation": [893],
+    "income50": 95.4,
+    "income75": 96.1,
+    "income100": 96.4,
+    "powerfactor50": 0.67,
+    "powerfactor75": 0.78,
+    "powerfactor100": 0.82,
+    "nominalchain": [749],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin" :  20,
+    "temperatureMax": 40,
+
+    "conjugateNominal": [650.2868491490298]
+  }
+},     {
+  "code": 45,
+  "price": 276.60,
+  "category": "AGRICULTIURE",
+  "protection": "IP21",
+  "model": "WJet Pump - Capacitor de Partida - Forma J",
+  "image": "https://ecatalog.weg.net/files/produtos/motor-mono-jet-pump-split-phase-rosca-brasil-G.jpg",
+  "motors":{
+    "standard": "NEMA",
+    "frequency": 60,
+    "nominalTension": [110,220],
+    "poles": [4],
+    "powerHP": [0.75],
+    "codeDaCarcaca": "D56",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [5.3],
+    "conjugateFromStart": [2.5],
+    "maximumConjugate": [2.5],
+    "momentOfInertia": 0.00451,
+    "rotorTimeBlocked": 6,
+    "weight": 13.6,
+    "factorOfService": 1.4,
+    "nominalRotation": [1740],
+    "income50": 61.5,
+    "income75": 68.0,
+    "income100": 69.1,
+    "powerfactor50": 0.46,
+    "powerfactor75": 0.57,
+    "powerfactor100": 0.66,
+    "nominalchain": [11.0,5.50],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin" :  20,
+    "temperatureMax": 40,
+
+    "conjugateNominal": [0.3128804721390536]
+  }
+},     {
+  "code": 46,
+  "price": 276.60,
+  "category": "AGRICULTIURE",
+  "protection": "IP21",
+  "model": "WJet Pump - Capacitor de Partida - Forma C",
+  "image": "https://ecatalog.weg.net/files/produtos/motor-mono-jet-pump-split-phase-chaveta-brasil-G.jpg",
+  "motors":{
+    "standard": "NEMA",
+    "frequency": 60,
+    "nominalTension": [110,220],
+    "poles": [2],
+    "powerHP": [3.0],
+    "codeDaCarcaca": "G56H",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [7.0],
+    "conjugateFromStart": [2.2],
+    "maximumConjugate": [2.3],
+    "momentOfInertia": "0.00304",
+    "rotorTimeBlocked": 6,
+    "weight": 22.5,
+    "factorOfService": 1.0,
+    "nominalRotation": [3480],
+    "income50": 77.0,
+    "income75": 79.2,
+    "income100": 78.5,
+    "powerfactor50": 0.65,
+    "powerfactor75": 0.77,
+    "powerfactor100": 0.83,
+    "nominalchain": [30.8,15.4],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin" :  20,
+    "temperatureMax": 40,
+
+    "conjugateNominal": [0.6257609442781072]
+  }
+},     {
+  "code": 47,
+  "price": 276.60,
+  "category": "AGRICULTIURE",
+  "protection": "IP54",
+  "model": "Motor Para Bomba de CombustÃ­vel - TrifÃ¡sico",
+  "image": "https://ecatalog.weg.net/files/produtos/motor-trifasico-para-bomba-combustivel-brasil-G.jpg",
+  "motors":{
+    "standard": "NEMA",
+    "frequency": 60,
+    "nominalTension": [220,380,440],
+    "poles": [4],
+    "powerHP": [1.0],
+    "codeDaCarcaca": "EX56",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [7.4],
+    "conjugateFromStart": [3.6],
+    "maximumConjugate": [3.4],
+    "momentOfInertia": 0.00435,
+    "rotorTimeBlocked": 7,
+    "weight": 14.2,
+    "noiseLevel": 47,
+    "factorOfService": 1.0,
+    "nominalRotation": [1740],
+    "income50": 67.0,
+    "income75": 72.0,
+    "income100": 74.0,
+    "powerfactor50": 0.5,
+    "powerfactor75": 0.62,
+    "powerfactor100": 0.71,
+    "nominalchain": [3.80,2.20,1.90],
+    "altitude": 1000,
+    "regime": "S2 30 MIN",
+    "temperatureMin" :  20,
+    "temperatureMax": 40,
+
+    "conjugateNominal": [0.4171739628520716]
+  }
+},     {
+  "code": 48,
+  "price": 276.60,
+  "category": "AGRICULTIURE",
+  "protection": "IP54",
+  "model": "Motosserra",
+  "image": "https://ecatalog.weg.net/files/produtos/motosserra-brasil-G.jpg",
+  "motors":{
+    "standard": "IEC",
+    "frequency": 60,
+    "nominalTension": [440],
+    "poles": [2],
+    "powerHP": [3.0],
+    "codeDaCarcaca": "80S/MS",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [7.3],
+    "conjugateFromStart": [3.3],
+    "maximumConjugate": [3.7],
+    "momentOfInertia": 0.00315,
+    "rotorTimeBlocked": 9,
+    "weight": 38.0,
+    "noiseLevel": 62,
+    "factorOfService": 1.15,
+    "nominalRotation": [3500],
+    "income50": 76.0,
+    "income75": 79.5,
+    "income100": 80.5,
+    "powerfactor50": 0.65,
+    "powerfactor75": 0.75,
+    "powerfactor100": 0.8,
+    "nominalchain": [4.49],
+    "altitude": 1000,
+    "regime": "S6 50%",
+    "temperatureMin" :  20,
+    "temperatureMax": 40,
+
+    "conjugateNominal": [0.6221851674536609]
+  }
+},     {
+  "code": 49,
+  "price": 276.60,
+  "category": "AGRICULTIURE",
+  "protection": "IP66",
+  "model": "W21Xdb Motofreio Ã  Prova de ExplosÃ£o IR2",
+  "image": "https://ecatalog.weg.net/files/produtos/motofreio-a-prova-de-explosao-brasil-G.jpg",
+  "motors":{
+    "standard": "IEC",
+    "frequency": 60,
+    "nominalTension": [220,380],
+    "poles": [8],
+    "powerHP": [1.5],
+    "codeDaCarcaca": "112M",
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [5.2],
+    "conjugateFromStart": [2.3],
+    "maximumConjugate": [2.6],
+    "momentOfInertia": 0.01682,
+    "rotorTimeBlocked": 18,
+    "weight": 52.8,
+    "noiseLevel": 50,
+    "factorOfService": 1.15,
+    "nominalRotation": [860],
+    "income50": 72.0,
+    "income75": 76.0,
+    "income100": 78.0,
+    "powerfactor50": 0.44,
+    "powerfactor75": 0.56,
+    "powerfactor100": 0.64,
+    "nominalchain": [5.78,3.35],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin" :  20,
+    "temperatureMax": 40,
+
+    "conjugateNominal": [1.2660744686557053]
+  }
+},     {
+  "code": 50,
+  "price": 276.60,
+  "category": "AGRICULTIURE",
+  "protection": "IP55",
+  "model": "W22 10 & 12 polos",
+  "image": "https://ecatalog.weg.net/files/produtos/W22-B3D-All-Frames-RAL-5009-G.jpg",
+  "motors":{
+    "standard": "IEC",
+    "frequency": 60,
+    "nominalTension": [220,380],
+    "poles": [10],
+    "powerHP": [0.16],
+    "codeDaCarcaca": 80,
+    "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+    "ipIn": [3.0],
+    "conjugateFromStart": [3.2],
+    "maximumConjugate": [3.5],
+    "momentOfInertia": 0.00270,
+    "rotorTimeBlocked": 35,
+    "weight": 15.0,
+    "noiseLevel": 42,
+    "factorOfService": 1.15,
+    "nominalRotation": [685],
+    "income50": 36.0,
+    "income75": 45.0,
+    "income100": 50.0,
+    "powerfactor50": 0.36,
+    "powerfactor75": 0.43,
+    "powerfactor100": 0.5,
+    "nominalchain": [1.26,0.729],
+    "altitude": 1000,
+    "regime": "S1",
+    "temperatureMin" :  20,
+    "temperatureMax": 40,
+
+    "conjugateNominal": [0.16954924271243318]
+  }
+},
   {
-    "code": 45,
-    "price": "1111.1",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W22-Magnet-B3D-G.jpg",
-    "motors": {
+    "code": 50,
+    "price":131,
+    "category": "OTHERS",
+    "protection": "IP21",
+    "model": "WJet Pump - Capacitor de Partida - Forma J",
+    "image": "https://ecatalog.weg.net/files/produtos/motor-mono-jet-pump-split-phase-rosca-brasil-G.jpg",
+    "motors":{
       "standard": "NEMA",
       "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
+      "nominalTension": [110,220],
+      "poles": [4],
+      "powerHP": [1.5],
       "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
+      "typeDaCarcaca": "CarcaÃ§a PadrÃ£o",
+      "ipIn": [5.7],
+      "conjugateFromStart": [2.6],
+      "maximumConjugate": [2.4],
       "momentOfInertia": 0.00824,
       "rotorTimeBlocked": 6,
       "weight": 20.2,
       "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
+      "nominalRotation": [1730],
       "income50": 67.5,
       "income75": 72.0,
       "income100": 71.7,
       "powerfactor50": 0.49,
       "powerfactor75": 0.61,
       "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
+      "nominalchain": [20.0,10.0],
       "altitude": 1000,
       "regime": "S1",
       "temperatureMin": 20,
       "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22 Magnet Super Premium",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
-    }
-  },
-  {
-    "code": 41,
-    "price": "222.2",
-    "category": "HOME",
-    "image": "https://ecatalog.weg.net/files/produtos/W22-B3D-All-Frames-RAL-6002-G.jpg",
-    "motors": {
-      "standard": "NEMA",
-      "frequency": 60,
-      "nominalTension": [
-        110,
-        220
-      ],
-      "poles": [
-        4
-      ],
-      "powerHP": [
-        1.5
-      ],
-      "codeDaCarcaca": "F56H",
-      "typeDaCarcaca": "Carcaça Padrão",
-      "ipIn": [
-        5.7
-      ],
-      "conjugateFromStart": [
-        2.6
-      ],
-      "maximumConjugate": [
-        2.4
-      ],
-      "momentOfInertia": 0.00824,
-      "rotorTimeBlocked": 6,
-      "weight": 20.2,
-      "factorOfService": 1.15,
-      "nominalRotation": [
-        1730
-      ],
-      "income50": 67.5,
-      "income75": 72.0,
-      "income100": 71.7,
-      "powerfactor50": 0.49,
-      "powerfactor75": 0.61,
-      "powerfactor100": 0.7,
-      "nominalchain": [
-        20.0,
-        10.0
-      ],
-      "altitude": 1000,
-      "regime": "S1",
-      "temperatureMin": 20,
-      "temperatureMax": 40,
-      "protection": "IP21",
-      "model": "W22 IR3 Premium",
-      "conjugateNominal": [
-        0.6293780595629518
-      ]
+      "conjugateNominal": [0.6293780595629518]
     }
   }
 ]

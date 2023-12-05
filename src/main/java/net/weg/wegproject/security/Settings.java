@@ -105,7 +105,7 @@ public class Settings {
                         .requestMatchers(HttpMethod.DELETE, "/address/**").hasAuthority("ADMIN")
                         .requestMatchers(HttpMethod.PUT, "/address/**").hasAnyAuthority("ADMIN", "CLIENT")
                         .requestMatchers(HttpMethod.POST, "/login").permitAll()
-                        .anyRequest().authenticated()
+                        .anyRequest().permitAll()
         );
         http.csrf(AbstractHttpConfigurer::disable);
         http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
