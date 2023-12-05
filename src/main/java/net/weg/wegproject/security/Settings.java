@@ -77,7 +77,7 @@ public class Settings {
                         .requestMatchers(HttpMethod.GET, "/product").permitAll()
                         .requestMatchers(HttpMethod.DELETE, "/product/**").hasAuthority("ADMIN")
                         .requestMatchers(HttpMethod.PATCH, "/product/**").hasAuthority("ADMIN")
-                        .requestMatchers(HttpMethod.POST, "/order/**").hasAuthority("ADMIN")
+                        .requestMatchers(HttpMethod.POST, "/order/**").hasAnyAuthority("ADMIN", "CLIENT")
                         .requestMatchers(HttpMethod.GET, "/order/**").hasAnyAuthority("ADMIN", "CLIENT")
                         .requestMatchers(HttpMethod.DELETE, "/order/**").hasAuthority("ADMIN")
                         .requestMatchers(HttpMethod.GET, "/order").hasAuthority("ADMIN")
