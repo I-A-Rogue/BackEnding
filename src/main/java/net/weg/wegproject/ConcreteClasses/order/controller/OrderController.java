@@ -1,5 +1,6 @@
 package net.weg.wegproject.ConcreteClasses.order.controller;
 
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import net.weg.wegproject.ConcreteClasses.order.exceptions.NoOrderException;
 import net.weg.wegproject.ConcreteClasses.order.exceptions.NoOrdersException;
@@ -29,6 +30,7 @@ public class OrderController {
     OrderService orderService;
     CartService cartService;
 
+    @Transactional
     @PostMapping("/{cartId}")
     public ResponseEntity<?> createOrder(@RequestBody OrderDTO orderdto, @PathVariable Long cartId) {
         try {
@@ -57,7 +59,7 @@ public class OrderController {
 
             return response;
         } catch (Exception e) {
-            throw new OrderCreateException();
+            throw new RuntimeException(e.getMessage());
         }
     }
 

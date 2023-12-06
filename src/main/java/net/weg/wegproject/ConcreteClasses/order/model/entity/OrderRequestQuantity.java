@@ -16,11 +16,11 @@ public class OrderRequestQuantity {
 
         @Id
         @GeneratedValue
-        @ManyToOne
+        @ManyToOne(fetch = FetchType.EAGER)
         @JoinColumn(name = "product_id")
         Product product;
         @Id
-        @ManyToOne
+        @ManyToOne(fetch = FetchType.EAGER)
         @JoinColumn(name = "order_id")
         @JsonIgnore
         OrderRequest order;

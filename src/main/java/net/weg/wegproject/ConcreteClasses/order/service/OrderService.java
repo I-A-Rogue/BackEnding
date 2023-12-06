@@ -22,7 +22,7 @@ public class OrderService {
         try {
             return ResponseEntity.ok(orderRepository.save(order));
         }catch (Exception e){
-            throw new OrderCreateException();
+            throw new RuntimeException(e.getMessage());
         }
     }
 

@@ -25,6 +25,6 @@ public class OrderRequest {
     private User user;
     private String status;
     private Date date;
-    @OneToMany(mappedBy = "order",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "order",cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<OrderRequestQuantity> products;
 }
