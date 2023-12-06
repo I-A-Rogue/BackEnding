@@ -19,7 +19,7 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 
     List<ProductResum> findByCategory(Category category);
 
-    @Query(value = "SELECT p.code, p.price, p.image FROM Product p WHERE p.name LIKE %?1%")
-    List<ProductResum> findByFilter(String searchText, Filtro filtro);
+//    @Query(value = "SELECT p.code, p.price, p.image FROM Product p WHERE p.name LIKE %?1%")
+//    List<ProductResum> findByFilter(String searchText, Filtro filtro);
 
 }

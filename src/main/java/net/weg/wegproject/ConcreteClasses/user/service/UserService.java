@@ -41,7 +41,7 @@ public class UserService implements ServiceInterface<User> {
     @Override
     public User findOne(Long id) {
         try {
-            return userRepository.findById(id).orElseThrow();
+            return userRepository.findById(id).get();
         } catch (Exception e) {
             throw new NoUserException();
         }

@@ -48,7 +48,6 @@ public class UserController {
     @GetMapping
     public ResponseEntity<List<User>> findAll() {
         try {
-            System.out.println("ENTREIIIIIIIAADKJABDBKSJFNBKJ");
             return ResponseEntity.ok(userService.findAll());
         } catch (Exception e) {
             throw new NoUsersException();
@@ -78,8 +77,8 @@ public class UserController {
     public ResponseEntity<User> update(@RequestBody UserDTO objDTO, @PathVariable Long id) {
         try {
             User user = userService.findOne(id);
+            objDTO.setPassword(user.getPassword());
             BeanUtils.copyProperties(objDTO, user);
-            user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
             return ResponseEntity.ok(userService.update(user));
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
